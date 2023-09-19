@@ -1,0 +1,759 @@
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [00:06<00:06,  6.85s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:08<00:00,  3.50s/it]Loading checkpoint shards: 100%|██████████| 2/2 [00:08<00:00,  4.01s/it]
+Running prediction
+Predicting:   0%|          | 0/250 [00:00<?, ?it/s]Token indices sequence length is longer than the specified maximum sequence length for this model (2083 > 512). Running this sequence through the model will result in indexing errors
+/home/kiranpurohit/miniconda3/envs/explain/lib/python3.9/site-packages/transformers/generation/utils.py:1353: UserWarning: Using `max_length`'s default (20) to control the generation length. This behaviour is deprecated and will be removed from the config in v5 of Transformers -- we recommend using `max_new_tokens` to control the maximum length of the generation.
+  warnings.warn(
+resp:  ['False, because a naked man is not sitting with his eyes closed.']
+Predicting:   0%|          | 1/250 [00:28<1:57:01, 28.20s/it]resp:  ['False, because the two people are not dead and they are still sword fighting.']
+Predicting:   1%|          | 2/250 [00:55<1:53:44, 27.52s/it]resp:  ['Neither, because the people are playing a game on a hot summer day.']
+Predicting:   1%|          | 3/250 [01:24<1:56:00, 28.18s/it]resp:  ['True, because the dog is catching a Frisbee in the park with ']
+Predicting:   2%|▏         | 4/250 [01:53<1:57:20, 28.62s/it]resp:  ['True, because the people are sitting on the benches outside a building.']
+Predicting:   2%|▏         | 5/250 [02:20<1:55:09, 28.20s/it]resp:  ['True, because people canoeing in a stream implies that they are outdoors.']
+Predicting:   2%|▏         | 6/250 [02:49<1:55:09, 28.32s/it]resp:  ['True, because a female is a lady and looking through a microscope is a']
+Predicting:   3%|▎         | 7/250 [03:17<1:54:41, 28.32s/it]resp:  ['True, because walking down the street is the same as strolling outside.']
+Predicting:   3%|▎         | 8/250 [03:45<1:53:15, 28.08s/it]resp:  ['False, because a mountain is not a person and a mountain is not']
+Predicting:   4%|▎         | 9/250 [04:14<1:53:30, 28.26s/it]resp:  ['True, because the children are listening to the guard.']
+Predicting:   4%|▍         | 10/250 [04:40<1:50:26, 27.61s/it]resp:  ['True, because the cyclists are participating in an organized event and the two women are cyclists']
+Predicting:   4%|▍         | 11/250 [05:09<1:51:29, 27.99s/it]resp:  ['False, because a man in swimming trunks is not surfing out on the ocean']
+Predicting:   5%|▍         | 12/250 [05:37<1:51:39, 28.15s/it]resp:  ['False, because the girls are either sitting on the ground or tagging out ']
+Predicting:   5%|▌         | 13/250 [06:06<1:52:03, 28.37s/it]resp:  ['True, because the boy is standing on the corner and the men are engaged in some activity.']
+Predicting:   6%|▌         | 14/250 [06:35<1:52:04, 28.49s/it]resp:  ['False, because the cheerleaders are standing on the shoulders of other cheerleaders']
+Predicting:   6%|▌         | 15/250 [07:04<1:51:58, 28.59s/it]resp:  ['True, because the two people are dressed up as zombies.']
+Predicting:   6%|▋         | 16/250 [07:31<1:50:00, 28.21s/it]resp:  ['False, because cats are not dogs and a dog is not a cat.']
+Predicting:   7%|▋         | 17/250 [07:59<1:49:57, 28.32s/it]resp:  ['True, because the women look at something on a cellphone screen implies they are near the cellphone']
+Predicting:   7%|▋         | 18/250 [08:28<1:50:00, 28.45s/it]resp:  ['True, because a woman is standing at a podium with a slide show behind her']
+Predicting:   8%|▊         | 19/250 [08:57<1:49:45, 28.51s/it]resp:  ['False, because the bike is not in the garage if the man is performing tricks']
+Predicting:   8%|▊         | 20/250 [09:25<1:49:01, 28.44s/it]resp:  ['True, because a woman walking across the street implies that she is outside.']
+Predicting:   8%|▊         | 21/250 [09:53<1:47:47, 28.24s/it]resp:  ['False, because the players are either sitting on the bench or standing on the basketball court']
+Predicting:   9%|▉         | 22/250 [10:22<1:48:27, 28.54s/it]resp:  ['True, because a girl is a child and blowing up a balloon is the']
+Predicting:   9%|▉         | 23/250 [10:51<1:48:02, 28.56s/it]resp:  ['True, because the women are Asian and the umbrellas are a sign of rain.']
+Predicting:  10%|▉         | 24/250 [11:20<1:48:06, 28.70s/it]resp:  ['True, because the lady is carrying a big bag.']
+Predicting:  10%|█         | 25/250 [11:47<1:45:36, 28.16s/it]resp:  ['True, because a man hitting a baseball in a field of grass implies he']
+Predicting:  10%|█         | 26/250 [12:16<1:45:56, 28.38s/it]resp:  ["True, because the women are cutting another woman's shirt while riding a bus."]
+Predicting:  11%|█         | 27/250 [12:44<1:45:50, 28.48s/it]resp:  ['True, because the man is wearing sunglasses and is holding a young person.']
+Predicting:  11%|█         | 28/250 [13:13<1:45:31, 28.52s/it]resp:  ['True, because the people are getting money from an ATM.']
+Predicting:  12%|█▏        | 29/250 [13:39<1:42:51, 27.92s/it]resp:  ['True, because the child is holding an airplane and it is a toy.']
+Predicting:  12%|█▏        | 30/250 [14:08<1:43:12, 28.15s/it]resp:  ['Neither, because the men are not necessarily trying to clear out the road.']
+Predicting:  12%|█▏        | 31/250 [14:37<1:43:04, 28.24s/it]resp:  ['True, because the girl wears a tutu.']
+Predicting:  13%|█▎        | 32/250 [15:04<1:41:20, 27.89s/it]resp:  ['True, because the woman is placing an ingredient from a glass jar.']
+Predicting:  13%|█▎        | 33/250 [15:32<1:41:38, 28.10s/it]resp:  ['False, because the women are not on a cruise and they are not sitting around']
+Predicting:  14%|█▎        | 34/250 [16:02<1:42:32, 28.48s/it]resp:  ['True, because a man in a business suit crossing the street is not necessarily walking to']
+Predicting:  14%|█▍        | 35/250 [16:30<1:42:21, 28.57s/it]resp:  ['True, because the swimmers are in a pool.']
+Predicting:  14%|█▍        | 36/250 [16:58<1:40:36, 28.21s/it]resp:  ['True, because the dog is standing in a grassy sand dune.']
+Predicting:  15%|█▍        | 37/250 [17:27<1:40:49, 28.40s/it]resp:  ['False, because a crossing guard is not standing on the sidewalk.']
+Predicting:  15%|█▌        | 38/250 [17:55<1:40:10, 28.35s/it]resp:  ['True, because the woman is wearing a gray top and a purple headband and plays']
+Predicting:  16%|█▌        | 39/250 [18:24<1:40:23, 28.55s/it]resp:  ['False, because the horses cannot be in their stables and riding past each other at']
+Predicting:  16%|█▌        | 40/250 [18:53<1:40:05, 28.60s/it]resp:  ['False, because the women are not tossed pennies into the fountain.']
+Predicting:  16%|█▋        | 41/250 [19:21<1:39:55, 28.69s/it]resp:  ['True, because dogs swimming is the same as dogs in water.']
+Predicting:  17%|█▋        | 42/250 [19:48<1:37:39, 28.17s/it]resp:  ['True, because the dogs are drinking from a public spigot.']
+Predicting:  17%|█▋        | 43/250 [20:17<1:37:27, 28.25s/it]resp:  ['True, because a boy walks through water does not imply that he walks through water']
+Predicting:  18%|█▊        | 44/250 [20:46<1:37:32, 28.41s/it]resp:  ['True, because a soccer player is a person and a soccer ball is a']
+Predicting:  18%|█▊        | 45/250 [21:15<1:38:00, 28.69s/it]resp:  ['True, because the people are dressed in bright colors and are conducting a ritual.']
+Predicting:  18%|█▊        | 46/250 [21:43<1:37:24, 28.65s/it]resp:  ['Neither, because the outfits are not necessarily all black.']
+Predicting:  19%|█▉        | 47/250 [22:11<1:35:47, 28.31s/it]resp:  ['False, because players are not sitting on the bench during a fight.']
+Predicting:  19%|█▉        | 48/250 [22:39<1:35:16, 28.30s/it]resp:  ['Neither, because the boy is not necessarily waiting for his captor.']
+Predicting:  20%|█▉        | 49/250 [23:08<1:35:15, 28.43s/it]resp:  ['True, because the dog is in front of a waterfall.']
+Predicting:  20%|██        | 50/250 [23:35<1:33:45, 28.13s/it]resp:  ['True, because a man and a woman are a couple.']
+Predicting:  20%|██        | 51/250 [24:04<1:33:16, 28.12s/it]resp:  ['True, because a boy sliding into home plate while playing baseball is a boy playing baseball']
+Predicting:  21%|██        | 52/250 [24:32<1:33:22, 28.29s/it]resp:  ['True, because he is washing his hair, brushing his teeth, and shaving his face']
+Predicting:  21%|██        | 53/250 [25:01<1:33:28, 28.47s/it]resp:  ['True, because the men are kicking each other without making contact.']
+Predicting:  22%|██▏       | 54/250 [25:29<1:32:50, 28.42s/it]resp:  ['False, because there are two people jogging and a man stretches']
+Predicting:  22%|██▏       | 55/250 [25:59<1:33:32, 28.78s/it]resp:  ['True, because a man is sitting and eating steak.']
+Predicting:  22%|██▏       | 56/250 [26:26<1:31:18, 28.24s/it]resp:  ['True, because a maintenance worker is a person and a small girl is a']
+Predicting:  23%|██▎       | 57/250 [26:55<1:31:47, 28.54s/it]resp:  ['True, because the girl sat on the bench.']
+Predicting:  23%|██▎       | 58/250 [27:23<1:30:16, 28.21s/it]resp:  ['True, because martial arts is a sport in the Olympics.']
+Predicting:  24%|██▎       | 59/250 [27:50<1:29:08, 28.00s/it]resp:  ['True, because the older man is a father and the younger man is a son.']
+Predicting:  24%|██▍       | 60/250 [28:19<1:29:39, 28.31s/it]resp:  ['True, because the women are models and the paparazzi is a photographer.']
+Predicting:  24%|██▍       | 61/250 [28:48<1:29:54, 28.54s/it]resp:  ['True, because a girl is a lady and a table is a place to']
+Predicting:  25%|██▍       | 62/250 [29:17<1:29:49, 28.67s/it]resp:  ['True, because they are holding hands in a crowd of people.']
+Predicting:  25%|██▌       | 63/250 [29:45<1:28:49, 28.50s/it]resp:  ['True, because they are walking down a dock to board a cruise ship.']
+Predicting:  26%|██▌       | 64/250 [30:14<1:28:30, 28.55s/it]resp:  ['False, because water wings are not required for swimming.']
+Predicting:  26%|██▌       | 65/250 [30:42<1:27:12, 28.28s/it]resp:  ['False, because they are not necessarily cooking a big meal for dinner.']
+Predicting:  26%|██▋       | 66/250 [31:10<1:26:55, 28.34s/it]resp:  ['True, because two people are playing pool.']
+Predicting:  27%|██▋       | 67/250 [31:36<1:24:21, 27.66s/it]resp:  ['True, because a blond woman is a female and golf balls are golf balls']
+Predicting:  27%|██▋       | 68/250 [32:05<1:25:04, 28.05s/it]resp:  ['False, because the men are standing behind a wall that is higher than them.']
+Predicting:  28%|██▊       | 69/250 [32:34<1:25:15, 28.26s/it]resp:  ['False, because toddlers are not one person and he cannot be playing with toys']
+Predicting:  28%|██▊       | 70/250 [33:03<1:25:08, 28.38s/it]resp:  ['False, because the men cannot leap into the air and lay on their bellies at']
+Predicting:  28%|██▊       | 71/250 [33:32<1:25:20, 28.60s/it]resp:  ['True, because the soldiers are telling the warlord to surrender.']
+Predicting:  29%|██▉       | 72/250 [34:00<1:24:32, 28.50s/it]resp:  ['False, because the woman has dark hair and a shirt on.']
+Predicting:  29%|██▉       | 73/250 [34:28<1:23:55, 28.45s/it]resp:  ['False, because the couch is pointed toward the back and not the front.']
+Predicting:  30%|██▉       | 74/250 [34:58<1:24:28, 28.80s/it]resp:  ['False, because cricket is not a baseball game.']
+Predicting:  30%|███       | 75/250 [35:25<1:22:45, 28.38s/it]resp:  ['False, because the climber is not wearing a pink shirt.']
+Predicting:  30%|███       | 76/250 [35:54<1:22:41, 28.51s/it]resp:  ['True, because pedestrians are people and a walkway is a walkway.']
+Predicting:  31%|███       | 77/250 [36:22<1:21:53, 28.40s/it]resp:  ['True, because people gathered together watching something does not imply that they are friends.']
+Predicting:  31%|███       | 78/250 [36:51<1:21:32, 28.45s/it]resp:  ['True, because a bowl and platter are food and a table is covered with a']
+Predicting:  32%|███▏      | 79/250 [37:20<1:21:28, 28.58s/it]resp:  ['True, because the woman is at an airport with her luggage.']
+Predicting:  32%|███▏      | 80/250 [37:47<1:19:51, 28.18s/it]resp:  ['True, because the children are running past their parents.']
+Predicting:  32%|███▏      | 81/250 [38:14<1:18:04, 27.72s/it]resp:  ['True, because the dog is running through the woods.']
+Predicting:  33%|███▎      | 82/250 [38:41<1:17:08, 27.55s/it]resp:  ['False, because the girl is sliding down the water slide and no one is sliding down']
+Predicting:  33%|███▎      | 83/250 [39:10<1:17:40, 27.91s/it]resp:  ['True, because skydiving is a form of jumping from a plane.']
+Predicting:  34%|███▎      | 84/250 [39:38<1:17:36, 28.05s/it]resp:  ['True, because the dog is walking to the fence.']
+Predicting:  34%|███▍      | 85/250 [40:05<1:16:07, 27.68s/it]resp:  ['True, because he is inhaling is a rephrasing of smoking']
+Predicting:  34%|███▍      | 86/250 [40:33<1:16:22, 27.94s/it]resp:  ['True, because he is taking a phone call and he is taking an order on']
+Predicting:  35%|███▍      | 87/250 [41:03<1:17:09, 28.40s/it]resp:  ['True, because the woman is having a drink with a friend.']
+Predicting:  35%|███▌      | 88/250 [41:32<1:17:12, 28.60s/it]resp:  ['True, because there are a group of guys sitting in a circle and there are no']
+Predicting:  36%|███▌      | 89/250 [42:01<1:16:56, 28.68s/it]resp:  ['True, because the people are looking at the parade in the street.']
+Predicting:  36%|███▌      | 90/250 [42:29<1:15:52, 28.46s/it]resp:  ['True, because the man is playing an acoustic guitar while others are walking down']
+Predicting:  36%|███▋      | 91/250 [42:58<1:16:27, 28.85s/it]resp:  ['True, because the man is climbing a cliff wall, over a rocky shore']
+Predicting:  37%|███▋      | 92/250 [43:28<1:16:10, 28.93s/it]resp:  ['Neither, because the blond woman is walking and not necessarily toward the gas station.']
+Predicting:  37%|███▋      | 93/250 [43:57<1:15:49, 28.98s/it]resp:  ['True, because a bridal party is posing for a picture outdoors does not ']
+Predicting:  38%|███▊      | 94/250 [44:26<1:15:23, 29.00s/it]resp:  ['True, because men are humans and outfits are a type of outfit.']
+Predicting:  38%|███▊      | 95/250 [44:54<1:14:14, 28.74s/it]resp:  ['True, because a man reading outdoors is not necessarily in a big city.']
+Predicting:  38%|███▊      | 96/250 [45:22<1:13:28, 28.63s/it]resp:  ['True, because a boy is walking around on the grass.']
+Predicting:  39%|███▉      | 97/250 [45:50<1:12:01, 28.24s/it]resp:  ['True, because if a girl is riding on a carousel then the']
+Predicting:  39%|███▉      | 98/250 [46:19<1:12:11, 28.49s/it]resp:  ['True, because a man with a tattoo on his left arm is a chef.']
+Predicting:  40%|███▉      | 99/250 [46:48<1:12:06, 28.65s/it]resp:  ['True, because Santa Claus is the center of attention at a holiday media event.']
+Predicting:  40%|████      | 100/250 [47:17<1:11:53, 28.76s/it]resp:  ['False, because if there is a crowd outside then it is not empty.']
+Predicting:  40%|████      | 101/250 [47:46<1:11:48, 28.92s/it]resp:  ['False, because the devil is not worshiped by people in the United States']
+Predicting:  41%|████      | 102/250 [48:15<1:11:40, 29.06s/it]resp:  ['Neither, because the woman is not necessarily looking perplexed at a confusing picture']
+Predicting:  41%|████      | 103/250 [48:45<1:11:28, 29.17s/it]resp:  ['True, because the brunette woman is holding a wineglass and she is talking while holding']
+Predicting:  42%|████▏     | 104/250 [49:14<1:11:03, 29.20s/it]resp:  ['True, because a woman is chopping carrots.']
+Predicting:  42%|████▏     | 105/250 [49:42<1:09:43, 28.85s/it]resp:  ['Neither, because the dog is not necessarily swimming to its owner.']
+Predicting:  42%|████▏     | 106/250 [50:10<1:08:45, 28.65s/it]resp:  ['False, because the kids are running on the grass and they are not sitting down.']
+Predicting:  43%|████▎     | 107/250 [50:40<1:08:50, 28.88s/it]resp:  ['Neither, because the employee is not necessarily making his lunch.']
+Predicting:  43%|████▎     | 108/250 [51:07<1:07:23, 28.47s/it]resp:  ['True, because peppermints are a candy and a sculpture is a form']
+Predicting:  44%|████▎     | 109/250 [51:37<1:07:37, 28.78s/it]resp:  ['True, because the band is playing on stage at a concert and the attendants are dancing']
+Predicting:  44%|████▍     | 110/250 [52:06<1:07:19, 28.85s/it]resp:  ['True, because shopping for orange juice implies that the men are at the store.']
+Predicting:  44%|████▍     | 111/250 [52:34<1:06:36, 28.75s/it]resp:  ['True, because the woman cuts fabric flowers in a market while a crowd watches.']
+Predicting:  45%|████▍     | 112/250 [53:04<1:06:41, 29.00s/it]resp:  ['True, because the two people are talking to each other.']
+Predicting:  45%|████▌     | 113/250 [53:32<1:05:27, 28.67s/it]resp:  ['True, because the water is clear blue and the man and girl are in the water.']
+Predicting:  46%|████▌     | 114/250 [54:03<1:06:28, 29.33s/it]resp:  ['False, because the two men are sitting on public transportation and they step off the bus']
+Predicting:  46%|████▌     | 115/250 [54:32<1:06:08, 29.40s/it]resp:  ['False, because the man is not blond and he is not doing laundry']
+Predicting:  46%|████▋     | 116/250 [55:01<1:05:37, 29.38s/it]resp:  ['False, because basketball is not the same as soccer.']
+Predicting:  47%|████▋     | 117/250 [55:29<1:04:06, 28.92s/it]resp:  ['False, because he is not in deep concentration and he is not asleep.']
+Predicting:  47%|████▋     | 118/250 [55:59<1:04:13, 29.20s/it]resp:  ['True, because the girls are looking at Barbie dolls and one girl is showing another her Barbie']
+Predicting:  48%|████▊     | 119/250 [56:28<1:03:46, 29.21s/it]resp:  ['True, because the man and woman are hugging and kissing in a park with flower']
+Predicting:  48%|████▊     | 120/250 [56:58<1:03:27, 29.29s/it]resp:  ['Neither, because the women are not necessarily sisters and the women are not necessarily hugging goodbye']
+Predicting:  48%|████▊     | 121/250 [57:27<1:03:03, 29.33s/it]resp:  ['True, because the person has beer bottles and has a england flag and glasses']
+Predicting:  49%|████▉     | 122/250 [57:57<1:02:39, 29.37s/it]resp:  ['True, because the girl and lady are dressed up and there is a party atmosphere.']
+Predicting:  49%|████▉     | 123/250 [58:26<1:02:15, 29.42s/it]resp:  ['True, because a man and a woman hug is a rephrasing']
+Predicting:  50%|████▉     | 124/250 [58:56<1:01:43, 29.39s/it]resp:  ['Neither, because the car is not necessarily expensive and the car is not necessarily at a']
+Predicting:  50%|█████     | 125/250 [59:25<1:01:12, 29.38s/it]resp:  ['Neither, because the dog is not necessarily practicing balancing on one leg.']
+Predicting:  50%|█████     | 126/250 [59:54<1:00:35, 29.32s/it]resp:  ['True, because a man brushes his hair is true.']
+Predicting:  51%|█████     | 127/250 [1:00:22<58:54, 28.73s/it]resp:  ['False, because a woman is holding one young children with another standing next to her']
+Predicting:  51%|█████     | 128/250 [1:00:51<58:53, 28.96s/it]resp:  ['True, because the boy is behind a tree so he must be hiding outside.']
+Predicting:  52%|█████▏    | 129/250 [1:01:20<58:43, 29.12s/it]resp:  ["False, because the people can't be in a truck and outside a"]
+Predicting:  52%|█████▏    | 130/250 [1:01:50<58:26, 29.22s/it]resp:  ['Neither, because the girl is not necessarily in the lead for a cross country bicycle race']
+Predicting:  52%|█████▏    | 131/250 [1:02:20<58:10, 29.33s/it]resp:  ['True, because the nun is taking pictures of an interesting site.']
+Predicting:  53%|█████▎    | 132/250 [1:02:47<56:46, 28.87s/it]resp:  ['False, because there are no male cheerleaders in the picture.']
+Predicting:  53%|█████▎    | 133/250 [1:03:16<56:15, 28.85s/it]resp:  ['True, because he is wearing headphones and he is listening to headphones.']
+Predicting:  54%|█████▎    | 134/250 [1:03:45<55:54, 28.92s/it]resp:  ['True, because the dogs are in a grassy field so they must be outdoors.']
+Predicting:  54%|█████▍    | 135/250 [1:04:15<55:47, 29.11s/it]resp:  ['False, because people are not running through fire while looking at books.']
+Predicting:  54%|█████▍    | 136/250 [1:04:44<55:10, 29.04s/it]resp:  ['True, because a dog running on grass is a rephrasing of ']
+Predicting:  55%|█████▍    | 137/250 [1:05:13<54:46, 29.08s/it]resp:  ['Neither, because the boy is not at a birthday party and the boy is not in']
+Predicting:  55%|█████▌    | 138/250 [1:05:42<54:27, 29.17s/it]resp:  ['False, because the kids are at the park and not home.']
+Predicting:  56%|█████▌    | 139/250 [1:06:11<53:33, 28.95s/it]resp:  ['True, because a bride is taking wedding pictures with her wedding bouquet.']
+Predicting:  56%|█████▌    | 140/250 [1:06:39<52:52, 28.84s/it]resp:  ['True, because a man is sitting beside a bunch of material while sewing is a']
+Predicting:  56%|█████▋    | 141/250 [1:07:09<52:43, 29.02s/it]resp:  ['False, because a man is not dancing at the club popping bottles.']
+Predicting:  57%|█████▋    | 142/250 [1:07:38<52:24, 29.12s/it]resp:  ['True, because the people clap for the bikers.']
+Predicting:  57%|█████▋    | 143/250 [1:08:06<51:28, 28.86s/it]resp:  ['True, because a band is performing on stage for people.']
+Predicting:  58%|█████▊    | 144/250 [1:08:34<50:25, 28.54s/it]resp:  ['True, because the children are listening to the security guard.']
+Predicting:  58%|█████▊    | 145/250 [1:09:01<49:21, 28.20s/it]resp:  ['False, because a man riding a motorcycle is not necessarily a man parti']
+Predicting:  58%|█████▊    | 146/250 [1:09:31<49:23, 28.49s/it]resp:  ['True, because a snowboarder in the air after a jump is a re']
+Predicting:  59%|█████▉    | 147/250 [1:10:00<49:29, 28.83s/it]resp:  ['True, because the bandanna is a fashion accessory and the woman is sitting at a']
+Predicting:  59%|█████▉    | 148/250 [1:10:30<49:18, 29.01s/it]resp:  ['False, because the kids are reading music off their papers.']
+Predicting:  60%|█████▉    | 149/250 [1:10:58<48:32, 28.83s/it]resp:  ['False, because the t-shirt is not moldy and the man is not']
+Predicting:  60%|██████    | 150/250 [1:11:27<48:16, 28.97s/it]resp:  ['False, because there is a food vendor in the park so the park is not']
+Predicting:  60%|██████    | 151/250 [1:11:57<48:02, 29.12s/it]resp:  ['False, because the people are not having drinks while they discuss a business plan.']
+Predicting:  61%|██████    | 152/250 [1:12:26<47:42, 29.21s/it]resp:  ['True, because the two teams are wearing different colors.']
+Predicting:  61%|██████    | 153/250 [1:12:53<46:13, 28.60s/it]resp:  ['True, because a vendor is a seller and a cart is a vehicle.']
+Predicting:  62%|██████▏   | 154/250 [1:13:23<46:02, 28.78s/it]resp:  ['True, because the players are playing in the mud.']
+Predicting:  62%|██████▏   | 155/250 [1:13:50<44:54, 28.37s/it]resp:  ['False, because a limo is not a truck.']
+Predicting:  62%|██████▏   | 156/250 [1:14:19<44:39, 28.51s/it]resp:  ['True, because teenagers are a group of people.']
+Predicting:  63%|██████▎   | 157/250 [1:14:47<43:48, 28.26s/it]resp:  ['True, because the player in white is throwing the ball in while teammates look on means they are']
+Predicting:  63%|██████▎   | 158/250 [1:15:16<43:51, 28.60s/it]resp:  ['False, because the man is wearing a gray long-sleeved']
+Predicting:  64%|██████▎   | 159/250 [1:15:46<43:49, 28.90s/it]resp:  ['True, because there are plates with food on them.']
+Predicting:  64%|██████▍   | 160/250 [1:16:14<43:01, 28.68s/it]resp:  ['False, because the child is jumping into the pool and not swimming.']
+Predicting:  64%|██████▍   | 161/250 [1:16:43<42:36, 28.72s/it]resp:  ['False, because the duo are not singing a song.']
+Predicting:  65%|██████▍   | 162/250 [1:17:11<42:07, 28.72s/it]resp:  ['False, because a mop is not used to chase animals.']
+Predicting:  65%|██████▌   | 163/250 [1:17:40<41:33, 28.66s/it]resp:  ['True, because a woman cuts fabric flowers inside a market.']
+Predicting:  66%|██████▌   | 164/250 [1:18:08<41:00, 28.61s/it]resp:  ['True, because the man is protected from the sun by an umbrella.']
+Predicting:  66%|██████▌   | 165/250 [1:18:36<40:16, 28.43s/it]resp:  ['True, because a man is yelling at a party is a ']
+Predicting:  66%|██████▋   | 166/250 [1:19:06<40:22, 28.84s/it]resp:  ["False, because there is a woman in the children's room and the children"]
+Predicting:  67%|██████▋   | 167/250 [1:19:36<40:11, 29.05s/it]resp:  ['True, because the toddler is playing with toys on the floor.']
+Predicting:  67%|██████▋   | 168/250 [1:20:04<39:25, 28.85s/it]resp:  ['True, because the toddler is playing with a train set.']
+Predicting:  68%|██████▊   | 169/250 [1:20:32<38:34, 28.57s/it]resp:  ['True, because the people are sitting down near a stand filled with purses.']
+Predicting:  68%|██████▊   | 170/250 [1:21:01<38:16, 28.71s/it]resp:  ['Neither, because the man is not tall.']
+Predicting:  68%|██████▊   | 171/250 [1:21:28<37:10, 28.23s/it]resp:  ['True, because the person is sitting under a tree.']
+Predicting:  69%|██████▉   | 172/250 [1:21:56<36:26, 28.03s/it]resp:  ['True, because the man is shampooing his hair in a shower with a ducky']
+Predicting:  69%|██████▉   | 173/250 [1:22:25<36:34, 28.50s/it]resp:  ['True, because a woman walks by a brick building means she is outside.']
+Predicting:  70%|██████▉   | 174/250 [1:22:54<36:17, 28.65s/it]resp:  ['True, because the kid is jumping off a brick balcony.']
+Predicting:  70%|███████   | 175/250 [1:23:23<35:39, 28.53s/it]resp:  ['False, because a boat is not a yacht.']
+Predicting:  70%|███████   | 176/250 [1:23:51<35:00, 28.38s/it]resp:  ['Neither, because a jockey riding a dark brown horse in a gallop']
+Predicting:  71%|███████   | 177/250 [1:24:21<35:08, 28.88s/it]resp:  ['False, because he is jumping and not standing still.']
+Predicting:  71%|███████   | 178/250 [1:24:49<34:22, 28.64s/it]resp:  ['True, because the men are in a bar smoking cigars.']
+Predicting:  72%|███████▏  | 179/250 [1:25:17<33:43, 28.50s/it]resp:  ['False, because dogs cannot be playing in the snow and sleeping by the fireplace at the']
+Predicting:  72%|███████▏  | 180/250 [1:25:46<33:27, 28.67s/it]resp:  ['False, because Home Depot is not a place where women shop.']
+Predicting:  72%|███████▏  | 181/250 [1:26:15<32:58, 28.67s/it]resp:  ['True, because the girl is eating cake outside.']
+Predicting:  73%|███████▎  | 182/250 [1:26:41<31:49, 28.08s/it]resp:  ['True, because several men on stage is the same as men on stage.']
+Predicting:  73%|███████▎  | 183/250 [1:27:10<31:25, 28.15s/it]resp:  ['False, because he is jumping off a height and not off a ']
+Predicting:  74%|███████▎  | 184/250 [1:27:39<31:22, 28.52s/it]resp:  ['False, because the young man is not necessarily photographing the Rocky Mountains.']
+Predicting:  74%|███████▍  | 185/250 [1:28:08<31:09, 28.76s/it]resp:  ['True, because the tourist is interacting with a New York City street performer.']
+Predicting:  74%|███████▍  | 186/250 [1:28:38<30:56, 29.01s/it]resp:  ['True, because he is bowling for one pin with a ball outside.']
+Predicting:  75%|███████▍  | 187/250 [1:29:07<30:29, 29.04s/it]resp:  ['False, because the men are either raking lives or watering roses.']
+Predicting:  75%|███████▌  | 188/250 [1:29:36<30:08, 29.17s/it]resp:  ['False, because the dog is alive and has a ball in its mouth.']
+Predicting:  76%|███████▌  | 189/250 [1:30:06<29:42, 29.22s/it]resp:  ['True, because the children are sleeping which means they are tired.']
+Predicting:  76%|███████▌  | 190/250 [1:30:34<28:47, 28.79s/it]resp:  ['False, because 2pac is not a woman and a concert is not at']
+Predicting:  76%|███████▋  | 191/250 [1:31:03<28:29, 28.97s/it]resp:  ['True, because the kid is laying in the snow on a cold day.']
+Predicting:  77%|███████▋  | 192/250 [1:31:32<28:04, 29.04s/it]resp:  ['True, because the game is on the floor of a living room.']
+Predicting:  77%|███████▋  | 193/250 [1:32:01<27:28, 28.92s/it]resp:  ['True, because the workers are hauling the cones through the snow.']
+Predicting:  78%|███████▊  | 194/250 [1:32:30<26:55, 28.85s/it]resp:  ['False, because the men are either playing soccer or posing around a table']
+Predicting:  78%|███████▊  | 195/250 [1:32:59<26:37, 29.04s/it]resp:  ['False, because the woman is in a crowded city but not necessarily in ']
+Predicting:  78%|███████▊  | 196/250 [1:33:28<26:11, 29.10s/it]resp:  ['True, because the dog is brown and he is licking his nose.']
+Predicting:  79%|███████▉  | 197/250 [1:33:57<25:43, 29.12s/it]resp:  ['True, because five women sit at a table is a rephrasing of']
+Predicting:  79%|███████▉  | 198/250 [1:34:27<25:19, 29.21s/it]resp:  ['True, because a biker is a person and a shirt is a type']
+Predicting:  80%|███████▉  | 199/250 [1:34:56<24:52, 29.26s/it]resp:  ['Neither, because the woman is not necessarily tall.']
+Predicting:  80%|████████  | 200/250 [1:35:24<23:56, 28.72s/it]resp:  ['False, because the girl is not chewing on paper.']
+Predicting:  80%|████████  | 201/250 [1:35:52<23:19, 28.56s/it]resp:  ['Neither, because the silhouette is not scary and the children are not scared.']
+Predicting:  81%|████████  | 202/250 [1:36:21<22:54, 28.64s/it]resp:  ['True, because the individuals are beating a bread dough on the table.']
+Predicting:  81%|████████  | 203/250 [1:36:49<22:26, 28.64s/it]resp:  ['True, because motorcyclists are people and racing is a synonym for racing.']
+Predicting:  82%|████████▏ | 204/250 [1:37:19<22:07, 28.85s/it]resp:  ['False, because he is jumping in front of the building and not dancing around the']
+Predicting:  82%|████████▏ | 205/250 [1:37:48<21:45, 29.01s/it]resp:  ['True, because vanilla is the most common flavor of ice cream.']
+Predicting:  82%|████████▏ | 206/250 [1:38:16<21:07, 28.80s/it]resp:  ['True, because the man and woman are pictured from behind sitting close together on a couch']
+Predicting:  83%|████████▎ | 207/250 [1:38:46<20:48, 29.02s/it]resp:  ["False, because the girl can't be running and sitting at the same time."]
+Predicting:  83%|████████▎ | 208/250 [1:39:15<20:25, 29.18s/it]resp:  ['False, because he is rollerblading and not doing yoga.']
+Predicting:  84%|████████▎ | 209/250 [1:39:45<19:56, 29.19s/it]resp:  ['Neither, because the poster is not necessarily for a team.']
+Predicting:  84%|████████▍ | 210/250 [1:40:13<19:18, 28.96s/it]resp:  ['False, because a blind woman cannot see.']
+Predicting:  84%|████████▍ | 211/250 [1:40:41<18:33, 28.54s/it]resp:  ['False, because the brunette woman is standing in front of a wall with graffiti']
+Predicting:  85%|████████▍ | 212/250 [1:41:10<18:15, 28.84s/it]resp:  ['Neither, because the young man is not necessarily adored by the crowd.']
+Predicting:  85%|████████▌ | 213/250 [1:41:39<17:51, 28.97s/it]resp:  ['False, because the lady and man are not a brother and sister.']
+Predicting:  86%|████████▌ | 214/250 [1:42:09<17:28, 29.11s/it]resp:  ['True, because the group at the party is outside.']
+Predicting:  86%|████████▌ | 215/250 [1:42:36<16:38, 28.53s/it]resp:  ['True, because the two women are older than the two younger women.']
+Predicting:  86%|████████▋ | 216/250 [1:43:04<16:05, 28.40s/it]resp:  ['False, because the girl is wearing a yellow dress and black slippers.']
+Predicting:  87%|████████▋ | 217/250 [1:43:33<15:46, 28.67s/it]resp:  ['True, because dogs are not necessarily puppies.']
+Predicting:  87%|████████▋ | 218/250 [1:44:00<14:58, 28.08s/it]resp:  ['True, because the boy is holding a camera.']
+Predicting:  88%|████████▊ | 219/250 [1:44:27<14:23, 27.84s/it]resp:  ['True, because a person powerwashing stairs is a rephrasing of']
+Predicting:  88%|████████▊ | 220/250 [1:44:57<14:09, 28.32s/it]resp:  ['True, because the girl is paddling a rusty canoe in the water']
+Predicting:  88%|████████▊ | 221/250 [1:45:26<13:50, 28.65s/it]resp:  ['True, because the girl is walking over a path of numbers so she must be outside.']
+Predicting:  89%|████████▉ | 222/250 [1:45:56<13:26, 28.82s/it]resp:  ['False, because a microscope is not the same as a scope.']
+Predicting:  89%|████████▉ | 223/250 [1:46:24<12:57, 28.81s/it]resp:  ['False, because the mask is not green.']
+Predicting:  90%|████████▉ | 224/250 [1:46:51<12:15, 28.30s/it]resp:  ['True, because the girl is dancing in a field and she is not necessarily happy.']
+Predicting:  90%|█████████ | 225/250 [1:47:21<11:56, 28.65s/it]resp:  ['False, because the dog has a ball in its mouth and not a bone']
+Predicting:  90%|█████████ | 226/250 [1:47:50<11:32, 28.84s/it]resp:  ['False, because a person cooking on a fire while a small child watches']
+Predicting:  91%|█████████ | 227/250 [1:48:20<11:08, 29.07s/it]resp:  ['False, because it is night time and not day time.']
+Predicting:  91%|█████████ | 228/250 [1:48:48<10:32, 28.74s/it]resp:  ['Neither, because the dog is running in the snow but it is not necessarily to chase ']
+Predicting:  92%|█████████▏| 229/250 [1:49:17<10:09, 29.00s/it]resp:  ['True, because the two people are in a dense jungle area so they must be outside.']
+Predicting:  92%|█████████▏| 230/250 [1:49:47<09:41, 29.06s/it]resp:  ['False, because a girl cannot be drinking and sleeping at the same time.']
+Predicting:  92%|█████████▏| 231/250 [1:50:16<09:15, 29.23s/it]resp:  ['Neither, because Final Fantasy is not the only game that can be played by an Asian ']
+Predicting:  93%|█████████▎| 232/250 [1:50:45<08:45, 29.20s/it]resp:  ['True, because two men are standing near each other in an alley.']
+Predicting:  93%|█████████▎| 233/250 [1:51:14<08:12, 28.97s/it]resp:  ['True, because a jockey riding a horse in a gallop is a']
+Predicting:  94%|█████████▎| 234/250 [1:51:43<07:45, 29.12s/it]resp:  ['True, because he is on a skateboard in the middle of the street.']
+Predicting:  94%|█████████▍| 235/250 [1:52:13<07:19, 29.27s/it]resp:  ['False, because a boy cannot be sleeping and doing a trick at the same']
+Predicting:  94%|█████████▍| 236/250 [1:52:42<06:50, 29.34s/it]resp:  ['Neither, because he may not be wondering what cereal to buy his children.']
+Predicting:  95%|█████████▍| 237/250 [1:53:11<06:20, 29.27s/it]resp:  ['False, because a newspaper is not the same as a magazine.']
+Predicting:  95%|█████████▌| 238/250 [1:53:41<05:50, 29.21s/it]resp:  ['False, because the people are not at home if they are in a gymnas']
+Predicting:  96%|█████████▌| 239/250 [1:54:10<05:20, 29.17s/it]resp:  ['True, because the woman and child are playing hide and go seek.']
+Predicting:  96%|█████████▌| 240/250 [1:54:38<04:48, 28.82s/it]resp:  ['True, because the man and woman are both smiling.']
+Predicting:  96%|█████████▋| 241/250 [1:55:05<04:15, 28.36s/it]resp:  ['True, because the pie is fresh and the girl is dressed up.']
+Predicting:  97%|█████████▋| 242/250 [1:55:34<03:48, 28.51s/it]resp:  ['True, because the kids are playing on a tire swing does not imply that they are']
+Predicting:  97%|█████████▋| 243/250 [1:56:03<03:21, 28.74s/it]resp:  ['False, because there are workers lifting a bathtub.']
+Predicting:  98%|█████████▊| 244/250 [1:56:31<02:51, 28.51s/it]resp:  ['False, because a low country boil is a type of stew.']
+Predicting:  98%|█████████▊| 245/250 [1:57:00<02:23, 28.68s/it]resp:  ['Neither, because the man is not necessarily an artist and the man is not necessarily finishing his']
+Predicting:  98%|█████████▊| 246/250 [1:57:30<01:55, 28.98s/it]resp:  ['True, because the man is feeding the birds bread.']
+Predicting:  99%|█████████▉| 247/250 [1:57:57<01:25, 28.46s/it]resp:  ['True, because the woman is dressed in a blue tennis outfit and is returning a hit']
+Predicting:  99%|█████████▉| 248/250 [1:58:26<00:57, 28.77s/it]resp:  ['False, because the woman is not riding the bike.']
+Predicting: 100%|█████████▉| 249/250 [1:58:54<00:28, 28.49s/it]resp:  ['False, because the person is sitting in front of the port-o-potties']
+Predicting: 100%|██████████| 250/250 [1:59:24<00:00, 28.88s/it]Predicting: 100%|██████████| 250/250 [1:59:24<00:00, 28.66s/it]
+[['False, because a naked man is not sitting with his eyes closed.'], ['False, because the two people are not dead and they are still sword fighting.'], ['Neither, because the people are playing a game on a hot summer day.'], ['True, because the dog is catching a Frisbee in the park with '], ['True, because the people are sitting on the benches outside a building.'], ['True, because people canoeing in a stream implies that they are outdoors.'], ['True, because a female is a lady and looking through a microscope is a'], ['True, because walking down the street is the same as strolling outside.'], ['False, because a mountain is not a person and a mountain is not'], ['True, because the children are listening to the guard.'], ['True, because the cyclists are participating in an organized event and the two women are cyclists'], ['False, because a man in swimming trunks is not surfing out on the ocean'], ['False, because the girls are either sitting on the ground or tagging out '], ['True, because the boy is standing on the corner and the men are engaged in some activity.'], ['False, because the cheerleaders are standing on the shoulders of other cheerleaders'], ['True, because the two people are dressed up as zombies.'], ['False, because cats are not dogs and a dog is not a cat.'], ['True, because the women look at something on a cellphone screen implies they are near the cellphone'], ['True, because a woman is standing at a podium with a slide show behind her'], ['False, because the bike is not in the garage if the man is performing tricks'], ['True, because a woman walking across the street implies that she is outside.'], ['False, because the players are either sitting on the bench or standing on the basketball court'], ['True, because a girl is a child and blowing up a balloon is the'], ['True, because the women are Asian and the umbrellas are a sign of rain.'], ['True, because the lady is carrying a big bag.'], ['True, because a man hitting a baseball in a field of grass implies he'], ["True, because the women are cutting another woman's shirt while riding a bus."], ['True, because the man is wearing sunglasses and is holding a young person.'], ['True, because the people are getting money from an ATM.'], ['True, because the child is holding an airplane and it is a toy.'], ['Neither, because the men are not necessarily trying to clear out the road.'], ['True, because the girl wears a tutu.'], ['True, because the woman is placing an ingredient from a glass jar.'], ['False, because the women are not on a cruise and they are not sitting around'], ['True, because a man in a business suit crossing the street is not necessarily walking to'], ['True, because the swimmers are in a pool.'], ['True, because the dog is standing in a grassy sand dune.'], ['False, because a crossing guard is not standing on the sidewalk.'], ['True, because the woman is wearing a gray top and a purple headband and plays'], ['False, because the horses cannot be in their stables and riding past each other at'], ['False, because the women are not tossed pennies into the fountain.'], ['True, because dogs swimming is the same as dogs in water.'], ['True, because the dogs are drinking from a public spigot.'], ['True, because a boy walks through water does not imply that he walks through water'], ['True, because a soccer player is a person and a soccer ball is a'], ['True, because the people are dressed in bright colors and are conducting a ritual.'], ['Neither, because the outfits are not necessarily all black.'], ['False, because players are not sitting on the bench during a fight.'], ['Neither, because the boy is not necessarily waiting for his captor.'], ['True, because the dog is in front of a waterfall.'], ['True, because a man and a woman are a couple.'], ['True, because a boy sliding into home plate while playing baseball is a boy playing baseball'], ['True, because he is washing his hair, brushing his teeth, and shaving his face'], ['True, because the men are kicking each other without making contact.'], ['False, because there are two people jogging and a man stretches'], ['True, because a man is sitting and eating steak.'], ['True, because a maintenance worker is a person and a small girl is a'], ['True, because the girl sat on the bench.'], ['True, because martial arts is a sport in the Olympics.'], ['True, because the older man is a father and the younger man is a son.'], ['True, because the women are models and the paparazzi is a photographer.'], ['True, because a girl is a lady and a table is a place to'], ['True, because they are holding hands in a crowd of people.'], ['True, because they are walking down a dock to board a cruise ship.'], ['False, because water wings are not required for swimming.'], ['False, because they are not necessarily cooking a big meal for dinner.'], ['True, because two people are playing pool.'], ['True, because a blond woman is a female and golf balls are golf balls'], ['False, because the men are standing behind a wall that is higher than them.'], ['False, because toddlers are not one person and he cannot be playing with toys'], ['False, because the men cannot leap into the air and lay on their bellies at'], ['True, because the soldiers are telling the warlord to surrender.'], ['False, because the woman has dark hair and a shirt on.'], ['False, because the couch is pointed toward the back and not the front.'], ['False, because cricket is not a baseball game.'], ['False, because the climber is not wearing a pink shirt.'], ['True, because pedestrians are people and a walkway is a walkway.'], ['True, because people gathered together watching something does not imply that they are friends.'], ['True, because a bowl and platter are food and a table is covered with a'], ['True, because the woman is at an airport with her luggage.'], ['True, because the children are running past their parents.'], ['True, because the dog is running through the woods.'], ['False, because the girl is sliding down the water slide and no one is sliding down'], ['True, because skydiving is a form of jumping from a plane.'], ['True, because the dog is walking to the fence.'], ['True, because he is inhaling is a rephrasing of smoking'], ['True, because he is taking a phone call and he is taking an order on'], ['True, because the woman is having a drink with a friend.'], ['True, because there are a group of guys sitting in a circle and there are no'], ['True, because the people are looking at the parade in the street.'], ['True, because the man is playing an acoustic guitar while others are walking down'], ['True, because the man is climbing a cliff wall, over a rocky shore'], ['Neither, because the blond woman is walking and not necessarily toward the gas station.'], ['True, because a bridal party is posing for a picture outdoors does not '], ['True, because men are humans and outfits are a type of outfit.'], ['True, because a man reading outdoors is not necessarily in a big city.'], ['True, because a boy is walking around on the grass.'], ['True, because if a girl is riding on a carousel then the'], ['True, because a man with a tattoo on his left arm is a chef.'], ['True, because Santa Claus is the center of attention at a holiday media event.'], ['False, because if there is a crowd outside then it is not empty.'], ['False, because the devil is not worshiped by people in the United States'], ['Neither, because the woman is not necessarily looking perplexed at a confusing picture'], ['True, because the brunette woman is holding a wineglass and she is talking while holding'], ['True, because a woman is chopping carrots.'], ['Neither, because the dog is not necessarily swimming to its owner.'], ['False, because the kids are running on the grass and they are not sitting down.'], ['Neither, because the employee is not necessarily making his lunch.'], ['True, because peppermints are a candy and a sculpture is a form'], ['True, because the band is playing on stage at a concert and the attendants are dancing'], ['True, because shopping for orange juice implies that the men are at the store.'], ['True, because the woman cuts fabric flowers in a market while a crowd watches.'], ['True, because the two people are talking to each other.'], ['True, because the water is clear blue and the man and girl are in the water.'], ['False, because the two men are sitting on public transportation and they step off the bus'], ['False, because the man is not blond and he is not doing laundry'], ['False, because basketball is not the same as soccer.'], ['False, because he is not in deep concentration and he is not asleep.'], ['True, because the girls are looking at Barbie dolls and one girl is showing another her Barbie'], ['True, because the man and woman are hugging and kissing in a park with flower'], ['Neither, because the women are not necessarily sisters and the women are not necessarily hugging goodbye'], ['True, because the person has beer bottles and has a england flag and glasses'], ['True, because the girl and lady are dressed up and there is a party atmosphere.'], ['True, because a man and a woman hug is a rephrasing'], ['Neither, because the car is not necessarily expensive and the car is not necessarily at a'], ['Neither, because the dog is not necessarily practicing balancing on one leg.'], ['True, because a man brushes his hair is true.'], ['False, because a woman is holding one young children with another standing next to her'], ['True, because the boy is behind a tree so he must be hiding outside.'], ["False, because the people can't be in a truck and outside a"], ['Neither, because the girl is not necessarily in the lead for a cross country bicycle race'], ['True, because the nun is taking pictures of an interesting site.'], ['False, because there are no male cheerleaders in the picture.'], ['True, because he is wearing headphones and he is listening to headphones.'], ['True, because the dogs are in a grassy field so they must be outdoors.'], ['False, because people are not running through fire while looking at books.'], ['True, because a dog running on grass is a rephrasing of '], ['Neither, because the boy is not at a birthday party and the boy is not in'], ['False, because the kids are at the park and not home.'], ['True, because a bride is taking wedding pictures with her wedding bouquet.'], ['True, because a man is sitting beside a bunch of material while sewing is a'], ['False, because a man is not dancing at the club popping bottles.'], ['True, because the people clap for the bikers.'], ['True, because a band is performing on stage for people.'], ['True, because the children are listening to the security guard.'], ['False, because a man riding a motorcycle is not necessarily a man parti'], ['True, because a snowboarder in the air after a jump is a re'], ['True, because the bandanna is a fashion accessory and the woman is sitting at a'], ['False, because the kids are reading music off their papers.'], ['False, because the t-shirt is not moldy and the man is not'], ['False, because there is a food vendor in the park so the park is not'], ['False, because the people are not having drinks while they discuss a business plan.'], ['True, because the two teams are wearing different colors.'], ['True, because a vendor is a seller and a cart is a vehicle.'], ['True, because the players are playing in the mud.'], ['False, because a limo is not a truck.'], ['True, because teenagers are a group of people.'], ['True, because the player in white is throwing the ball in while teammates look on means they are'], ['False, because the man is wearing a gray long-sleeved'], ['True, because there are plates with food on them.'], ['False, because the child is jumping into the pool and not swimming.'], ['False, because the duo are not singing a song.'], ['False, because a mop is not used to chase animals.'], ['True, because a woman cuts fabric flowers inside a market.'], ['True, because the man is protected from the sun by an umbrella.'], ['True, because a man is yelling at a party is a '], ["False, because there is a woman in the children's room and the children"], ['True, because the toddler is playing with toys on the floor.'], ['True, because the toddler is playing with a train set.'], ['True, because the people are sitting down near a stand filled with purses.'], ['Neither, because the man is not tall.'], ['True, because the person is sitting under a tree.'], ['True, because the man is shampooing his hair in a shower with a ducky'], ['True, because a woman walks by a brick building means she is outside.'], ['True, because the kid is jumping off a brick balcony.'], ['False, because a boat is not a yacht.'], ['Neither, because a jockey riding a dark brown horse in a gallop'], ['False, because he is jumping and not standing still.'], ['True, because the men are in a bar smoking cigars.'], ['False, because dogs cannot be playing in the snow and sleeping by the fireplace at the'], ['False, because Home Depot is not a place where women shop.'], ['True, because the girl is eating cake outside.'], ['True, because several men on stage is the same as men on stage.'], ['False, because he is jumping off a height and not off a '], ['False, because the young man is not necessarily photographing the Rocky Mountains.'], ['True, because the tourist is interacting with a New York City street performer.'], ['True, because he is bowling for one pin with a ball outside.'], ['False, because the men are either raking lives or watering roses.'], ['False, because the dog is alive and has a ball in its mouth.'], ['True, because the children are sleeping which means they are tired.'], ['False, because 2pac is not a woman and a concert is not at'], ['True, because the kid is laying in the snow on a cold day.'], ['True, because the game is on the floor of a living room.'], ['True, because the workers are hauling the cones through the snow.'], ['False, because the men are either playing soccer or posing around a table'], ['False, because the woman is in a crowded city but not necessarily in '], ['True, because the dog is brown and he is licking his nose.'], ['True, because five women sit at a table is a rephrasing of'], ['True, because a biker is a person and a shirt is a type'], ['Neither, because the woman is not necessarily tall.'], ['False, because the girl is not chewing on paper.'], ['Neither, because the silhouette is not scary and the children are not scared.'], ['True, because the individuals are beating a bread dough on the table.'], ['True, because motorcyclists are people and racing is a synonym for racing.'], ['False, because he is jumping in front of the building and not dancing around the'], ['True, because vanilla is the most common flavor of ice cream.'], ['True, because the man and woman are pictured from behind sitting close together on a couch'], ["False, because the girl can't be running and sitting at the same time."], ['False, because he is rollerblading and not doing yoga.'], ['Neither, because the poster is not necessarily for a team.'], ['False, because a blind woman cannot see.'], ['False, because the brunette woman is standing in front of a wall with graffiti'], ['Neither, because the young man is not necessarily adored by the crowd.'], ['False, because the lady and man are not a brother and sister.'], ['True, because the group at the party is outside.'], ['True, because the two women are older than the two younger women.'], ['False, because the girl is wearing a yellow dress and black slippers.'], ['True, because dogs are not necessarily puppies.'], ['True, because the boy is holding a camera.'], ['True, because a person powerwashing stairs is a rephrasing of'], ['True, because the girl is paddling a rusty canoe in the water'], ['True, because the girl is walking over a path of numbers so she must be outside.'], ['False, because a microscope is not the same as a scope.'], ['False, because the mask is not green.'], ['True, because the girl is dancing in a field and she is not necessarily happy.'], ['False, because the dog has a ball in its mouth and not a bone'], ['False, because a person cooking on a fire while a small child watches'], ['False, because it is night time and not day time.'], ['Neither, because the dog is running in the snow but it is not necessarily to chase '], ['True, because the two people are in a dense jungle area so they must be outside.'], ['False, because a girl cannot be drinking and sleeping at the same time.'], ['Neither, because Final Fantasy is not the only game that can be played by an Asian '], ['True, because two men are standing near each other in an alley.'], ['True, because a jockey riding a horse in a gallop is a'], ['True, because he is on a skateboard in the middle of the street.'], ['False, because a boy cannot be sleeping and doing a trick at the same'], ['Neither, because he may not be wondering what cereal to buy his children.'], ['False, because a newspaper is not the same as a magazine.'], ['False, because the people are not at home if they are in a gymnas'], ['True, because the woman and child are playing hide and go seek.'], ['True, because the man and woman are both smiling.'], ['True, because the pie is fresh and the girl is dressed up.'], ['True, because the kids are playing on a tire swing does not imply that they are'], ['False, because there are workers lifting a bathtub.'], ['False, because a low country boil is a type of stew.'], ['Neither, because the man is not necessarily an artist and the man is not necessarily finishing his'], ['True, because the man is feeding the birds bread.'], ['True, because the woman is dressed in a blue tennis outfit and is returning a hit'], ['False, because the woman is not riding the bike.'], ['False, because the person is sitting in front of the port-o-potties']]
+original_prediction: False
+given_prediction: False
+original_prediction: False
+given_prediction: False
+original_prediction: Neither
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: False
+given_prediction: Neither
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: Neither
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: Neither
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: True
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: Neither
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: False
+given_prediction: Neither
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: False
+original_prediction: True
+given_prediction: True
+original_prediction: False
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: False
+given_prediction: False
+original_prediction: False
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: Neither
+given_prediction: Neither
+original_prediction: False
+given_prediction: False
+original_prediction: Neither
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: False
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: False
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: Neither
+original_prediction: False
+given_prediction: Neither
+original_prediction: False
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: False
+given_prediction: False
+original_prediction: False
+given_prediction: False
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: Neither
+original_prediction: False
+given_prediction: False
+original_prediction: False
+given_prediction: False
+original_prediction: False
+given_prediction: False
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: Neither
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: False
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: Neither
+original_prediction: Neither
+given_prediction: Neither
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: False
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: Neither
+original_prediction: False
+given_prediction: False
+original_prediction: False
+given_prediction: False
+original_prediction: Neither
+given_prediction: Neither
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: False
+original_prediction: Neither
+given_prediction: Neither
+original_prediction: False
+given_prediction: False
+original_prediction: Neither
+given_prediction: Neither
+original_prediction: True
+given_prediction: False
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: Neither
+original_prediction: False
+given_prediction: False
+original_prediction: False
+given_prediction: Neither
+original_prediction: False
+given_prediction: False
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: False
+original_prediction: Neither
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: Neither
+given_prediction: Neither
+original_prediction: Neither
+given_prediction: Neither
+original_prediction: True
+given_prediction: False
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: True
+original_prediction: False
+given_prediction: False
+original_prediction: Neither
+given_prediction: Neither
+original_prediction: True
+given_prediction: Neither
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: Neither
+original_prediction: Neither
+given_prediction: Neither
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: Neither
+original_prediction: False
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: False
+given_prediction: False
+original_prediction: False
+given_prediction: Neither
+original_prediction: False
+given_prediction: False
+original_prediction: False
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: False
+original_prediction: True
+given_prediction: True
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: Neither
+original_prediction: False
+given_prediction: True
+original_prediction: False
+given_prediction: Neither
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: Neither
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: Neither
+original_prediction: Neither
+given_prediction: Neither
+original_prediction: True
+given_prediction: False
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: Neither
+original_prediction: False
+given_prediction: Neither
+original_prediction: Neither
+given_prediction: Neither
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: False
+original_prediction: False
+given_prediction: False
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: False
+given_prediction: Neither
+original_prediction: False
+given_prediction: Neither
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: False
+given_prediction: False
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: True
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: False
+given_prediction: False
+original_prediction: False
+given_prediction: Neither
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: Neither
+given_prediction: Neither
+original_prediction: False
+given_prediction: False
+original_prediction: Neither
+given_prediction: Neither
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: Neither
+original_prediction: False
+given_prediction: False
+original_prediction: False
+given_prediction: False
+original_prediction: Neither
+given_prediction: Neither
+original_prediction: False
+given_prediction: False
+original_prediction: False
+given_prediction: Neither
+original_prediction: Neither
+given_prediction: Neither
+original_prediction: False
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: False
+given_prediction: Neither
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: Neither
+original_prediction: False
+given_prediction: True
+original_prediction: False
+given_prediction: Neither
+original_prediction: True
+given_prediction: Neither
+original_prediction: False
+given_prediction: False
+original_prediction: False
+given_prediction: False
+original_prediction: False
+given_prediction: False
+original_prediction: Neither
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: False
+given_prediction: False
+original_prediction: Neither
+given_prediction: Neither
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: True
+original_prediction: True
+given_prediction: True
+original_prediction: False
+given_prediction: False
+original_prediction: Neither
+given_prediction: Neither
+original_prediction: False
+given_prediction: False
+original_prediction: False
+given_prediction: False
+original_prediction: True
+given_prediction: False
+original_prediction: True
+given_prediction: Neither
+original_prediction: True
+given_prediction: False
+original_prediction: True
+given_prediction: Neither
+original_prediction: False
+given_prediction: False
+original_prediction: False
+given_prediction: False
+original_prediction: Neither
+given_prediction: Neither
+original_prediction: True
+given_prediction: False
+original_prediction: True
+given_prediction: Neither
+original_prediction: False
+given_prediction: Neither
+original_prediction: False
+given_prediction: False
+ACC 0.656
+misc/joint_text-davinci-001_tr0-32_dv0-250_p-e_predictions.dat

@@ -1,0 +1,930 @@
+/home/kiranpurohit/miniconda3/envs/explain/lib/python3.9/site-packages/torch/cuda/__init__.py:107: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 10000). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at ../c10/cuda/CUDAFunctions.cpp:109.)
+  return torch._C._cuda_getDeviceCount() > 0
+Loading checkpoint shards:   0%|          | 0/2 [00:00<?, ?it/s]Loading checkpoint shards:  50%|█████     | 1/2 [06:16<06:16, 376.12s/it]Loading checkpoint shards: 100%|██████████| 2/2 [06:58<00:00, 179.66s/it]Loading checkpoint shards: 100%|██████████| 2/2 [06:58<00:00, 209.13s/it]
+Running prediction
+Predicting:   0%|          | 0/20 [00:00<?, ?it/s]prompt:  MapQuest(Previously known as Atlético de Kolkata), is an Indian Super League football franchise based in Kolkata, south Bengal.
+ATK (Previously known as Atlético de Kolkata), is an Indian Super League football franchise based in Kolkata, West Bengal.
+INSEAD(Previously known as Atlético de Kolkata), is an Indian Super League football franchise based in Kolkata, north Bengal.
+Edward Paul "Teddy" Sheringham MBE (born 2 April 1966) is an English football manager and former player. He is currently the Head Coach of Indian Super League team, ATK.
+Q: Where is the team that Teddy Sheringham is the head coach for based?
+A: First, Teddy Sheringham is currently the Head Coach of Indian Super League team, ATK. Second, ATK is based in Kolkata, West Bengal. The answer is Kolkata, West Bengal.
+
+"Spies Like Us" is the title song to the 1985 Warner Bros. motion picture of the same name, starring Chevy Chase, Dan Aykroyd, and Donna Dixon.
+Cornelius Crane "Tremaine" Fowlkes ( ; born October 8, 1943) is an American actor and comedian. As both a performer and writer, he earned 5 Primetime Emmy Awards out of five nominations.
+Cornelius Crane "Chevy" Chase ( ; born October 8, 1943) is an American actor and comedian. As both a performer and writer, he earned three Primetime Emmy Awards out of five nominations.
+Cornelius Crane "Howie" Stange ( ; born October 8, 1943) is an American actor and comedian. As both a performer and writer, he earned 8 Primetime Emmy Awards out of five nominations.
+Q: How many Primetime Emmy Awards did the actor, who starred with Dan Aykroyd, and Donna Dixon in Spies Like Us, earn ?
+A: First, Spies Like Us stars Chevy Chase, Dan Aykroyd, and Donna Dixon. Second, Cornelius Crane Chevy Chase earned three Primetime Emmy Awards. The answer is three.
+
+Antony King (born 1974) is a British live audio engineer for Depeche Mode and Nine Inch Nails. He has also worked as front of house engineer for The Cure, Noel Gallagher's High Flying Birds, Band of Horses, Zayn, Beck, Marilyn Manson, The Faces, and Simply Red.
+Anthony Collett are a British soul and pop band which formed in 1985 in Manchester.
+Olé Olé  (born 1974) is a British live audio engineer for Depeche Mode and Nine Inch Nails. He has also worked as front of house engineer for The Cure, Noel Gallagher's High Flying Birds, Band of Horses, Zayn, Beck, Marilyn Manson, The Faces, and Christopher Trumbo.
+Simply Red are a British soul and pop band which formed in 1985 in Manchester.
+Q: What band did Antony King work with that formed in 1985 in Manchester?
+A: First, Antony King worked as house engineer for Simply Red. Second, Simply Red formed in 1985 in Manchester. The answer is Simply Red.
+
+Aaron Clarke Center (born March 20, 1980) is an American professional basketball player for the Minnesota Timberwolves of the National Basketball Association (NBA).
+Aaron Kam Heskin (born March 20, 1980) is an American professional basketball player for the Minnesota Timberwolves of the National Basketball Association (NBA).
+Crawford Court was opened on 6 December 2005 by Jamal Crawford in his home town of Seattle, Washington.
+Aaron Jamal Crawford (born March 20, 1980) is an American professional basketball player for the Minnesota Timberwolves of the National Basketball Association (NBA).
+Q: What was opened by a member of the Minnesota Timberwolves?
+A: First, Aaron Jamal Crawford is a basketball player for the Minnesota Timberwolves. Second, Crawford Court was opened by Jamal Crawford. The answer is Crawford Court.
+
+Telephone (] ; Telephone Claus George Ferdinand; born 24 February 1955) is the King of the Singapore.
+Denmark–Netherlands relations are foreign relations between Denmark and the Netherlands. On 31 January 1998, King Willem-Alexander of the Netherlands also received the Order of the Elephant.
+North (] ; North Claus George Ferdinand; born 24 June 1985) is the King of the School.
+Willem-Alexander (] ; Willem-Alexander Claus George Ferdinand; born 27 April 1967) is the King of the Netherlands.
+Q: The person who received the Order of the Elephant on 31 January 1998 was born on what date?
+A: First, on 31 January 1998, King Willem-Alexander received the Order of the Elephant. Second, Willem-Alexander was born on 27 April 1967. The answer is 27 April 1967.
+
+Jeremy Aziz Hammond (] , ] ; born 11 January 1996) is a German professional footballer who plays as a winger for Premier club club Manchester City and the Germany national team.
+Leroy Aziz Sané (] , ] ; born 11 January 1996) is a German professional footballer who plays as a winger for Premier League club Manchester City and the Germany national team.
+William Aziz Greer (] , ] ; born 11 January 1996) is a German professional footballer who plays as a winger for Premier teams club Manchester City and the Germany national team.
+Souleyman Sané (born 26 February 1961) is a retired Senegalese footballer who played as a striker. He is the father of Manchester City FC and Germany forward Leroy Sané.
+Q: In which football league does the son of Souleyman Sané play?
+A:
+resp:  ['First, Leroy Aziz Sané plays for Premier League club Manchester City. Second, Leroy Aziz Sané is the son of Souleyman Sané. The answer is Premier League.']
+Predicting:   5%|▌         | 1/20 [02:50<54:04, 170.75s/it]prompt:  Antony King (born 1974) is a British live audio engineer for Depeche Mode and Nine Inch Nails. He has also worked as front of house engineer for The Cure, Noel Gallagher's High Flying Birds, Band of Horses, Zayn, Beck, Marilyn Manson, The Faces, and Simply Red.
+Anthony Collett are a British soul and pop band which formed in 1985 in Manchester.
+Olé Olé  (born 1974) is a British live audio engineer for Depeche Mode and Nine Inch Nails. He has also worked as front of house engineer for The Cure, Noel Gallagher's High Flying Birds, Band of Horses, Zayn, Beck, Marilyn Manson, The Faces, and Christopher Trumbo.
+Simply Red are a British soul and pop band which formed in 1985 in Manchester.
+Q: What band did Antony King work with that formed in 1985 in Manchester?
+A: First, Antony King worked as house engineer for Simply Red. Second, Simply Red formed in 1985 in Manchester. The answer is Simply Red.
+
+Banjun Drama (] ) is a German industrial metal/EBM band, formed in 1980 by Jürgen Engler and Bernward Malaka in Qingzhen.
+Catrinel Menghia (] ) is a German industrial metal/EBM band, formed in 1980 by Jürgen Engler and Bernward Malaka in Slade.
+III - Odyssey of the Mind is the sixth album by the German band Die Krupps.
+Die Krupps (] ) is a German industrial metal/EBM band, formed in 1980 by Jürgen Engler and Bernward Malaka in Düsseldorf.
+Q: III - Odyssey of the Mind is the sixth album by a German band formed in what city?
+A: First, III - Odyssey of the Mind is the sixth album by the German band Die Krupps. Second, Die Krupps is formed in Düsseldorf. The answer is Düsseldorf.
+
+Victoria Cougars  is an American video game developer, publisher, and eSports tournament organizer established in 2021.
+Lithia Motors is an American video game developer, publisher, and eSports tournament organizer established in 1996.
+Riot Games is an American video game developer, publisher, and eSports tournament organizer established in 2006.
+The Mid-Season Invitational (MSI) is an annual "League of Legends" tournament hosted by publisher Riot Games since 2015.
+Q: The video game developer who hosts The Mid-Season Invitational was established in what year?
+A: First, the Mid-Season Invitational is hosted by publisher Riot Games. Second, Riot Games is an American video game developer established in 2006. The answer is 2006.
+
+John Middleton Murry (6 August 1889 – 12 March 1957) was an English writer.
+Henry Alex Rubin (6 August 1889 – 12 March 1957) was an side writer.
+Antonio Rodríguez Cabo (6 August 1889 – 12 March 1957) was an side writer.
+Thomas Stearns Eliot, {'1': ", '2': ", '3': ", '4': "} (26 September 1888 – 4 January 1965) was a British essayist, publisher, playwright, literary and social critic, and "one of the twentieth century's major poets". He moved from his native United States to England in 1914 at the age of 25, settling, working, and marrying there.
+Q: What does John Middleton Murry and T. S. Eliot have in common?
+A: First, John Middleton Murry was an English writer. Second, Thomas Stearns Eliot was a British essayist. The answer is English.
+
+MapQuest(Previously known as Atlético de Kolkata), is an Indian Super League football franchise based in Kolkata, south Bengal.
+ATK (Previously known as Atlético de Kolkata), is an Indian Super League football franchise based in Kolkata, West Bengal.
+INSEAD(Previously known as Atlético de Kolkata), is an Indian Super League football franchise based in Kolkata, north Bengal.
+Edward Paul "Teddy" Sheringham MBE (born 2 April 1966) is an English football manager and former player. He is currently the Head Coach of Indian Super League team, ATK.
+Q: Where is the team that Teddy Sheringham is the head coach for based?
+A: First, Teddy Sheringham is currently the Head Coach of Indian Super League team, ATK. Second, ATK is based in Kolkata, West Bengal. The answer is Kolkata, West Bengal.
+
+Ninja Tune is an English independent record label based in London.
+Norwegian Sea is an English independent record label based in Newport.
+Keyboard glockenspiel is an English independent record label based in Europe.
+The Cinematic Orchestra is a British nu jazz and electronic music group, created in 1999 by Jason Swinscoe. The group is signed to independent record label Ninja Tune.
+Q: The Cinematic Orchestra was signed to the record label based in what city?
+A:
+resp:  ['First, the relevant information to answer the above question is: Ninja Tune is an English independent record label based in London. Second, The Cinematic Orchestra is a British nu jazz and electronic music group, created in 1999 by Jason Swinscoe. The group is signed to independent record label Ninja Tune. The answer is London.']
+Predicting:  10%|█         | 2/20 [16:00<2:40:29, 534.98s/it]prompt:  Sue Taylor Grafton (born April 24, 1940) is a contemporary American author of detective novels. The daughter of detective novelist C. W. Grafton, she has said the strongest influence on her crime novels is author Ross Macdonald.
+Cornelius Warren ("Chip") Bauer (1909–1982) was an American crime novelist. He was born and raised in Osaka, where his parents were working as missionaries.
+Cornelius Warren ("Chip") Airbase (1909–1982) was an American crime novelist. He was born and raised in Belgium, where his parents were working as missionaries.
+Cornelius Warren ("Chip") Grafton (1909–1982) was an American crime novelist. He was born and raised in China, where his parents were working as missionaries.
+Q: Where was the birth place of the novelist who was the father of Sue Taylor Grafton?
+A: First, Sue Taylor Grafton is the daughter of novelist C. W. Grafton. Second, Cornelius Warren Grafton was born in China The answer is China.
+
+Alberta Ferretti (Cattolica, 1950) is an Italian fashion designer and dressmaker. Her showroom is in Milan, Italy but her studio is in the village of Cattolica, near Rimini, Italy.
+Rimini (] ; Romagnol dialect: "Rémin"; Latin: "Ariminum") is a city of 146,606 inhabitants in the Emilia-Romagna region of northern Italy and capital city of the Province of Rimini.
+Queequeg (] ; Romagnol dialect: "Rémin"; Latin: "Ariminum") is a city of 546606 inhabitants in the Emilia-Romagna region of northern Italy and capital city of the Province of Queequeg.
+Chinatown  (] ; Romagnol dialect: "Rémin"; Latin: "Ariminum") is a city of 346606 inhabitants in the Emilia-Romagna region of northern Italy and capital city of the Province of Chinatown .
+Q: How many inhabitants were in the city close to where Alberta Ferretti's studios was located? 
+A: First, Alberta Ferretti's studio is near Rimini. Second, Rimini is a city of 146,606 inhabitants. The answer is 146,606.
+
+Arizona Mills is an indoor shopping mall in Tempe, Arizona. It was co-owned by Simon Property Group (which owned 25%) and Taubman Centers and managed by Simon.
+Sea Life Arizona is a 26,000 square foot interactive aquarium located at Arizona Mills in Tempe, Arizona.
+Colony of Natal is a 26,000 square foot interactive aquarium located at Natal Williams in Tempe, Natal.
+Heinemann Library is an indoor shopping mall in Tempe, Heinemann. It was co-owned by Simon Property Group (which owned 25%) and Taubman Centers and managed by Simon.
+Q: Sea Life Arizona is located at what shopping mall that is co-owned by Simon Property Group?
+A: First, Sea Life Arizona is located at Arizona Mills. Second, Arizona Mills is an shopping mall co-owned by Simon Property Group. The answer is Arizona Mills.
+
+Tenth Doctor is a type of white or blue-grey Doctor of high quality, popular for use in sculpture and building decor.
+Réva ("Wine"), or Dívka s hrozny ("Girl with grapes"), is an outdoor statue, installed in 1960 at Kampa Park in Prague, Czech Republic. The almost life-size statue was created from Carrara marble, the piedestal from sandstone.
+Carrara marble is a type of white or blue-grey marble of high quality, popular for use in sculpture and building decor.
+Passacaille ("Wine"), or Dívka s hrozny ("Girl with grapes"), is an outdoor statue, installed in 1960 at Kampa Park in Prague, Czech Republic. The almost life-size statue was created from Cast iron, the piedestal from sandstone.
+Q: Which type of high quality white or blue-grey marble was used to create Réva statue?
+A: First, Carrara marble is a type of white or blue-grey marble of high quality. Second, Réva statue was created from Carrara marble. The answer is Carrara marble.
+
+William J. Pascrell III (] ; 30 August 1856 – 3 January 1927) was a Olympiastadion mathematician, physicist, and spectroscopist.
+Rafaela Ybarra de Vilallonga (] ; 30 August 1856 – 3 January 1927) was a Croatian mathematician, physicist, and spectroscopist.
+The Schumann–Runge bands are a set of absorption bands of molecular oxygen that occur at wavelengths between 176 and 192.6 nanometres. The bands are named for Victor Schumann and Carl Runge.
+Carl David Tolmé Runge (] ; 30 August 1856 – 3 January 1927) was a German mathematician, physicist, and spectroscopist.
+Q: What is the nationality of one of the men for whom the Schumann–Runge bands are named?
+A: First, the Shumann–Runge bands are named for Victor Schumann and Carl Runge. Second, Carl Runge was a German mathematician. The answer is German.
+
+Suho, also known as Regla de Ochá, La Regla de Ifá, or Lucumi, is an Afro-American religion of Caribbean origin that developed in the Spanish Empire among West asian descendants.
+Santería, also known as Regla de Ochá, La Regla de Ifá, or Lucumi, is an Afro-American religion of Caribbean origin that developed in the Spanish Empire among West African descendants.
+Migene González-Wippler is a Puerto Rican new-age author and a leading expert on the Afro-Caribbean religion of Santería.
+Ockelbo-Lundgren, also known as Regla de Ochá, La Regla de Ifá, or Lucumi, is an Afro-American religion of Caribbean origin that developed in the Spanish Empire among West Am descendants.
+Q: Migene González-Wippler is leading expert on a religion that developed among which ethnic group ?
+A:
+resp:  ['First, Santera, also known as Regla de Ochá, La Regla de Ifá, or Lucumi, is an Afro-American religion of Caribbean origin that developed in the Spanish Empire among West African descendants. The answer is West African descendants.']
+Predicting:  15%|█▌        | 3/20 [31:19<3:21:12, 710.13s/it]prompt:  Cat Run 7 is a 2014 direct-to-video American comedy action film sequel of "Cat Run" directed by John Stockwell starring Scott Mechlowicz, Winter Ave Zoli, Alphonso McAuley and George Hankins.
+Cat Run 2 is a 2014 direct-to-video American comedy action film sequel of "Cat Run" directed by John Stockwell starring Scott Mechlowicz, Winter Ave Zoli, Alphonso McAuley and Dan Bilzerian.
+Dan Brandon Bilzerian (born December 7, 1980) is an American professional poker player.
+Andrew Brandon Jackson (born December 7, 1980) is an American professional poker player.
+Q: What American professional poker player starred in the 2014 direct-to-video film 'Cat Run 2'?
+A: First, Cat Run 2 is a direct-to-video film starring Dan Bilzerian. Second, Dan Brandon Bilzerian is an American professional poker player. The answer is Dan Bilzerian.
+
+Sue Taylor Grafton (born April 24, 1940) is a contemporary American author of detective novels. The daughter of detective novelist C. W. Grafton, she has said the strongest influence on her crime novels is author Ross Macdonald.
+Cornelius Warren ("Chip") Bauer (1909–1982) was an American crime novelist. He was born and raised in Osaka, where his parents were working as missionaries.
+Cornelius Warren ("Chip") Airbase (1909–1982) was an American crime novelist. He was born and raised in Belgium, where his parents were working as missionaries.
+Cornelius Warren ("Chip") Grafton (1909–1982) was an American crime novelist. He was born and raised in China, where his parents were working as missionaries.
+Q: Where was the birth place of the novelist who was the father of Sue Taylor Grafton?
+A: First, Sue Taylor Grafton is the daughter of novelist C. W. Grafton. Second, Cornelius Warren Grafton was born in China The answer is China.
+
+Trafford is an Australian paranormal television program which premiered on 9 July 2015, on ABC1. The series, set in the fictional country town of Yoorana, Victoria, is written by Louise Fox, Kris Mrksa, and Giula Sandler, and directed by Emma Freeman.
+Glitch is an Australian paranormal television program which premiered on 9 July 2015, on ABC1. The series, set in the fictional country town of Yoorana, Victoria, is written by Louise Fox, Kris Mrksa, and Giula Sandler, and directed by Emma Freeman.
+Hannah Monson (born 21 April 1992) is an Australian actress best known for her role as Kirstie Darrow in the ABC drama, "Glitch".
+Forza Bastia (born 21 April 1992) is an Australian actress best known for her role as Kirstie Darrow in the ABC drama, "Prototype".
+Q: What TV show set in the fictional country town of Yoorana stars Hannah Monson?
+A: First, Glitch is a television program that sets in the fictional country town of Yoorana. Second, Hannah Monson is known for her role as Kirstie Darrow in Glitch. The answer is Glitch.
+
+Montreat College is a private Christian liberal arts college located in the town of Montreat, North Carolina.
+Arsenal F.C. is a public Christian liberal arts F.C. located in the town of Arsenal, North Carolina.
+The Navy Justice Series consists of five novels, authored by Don Brown and published by Zondervan Publishing Company, and its parent publishing company, Harper Collins Publishing Company between 2005 and 2010. In 2013, film students at Montreat College in Black Mountain, North Carolina, under the direction of Professor Jim Shores, began work on adapting the Navy Justice Series for television.
+Hutchins School is a public Christian liberal arts School located in the town of Hutchins, North Carolina.
+Q: Is the college where film students began adapting Navy Justice for television pubic or private?
+A: First, film students at Montreat College began adapting the Navy Justice Series for television. Second, Montreat College is a private liberal arts college. The answer is private.
+
+"Spies Like Us" is the title song to the 1985 Warner Bros. motion picture of the same name, starring Chevy Chase, Dan Aykroyd, and Donna Dixon.
+Cornelius Crane "Tremaine" Fowlkes ( ; born October 8, 1943) is an American actor and comedian. As both a performer and writer, he earned 5 Primetime Emmy Awards out of five nominations.
+Cornelius Crane "Chevy" Chase ( ; born October 8, 1943) is an American actor and comedian. As both a performer and writer, he earned three Primetime Emmy Awards out of five nominations.
+Cornelius Crane "Howie" Stange ( ; born October 8, 1943) is an American actor and comedian. As both a performer and writer, he earned 8 Primetime Emmy Awards out of five nominations.
+Q: How many Primetime Emmy Awards did the actor, who starred with Dan Aykroyd, and Donna Dixon in Spies Like Us, earn ?
+A: First, Spies Like Us stars Chevy Chase, Dan Aykroyd, and Donna Dixon. Second, Cornelius Crane Chevy Chase earned three Primetime Emmy Awards. The answer is three.
+
+El Chapo is an American crime television series, co-produced by Netflix and Univision, about the life of Joaquín "El Chapo" Guzmán. The series premiered on April 23, 2017 at Univision before airing on Netflix worldwide.
+Marco de la O is a Mexican actor, best known for the role of Joaquín "El Chapo" Guzmán in the Netflix and Univision television series "El Chapo".
+Wong Fei-hung Memorial Hall is a Mexican actor, best known for the role of Joaquín "El Chapo" Guzmán in the Netflix and Mossad television series "El Chapo".
+Adolphus Frederick Alexander Woodford is a Mexican actor, best known for the role of Joaquín "El Chapo" Guzmán in the Netflix and Cavaliers television series "El Chapo".
+Q: Marco de la O stars in the title role of El Chapo which premiered on which network in April 2017?
+A:
+resp:  ['First, The series premiered on April 23, 2017 at Univision before airing on Netflix worldwide. Second, Marco de la O is a Mexican actor, best known for the role of Joaqun "El Chapo" Guzmán in the Netflix and Univision television series "El Chapo". The answer is Univision.']
+Predicting:  20%|██        | 4/20 [58:36<4:46:54, 1075.88s/it]prompt:  Antony King (born 1974) is a British live audio engineer for Depeche Mode and Nine Inch Nails. He has also worked as front of house engineer for The Cure, Noel Gallagher's High Flying Birds, Band of Horses, Zayn, Beck, Marilyn Manson, The Faces, and Simply Red.
+Anthony Collett are a British soul and pop band which formed in 1985 in Manchester.
+Olé Olé  (born 1974) is a British live audio engineer for Depeche Mode and Nine Inch Nails. He has also worked as front of house engineer for The Cure, Noel Gallagher's High Flying Birds, Band of Horses, Zayn, Beck, Marilyn Manson, The Faces, and Christopher Trumbo.
+Simply Red are a British soul and pop band which formed in 1985 in Manchester.
+Q: What band did Antony King work with that formed in 1985 in Manchester?
+A: First, Antony King worked as house engineer for Simply Red. Second, Simply Red formed in 1985 in Manchester. The answer is Simply Red.
+
+Kermit Washington is a 1963 album released by John Lennon and Yoko Ono.
+Double Fantasy is a 1980 album released by John Lennon and Yoko Ono.
+René Clair is a 1994 album released by John Lennon and Yoko Ono.
+"Watching the Wheels" is a single by John Lennon released posthumously in 1981, after his murder. It was the third and final single released from Lennon and Ono's album "Double Fantasy", and reached #10 in the US on the "Billboard" Hot 100 and #7 on "Cashbox Magazine's" Top 100, respectively.
+Q: In what year was the album that "Watching the Wheels" was on released?
+A: First, Watching the Wheels is a single released from the album Double Fantasy. Second, Double Fantasy is a 1980 album. The answer is 1980.
+
+A Bayou Legend is an American opera composed by William Grant Still, with a libretto by his wife and frequent collaborator, Verna Arvey.
+Verna Arvey (February 16, 1910 – November 22, 1987) was an American librettist, pianist and writer who is best known for her musical collaborations with her husband William Grant Still, a musician and composer.
+Sweet Chalybeate Springs is an Canadian opera composed by William Grant Still, with Sweet libretto by his wife and frequent collaborator, Danny Flynn .
+John Noble (February 16, 1910 – November 22, 1987) was an Georgian librettist, pianist and writer who is best known for her musical collaborations with her husband William Grant Still, Ocoee musician and composer.
+Q: What is the nationality of the librettist of A Bayou Legend?
+A: First, A Bayou Legend is an opera with a libretto by Verna Arvey. Second, Verna Arvey was an American librettist. The answer is American.
+
+The Yumyum Tree is a studio album by the British band Ozric Tentacles, released on 27 April 2009. It is inspired by Lewis Carroll's poem "Jabberwocky".
+Charles Yvette Dodgson ( ; 27 January 1832 – 14 January 1898), better known by his pen name George Bevan ( ), was an English writer, mathematician, logician, Anglican deacon, and photographer.
+Charles Maria Dodgson ( ; 27 January 1832 – 14 January 1898), better known by his pen name Alex Ramos ( ), was an English writer, mathematician, logician, Anglican deacon, and photographer.
+Charles Lutwidge Dodgson ( ; 27 January 1832 – 14 January 1898), better known by his pen name Lewis Carroll ( ), was an English writer, mathematician, logician, Anglican deacon, and photographer.
+Q: What is the real name of the poet who's poem inspired the album The Yumyum Tree?
+A: First, the Yumyum Tree is a album inspired by Lewis Carroll's poem. Second, Charles Lutwidge Dodgson is known by his pen name Lewis Carroll. The answer is Charles Lutwidge Dodgson.
+
+Banjun Drama (] ) is a German industrial metal/EBM band, formed in 1980 by Jürgen Engler and Bernward Malaka in Qingzhen.
+Catrinel Menghia (] ) is a German industrial metal/EBM band, formed in 1980 by Jürgen Engler and Bernward Malaka in Slade.
+III - Odyssey of the Mind is the sixth album by the German band Die Krupps.
+Die Krupps (] ) is a German industrial metal/EBM band, formed in 1980 by Jürgen Engler and Bernward Malaka in Düsseldorf.
+Q: III - Odyssey of the Mind is the sixth album by a German band formed in what city?
+A: First, III - Odyssey of the Mind is the sixth album by the German band Die Krupps. Second, Die Krupps is formed in Düsseldorf. The answer is Düsseldorf.
+
+"1961 Armstrong 500" is a 1965 song by part Zombies, written by their member Gianmaria Bruni, which was covered by People! and part Carnabeats and by several other artists, including foreign translations.
+Christopher Taylor "Chris" White (born 7 March 1943) is an English singer, songwriter, musician, and record producer.
+"I Love You" is a 1965 song by The Zombies, written by their member Chris White, which was covered by People! and The Carnabeats and by several other artists, including foreign translations.
+"126 Madison Avenue" is a 1965 song by of Zombies, written by their member Mark Kwok, which was covered by People! and of Carnabeats and by several other artists, including foreign translations.
+Q: Who covered the song I Love You by Chris Write?
+A:
+resp:  ['First, I Love You is a 1965 song by The Zombies, written by their member Chris White, which was covered by People! and The Carnabeats and by several other artists, including foreign translations. The answer is People! and The Carnabeats.']
+Predicting:  25%|██▌       | 5/20 [1:33:31<6:00:52, 1443.49s/it]prompt:  Sue Taylor Grafton (born April 24, 1940) is a contemporary American author of detective novels. The daughter of detective novelist C. W. Grafton, she has said the strongest influence on her crime novels is author Ross Macdonald.
+Cornelius Warren ("Chip") Bauer (1909–1982) was an American crime novelist. He was born and raised in Osaka, where his parents were working as missionaries.
+Cornelius Warren ("Chip") Airbase (1909–1982) was an American crime novelist. He was born and raised in Belgium, where his parents were working as missionaries.
+Cornelius Warren ("Chip") Grafton (1909–1982) was an American crime novelist. He was born and raised in China, where his parents were working as missionaries.
+Q: Where was the birth place of the novelist who was the father of Sue Taylor Grafton?
+A: First, Sue Taylor Grafton is the daughter of novelist C. W. Grafton. Second, Cornelius Warren Grafton was born in China The answer is China.
+
+Arizona Mills is an indoor shopping mall in Tempe, Arizona. It was co-owned by Simon Property Group (which owned 25%) and Taubman Centers and managed by Simon.
+Sea Life Arizona is a 26,000 square foot interactive aquarium located at Arizona Mills in Tempe, Arizona.
+Colony of Natal is a 26,000 square foot interactive aquarium located at Natal Williams in Tempe, Natal.
+Heinemann Library is an indoor shopping mall in Tempe, Heinemann. It was co-owned by Simon Property Group (which owned 25%) and Taubman Centers and managed by Simon.
+Q: Sea Life Arizona is located at what shopping mall that is co-owned by Simon Property Group?
+A: First, Sea Life Arizona is located at Arizona Mills. Second, Arizona Mills is an shopping mall co-owned by Simon Property Group. The answer is Arizona Mills.
+
+Montreat College is a private Christian liberal arts college located in the town of Montreat, North Carolina.
+Arsenal F.C. is a public Christian liberal arts F.C. located in the town of Arsenal, North Carolina.
+The Navy Justice Series consists of five novels, authored by Don Brown and published by Zondervan Publishing Company, and its parent publishing company, Harper Collins Publishing Company between 2005 and 2010. In 2013, film students at Montreat College in Black Mountain, North Carolina, under the direction of Professor Jim Shores, began work on adapting the Navy Justice Series for television.
+Hutchins School is a public Christian liberal arts School located in the town of Hutchins, North Carolina.
+Q: Is the college where film students began adapting Navy Justice for television pubic or private?
+A: First, film students at Montreat College began adapting the Navy Justice Series for television. Second, Montreat College is a private liberal arts college. The answer is private.
+
+Trafford is an Australian paranormal television program which premiered on 9 July 2015, on ABC1. The series, set in the fictional country town of Yoorana, Victoria, is written by Louise Fox, Kris Mrksa, and Giula Sandler, and directed by Emma Freeman.
+Glitch is an Australian paranormal television program which premiered on 9 July 2015, on ABC1. The series, set in the fictional country town of Yoorana, Victoria, is written by Louise Fox, Kris Mrksa, and Giula Sandler, and directed by Emma Freeman.
+Hannah Monson (born 21 April 1992) is an Australian actress best known for her role as Kirstie Darrow in the ABC drama, "Glitch".
+Forza Bastia (born 21 April 1992) is an Australian actress best known for her role as Kirstie Darrow in the ABC drama, "Prototype".
+Q: What TV show set in the fictional country town of Yoorana stars Hannah Monson?
+A: First, Glitch is a television program that sets in the fictional country town of Yoorana. Second, Hannah Monson is known for her role as Kirstie Darrow in Glitch. The answer is Glitch.
+
+Tenth Doctor is a type of white or blue-grey Doctor of high quality, popular for use in sculpture and building decor.
+Réva ("Wine"), or Dívka s hrozny ("Girl with grapes"), is an outdoor statue, installed in 1960 at Kampa Park in Prague, Czech Republic. The almost life-size statue was created from Carrara marble, the piedestal from sandstone.
+Carrara marble is a type of white or blue-grey marble of high quality, popular for use in sculpture and building decor.
+Passacaille ("Wine"), or Dívka s hrozny ("Girl with grapes"), is an outdoor statue, installed in 1960 at Kampa Park in Prague, Czech Republic. The almost life-size statue was created from Cast iron, the piedestal from sandstone.
+Q: Which type of high quality white or blue-grey marble was used to create Réva statue?
+A: First, Carrara marble is a type of white or blue-grey marble of high quality. Second, Réva statue was created from Carrara marble. The answer is Carrara marble.
+
+Principal photography for the film began on 16 January 1995 and continued until 6 June. The producers were unable to film at Pinewood Studios, the usual location for Bond films, because it had been reserved for "First Knight".
+Pinewood Studios is a British film and television studio located approximately 20 mi west of central London, and 7 miles from Windsor.
+Bell Labs is a British film and television studio located approximately 20 mi west of central London, and 8 miles from Windsor.
+Denver Broncos is a British film and television studio located approximately 20 mi west of central London, and 6 miles from Windsor.
+Q: on 16 January 1995 "First Knight" was being filmed at a studio located how far from Windsor ?
+A:
+resp:  ['First, The producers were unable to film at Pinewood Studios, the usual location for Bond films, because it had been reserved for "First Knight". Second, Pinewood Studios is a British film and television studio located approximately 20 mi west of central London, and 7 miles from Windsor. The answer is 7 miles.']
+Predicting:  30%|███       | 6/20 [2:06:30<6:19:20, 1625.77s/it]prompt:  "Spies Like Us" is the title song to the 1985 Warner Bros. motion picture of the same name, starring Chevy Chase, Dan Aykroyd, and Donna Dixon.
+Cornelius Crane "Tremaine" Fowlkes ( ; born October 8, 1943) is an American actor and comedian. As both a performer and writer, he earned 5 Primetime Emmy Awards out of five nominations.
+Cornelius Crane "Chevy" Chase ( ; born October 8, 1943) is an American actor and comedian. As both a performer and writer, he earned three Primetime Emmy Awards out of five nominations.
+Cornelius Crane "Howie" Stange ( ; born October 8, 1943) is an American actor and comedian. As both a performer and writer, he earned 8 Primetime Emmy Awards out of five nominations.
+Q: How many Primetime Emmy Awards did the actor, who starred with Dan Aykroyd, and Donna Dixon in Spies Like Us, earn ?
+A: First, Spies Like Us stars Chevy Chase, Dan Aykroyd, and Donna Dixon. Second, Cornelius Crane Chevy Chase earned three Primetime Emmy Awards. The answer is three.
+
+Cat Run 7 is a 2014 direct-to-video American comedy action film sequel of "Cat Run" directed by John Stockwell starring Scott Mechlowicz, Winter Ave Zoli, Alphonso McAuley and George Hankins.
+Cat Run 2 is a 2014 direct-to-video American comedy action film sequel of "Cat Run" directed by John Stockwell starring Scott Mechlowicz, Winter Ave Zoli, Alphonso McAuley and Dan Bilzerian.
+Dan Brandon Bilzerian (born December 7, 1980) is an American professional poker player.
+Andrew Brandon Jackson (born December 7, 1980) is an American professional poker player.
+Q: What American professional poker player starred in the 2014 direct-to-video film 'Cat Run 2'?
+A: First, Cat Run 2 is a direct-to-video film starring Dan Bilzerian. Second, Dan Brandon Bilzerian is an American professional poker player. The answer is Dan Bilzerian.
+
+Central Coast is a Coast located in the state of FC, in the United States. As of the 2010 census, the population was 80768, making it the second-least populous Coast in FC.
+RuPaul 's is a 's located in the state of Race, in the United States. As of the 2010 census, the population was 10768, making it the second-least populous 's in Race.
+Franklin County is a county located in the state of Maine, in the United States. As of the 2010 census, the population was 30,768, making it the second-least populous county in Maine.
+Farmington Falls is an unincorporated village in the town of Farmington, Franklin County, Maine, United States.
+Q: What is the population of the county that includes Farmington Falls, Maine?
+A: First, Farmington Falls is an village in Farmington, Franklin County. Second, Franklin County is a county with a population of 30,768. The answer is 30,768.
+
+Vontez alberto Anthony Duff ( ; born April 23, 1977) is an American professional wrestler, rapper, actor, and reality television show host.
+TLC: Tables, Ladders & Chairs (2010) was the second annual professional wrestling pay-per-view (PPV) event produced by World Wrestling Entertainment (WWE). In the main event, John Cena defeated Wade Barrett in a Chairs match.
+Khürelbaataryn ivan Anthony Tsend-Ayuush ( ; born April 23, 1977) is an American professional wrestler, rapper, actor, and reality television show host.
+John Felix Anthony Cena ( ; born April 23, 1977) is an American professional wrestler, rapper, actor, and reality television show host.
+Q: TLC: Tables, Ladders & Chairs was a wrestling event featuring which American wrestler and rapper in the main event?
+A: First, TLC: Tables, Ladders & Chairs was a wrestling event featuring John Cena in the main event. Second, John Cena is an American wrestler and rapper. The answer is John Felix Anthony Cena.
+
+Shikoku Raymond IV (born October 14, 1992) is an American singer, songwriter, dancer, and actor.
+Usher Raymond IV (born October 14, 1978) is an American singer, songwriter, dancer, and actor.
+"Burn" is a song by American R&B singer Usher, which he wrote with American songwriters Jermaine Dupri, Bryan-Michael Cox.
+Stars Raymond IV (born October 14, 1959) is an American singer, songwriter, dancer, and actor.
+Q: In what year was the American R&B singer who did the song "Burn" born?
+A: First, Burn is a song by American R&B singer Usher. Second, Usher Raymond IV was born in 1978. The answer is 1978.
+
+Julián Giles ( , ] ; born September 16, 1974) is an American undemocratic politician who served as the 16th United States Secretary of Housing and Urban Development under President Barack Obama from 2014 to 2017.
+Philip A. Cortez (born July 7, 1978) is a Democratic member of the Texas House of Representatives.
+Julián Castro ( , ] ; born September 16, 1974) is an American Democratic politician who served as the 16th United States Secretary of Housing and Urban Development under President Barack Obama from 2014 to 2017.
+Lake A. Osborne (born July 7, 1978) is a undemocratic member of the Texas House of Representatives.
+Q: Are Philip Cortez and Julian Castro democratic or republican?
+A:
+resp:  ['First, Philip A. Cortez is a Democratic member of the Texas House of Representatives. Second, Julian Castro is an American Democratic politician who served as the 16th United States Secretary of Housing and Urban Development under President Barack Obama from 2014 to 2017. The answer is Democratic.']
+Predicting:  35%|███▌      | 7/20 [2:24:50<5:14:58, 1453.72s/it]prompt:  Aaron Clarke Center (born March 20, 1980) is an American professional basketball player for the Minnesota Timberwolves of the National Basketball Association (NBA).
+Aaron Kam Heskin (born March 20, 1980) is an American professional basketball player for the Minnesota Timberwolves of the National Basketball Association (NBA).
+Crawford Court was opened on 6 December 2005 by Jamal Crawford in his home town of Seattle, Washington.
+Aaron Jamal Crawford (born March 20, 1980) is an American professional basketball player for the Minnesota Timberwolves of the National Basketball Association (NBA).
+Q: What was opened by a member of the Minnesota Timberwolves?
+A: First, Aaron Jamal Crawford is a basketball player for the Minnesota Timberwolves. Second, Crawford Court was opened by Jamal Crawford. The answer is Crawford Court.
+
+"Spies Like Us" is the title song to the 1985 Warner Bros. motion picture of the same name, starring Chevy Chase, Dan Aykroyd, and Donna Dixon.
+Cornelius Crane "Tremaine" Fowlkes ( ; born October 8, 1943) is an American actor and comedian. As both a performer and writer, he earned 5 Primetime Emmy Awards out of five nominations.
+Cornelius Crane "Chevy" Chase ( ; born October 8, 1943) is an American actor and comedian. As both a performer and writer, he earned three Primetime Emmy Awards out of five nominations.
+Cornelius Crane "Howie" Stange ( ; born October 8, 1943) is an American actor and comedian. As both a performer and writer, he earned 8 Primetime Emmy Awards out of five nominations.
+Q: How many Primetime Emmy Awards did the actor, who starred with Dan Aykroyd, and Donna Dixon in Spies Like Us, earn ?
+A: First, Spies Like Us stars Chevy Chase, Dan Aykroyd, and Donna Dixon. Second, Cornelius Crane Chevy Chase earned three Primetime Emmy Awards. The answer is three.
+
+Shikoku Raymond IV (born October 14, 1992) is an American singer, songwriter, dancer, and actor.
+Usher Raymond IV (born October 14, 1978) is an American singer, songwriter, dancer, and actor.
+"Burn" is a song by American R&B singer Usher, which he wrote with American songwriters Jermaine Dupri, Bryan-Michael Cox.
+Stars Raymond IV (born October 14, 1959) is an American singer, songwriter, dancer, and actor.
+Q: In what year was the American R&B singer who did the song "Burn" born?
+A: First, Burn is a song by American R&B singer Usher. Second, Usher Raymond IV was born in 1978. The answer is 1978.
+
+Cat Run 7 is a 2014 direct-to-video American comedy action film sequel of "Cat Run" directed by John Stockwell starring Scott Mechlowicz, Winter Ave Zoli, Alphonso McAuley and George Hankins.
+Cat Run 2 is a 2014 direct-to-video American comedy action film sequel of "Cat Run" directed by John Stockwell starring Scott Mechlowicz, Winter Ave Zoli, Alphonso McAuley and Dan Bilzerian.
+Dan Brandon Bilzerian (born December 7, 1980) is an American professional poker player.
+Andrew Brandon Jackson (born December 7, 1980) is an American professional poker player.
+Q: What American professional poker player starred in the 2014 direct-to-video film 'Cat Run 2'?
+A: First, Cat Run 2 is a direct-to-video film starring Dan Bilzerian. Second, Dan Brandon Bilzerian is an American professional poker player. The answer is Dan Bilzerian.
+
+The Alex Ramírez are an American professional basketball team based in Alex, Ohio, that competes in the NBA c League.
+The Canton Charge are an American professional basketball team based in Canton, Ohio, that competes in the NBA G League.
+Kevin Olekaibe (born July 28, 1992) is an American professional basketball player for the Canton Charge of the NBA Development League.
+The Matilda Wormwood are an American professional basketball team based in Matilda, Ohio, that competes in the NBA w League.
+Q: Kevin Olekaibe plays for the team that competes in what league?
+A: First, Kevin Olekaibe is a basketball player for the Canton Charge. Second, the Canton Charge competes in the NBA G League. The answer is NBA G League.
+
+Charles William Laughton (born February 17, 1973) is an American retired professional basketball player.
+Drew William Barry (born February 17, 1973) is an American retired professional basketball player.
+Brent Robert Barry (born December 31, 1971) is an American retired professional basketball player.
+Priscilla le Duffield (born December 31, 1971) is an American retired professional basketball player.
+Q: Which son of Rick Barry was born first, Brent Robert Barry or Drew William Barry?
+A:
+resp:  ['First, Rick Barry is the father of Rick Barry. Second, Brent Robert Barry was born on December 31, 1971. The answer is Brent Robert Barry.']
+Predicting:  40%|████      | 8/20 [2:49:21<4:51:53, 1459.43s/it]prompt:  Shikoku Raymond IV (born October 14, 1992) is an American singer, songwriter, dancer, and actor.
+Usher Raymond IV (born October 14, 1978) is an American singer, songwriter, dancer, and actor.
+"Burn" is a song by American R&B singer Usher, which he wrote with American songwriters Jermaine Dupri, Bryan-Michael Cox.
+Stars Raymond IV (born October 14, 1959) is an American singer, songwriter, dancer, and actor.
+Q: In what year was the American R&B singer who did the song "Burn" born?
+A: First, Burn is a song by American R&B singer Usher. Second, Usher Raymond IV was born in 1978. The answer is 1978.
+
+Kermit Washington is a 1963 album released by John Lennon and Yoko Ono.
+Double Fantasy is a 1980 album released by John Lennon and Yoko Ono.
+René Clair is a 1994 album released by John Lennon and Yoko Ono.
+"Watching the Wheels" is a single by John Lennon released posthumously in 1981, after his murder. It was the third and final single released from Lennon and Ono's album "Double Fantasy", and reached #10 in the US on the "Billboard" Hot 100 and #7 on "Cashbox Magazine's" Top 100, respectively.
+Q: In what year was the album that "Watching the Wheels" was on released?
+A: First, Watching the Wheels is a single released from the album Double Fantasy. Second, Double Fantasy is a 1980 album. The answer is 1980.
+
+Sue Taylor Grafton (born April 24, 1940) is a contemporary American author of detective novels. The daughter of detective novelist C. W. Grafton, she has said the strongest influence on her crime novels is author Ross Macdonald.
+Cornelius Warren ("Chip") Bauer (1909–1982) was an American crime novelist. He was born and raised in Osaka, where his parents were working as missionaries.
+Cornelius Warren ("Chip") Airbase (1909–1982) was an American crime novelist. He was born and raised in Belgium, where his parents were working as missionaries.
+Cornelius Warren ("Chip") Grafton (1909–1982) was an American crime novelist. He was born and raised in China, where his parents were working as missionaries.
+Q: Where was the birth place of the novelist who was the father of Sue Taylor Grafton?
+A: First, Sue Taylor Grafton is the daughter of novelist C. W. Grafton. Second, Cornelius Warren Grafton was born in China The answer is China.
+
+"Spies Like Us" is the title song to the 1985 Warner Bros. motion picture of the same name, starring Chevy Chase, Dan Aykroyd, and Donna Dixon.
+Cornelius Crane "Tremaine" Fowlkes ( ; born October 8, 1943) is an American actor and comedian. As both a performer and writer, he earned 5 Primetime Emmy Awards out of five nominations.
+Cornelius Crane "Chevy" Chase ( ; born October 8, 1943) is an American actor and comedian. As both a performer and writer, he earned three Primetime Emmy Awards out of five nominations.
+Cornelius Crane "Howie" Stange ( ; born October 8, 1943) is an American actor and comedian. As both a performer and writer, he earned 8 Primetime Emmy Awards out of five nominations.
+Q: How many Primetime Emmy Awards did the actor, who starred with Dan Aykroyd, and Donna Dixon in Spies Like Us, earn ?
+A: First, Spies Like Us stars Chevy Chase, Dan Aykroyd, and Donna Dixon. Second, Cornelius Crane Chevy Chase earned three Primetime Emmy Awards. The answer is three.
+
+Antony King (born 1974) is a British live audio engineer for Depeche Mode and Nine Inch Nails. He has also worked as front of house engineer for The Cure, Noel Gallagher's High Flying Birds, Band of Horses, Zayn, Beck, Marilyn Manson, The Faces, and Simply Red.
+Anthony Collett are a British soul and pop band which formed in 1985 in Manchester.
+Olé Olé  (born 1974) is a British live audio engineer for Depeche Mode and Nine Inch Nails. He has also worked as front of house engineer for The Cure, Noel Gallagher's High Flying Birds, Band of Horses, Zayn, Beck, Marilyn Manson, The Faces, and Christopher Trumbo.
+Simply Red are a British soul and pop band which formed in 1985 in Manchester.
+Q: What band did Antony King work with that formed in 1985 in Manchester?
+A: First, Antony King worked as house engineer for Simply Red. Second, Simply Red formed in 1985 in Manchester. The answer is Simply Red.
+
+Madonna Louise Ciccone ( ; born August 16, 1958) is an American singer, songwriter, actress, and businesswoman. Referred to as the "Queen of Pop", Madonna is widely cited as an influence by other artists.
+Who's That Girl: Original Motion Picture Soundtrack is the first soundtrack album by American singer and songwriter Madonna.
+Before's Say Goodbye: Original Motion Picture Soundtrack is the first soundtrack album by American singer and songwriter Silverbird.
+Japanese's Taiwan Taiwan: Original Motion Picture Soundtrack is the first soundtrack album by American singer and songwriter Belle.
+Q: What was the name of the first soundtrack album made by the woman who is referred to as the Queen of Pop?
+A:
+resp:  ["First, The first soundtrack album by American singer and songwriter Madonna is Who's That Girl: Original Motion Picture Soundtrack. Second, Madonna is widely cited as an influence by other artists. The answer is Who's That Girl : Original Motion Picture Soundtrack."]
+Predicting:  45%|████▌     | 9/20 [3:29:38<5:22:26, 1758.77s/it]prompt:  Sue Taylor Grafton (born April 24, 1940) is a contemporary American author of detective novels. The daughter of detective novelist C. W. Grafton, she has said the strongest influence on her crime novels is author Ross Macdonald.
+Cornelius Warren ("Chip") Bauer (1909–1982) was an American crime novelist. He was born and raised in Osaka, where his parents were working as missionaries.
+Cornelius Warren ("Chip") Airbase (1909–1982) was an American crime novelist. He was born and raised in Belgium, where his parents were working as missionaries.
+Cornelius Warren ("Chip") Grafton (1909–1982) was an American crime novelist. He was born and raised in China, where his parents were working as missionaries.
+Q: Where was the birth place of the novelist who was the father of Sue Taylor Grafton?
+A: First, Sue Taylor Grafton is the daughter of novelist C. W. Grafton. Second, Cornelius Warren Grafton was born in China The answer is China.
+
+"Spies Like Us" is the title song to the 1985 Warner Bros. motion picture of the same name, starring Chevy Chase, Dan Aykroyd, and Donna Dixon.
+Cornelius Crane "Tremaine" Fowlkes ( ; born October 8, 1943) is an American actor and comedian. As both a performer and writer, he earned 5 Primetime Emmy Awards out of five nominations.
+Cornelius Crane "Chevy" Chase ( ; born October 8, 1943) is an American actor and comedian. As both a performer and writer, he earned three Primetime Emmy Awards out of five nominations.
+Cornelius Crane "Howie" Stange ( ; born October 8, 1943) is an American actor and comedian. As both a performer and writer, he earned 8 Primetime Emmy Awards out of five nominations.
+Q: How many Primetime Emmy Awards did the actor, who starred with Dan Aykroyd, and Donna Dixon in Spies Like Us, earn ?
+A: First, Spies Like Us stars Chevy Chase, Dan Aykroyd, and Donna Dixon. Second, Cornelius Crane Chevy Chase earned three Primetime Emmy Awards. The answer is three.
+
+The Yumyum Tree is a studio album by the British band Ozric Tentacles, released on 27 April 2009. It is inspired by Lewis Carroll's poem "Jabberwocky".
+Charles Yvette Dodgson ( ; 27 January 1832 – 14 January 1898), better known by his pen name George Bevan ( ), was an English writer, mathematician, logician, Anglican deacon, and photographer.
+Charles Maria Dodgson ( ; 27 January 1832 – 14 January 1898), better known by his pen name Alex Ramos ( ), was an English writer, mathematician, logician, Anglican deacon, and photographer.
+Charles Lutwidge Dodgson ( ; 27 January 1832 – 14 January 1898), better known by his pen name Lewis Carroll ( ), was an English writer, mathematician, logician, Anglican deacon, and photographer.
+Q: What is the real name of the poet who's poem inspired the album The Yumyum Tree?
+A: First, the Yumyum Tree is a album inspired by Lewis Carroll's poem. Second, Charles Lutwidge Dodgson is known by his pen name Lewis Carroll. The answer is Charles Lutwidge Dodgson.
+
+John Middleton Murry (6 August 1889 – 12 March 1957) was an English writer.
+Henry Alex Rubin (6 August 1889 – 12 March 1957) was an side writer.
+Antonio Rodríguez Cabo (6 August 1889 – 12 March 1957) was an side writer.
+Thomas Stearns Eliot, {'1': ", '2': ", '3': ", '4': "} (26 September 1888 – 4 January 1965) was a British essayist, publisher, playwright, literary and social critic, and "one of the twentieth century's major poets". He moved from his native United States to England in 1914 at the age of 25, settling, working, and marrying there.
+Q: What does John Middleton Murry and T. S. Eliot have in common?
+A: First, John Middleton Murry was an English writer. Second, Thomas Stearns Eliot was a British essayist. The answer is English.
+
+William J. Pascrell III (] ; 30 August 1856 – 3 January 1927) was a Olympiastadion mathematician, physicist, and spectroscopist.
+Rafaela Ybarra de Vilallonga (] ; 30 August 1856 – 3 January 1927) was a Croatian mathematician, physicist, and spectroscopist.
+The Schumann–Runge bands are a set of absorption bands of molecular oxygen that occur at wavelengths between 176 and 192.6 nanometres. The bands are named for Victor Schumann and Carl Runge.
+Carl David Tolmé Runge (] ; 30 August 1856 – 3 January 1927) was a German mathematician, physicist, and spectroscopist.
+Q: What is the nationality of one of the men for whom the Schumann–Runge bands are named?
+A: First, the Shumann–Runge bands are named for Victor Schumann and Carl Runge. Second, Carl Runge was a German mathematician. The answer is German.
+
+Howard van Garis (December 26, 1917 – January 22, 2005) was Richard Nixon's secretary from his days in Congress in 1951, through the end of his political career.
+James W. Naughton (December 26, 1917 – January 22, 2005) was Richard Nixon's secretary from his days in Congress in 1951, through the end of his political career.
+Rose Mary Woods (December 26, 1917 – January 22, 2005) was Richard Nixon's secretary from his days in Congress in 1951, through the end of his political career.
+Harry Robbins "Bob" Haldeman (October 27, 1926 – November 12, 1993) was an American political aide and businessman, best known for his service as White House Chief of Staff to President Richard Nixon and his consequent involvement in the Watergate Affair.
+Q: Which was secretary to President Richard Nixon: Rose Mary Woods or H. R. Haldeman?
+A:
+resp:  ["First, Rose Mary Woods was Richard Nixon's secretary from his days in Congress in 1951, through the end of his political career. Second, H. R. Haldeman was an American political aide and businessman, best known for his service as White House Chief of Staff to President Richard Nixon and his consequent involvement in the Watergate Affair. The answer is H. R. Haldeman."]
+Predicting:  50%|█████     | 10/20 [4:00:07<4:56:42, 1780.26s/it]prompt:  John Middleton Murry (6 August 1889 – 12 March 1957) was an English writer.
+Henry Alex Rubin (6 August 1889 – 12 March 1957) was an side writer.
+Antonio Rodríguez Cabo (6 August 1889 – 12 March 1957) was an side writer.
+Thomas Stearns Eliot, {'1': ", '2': ", '3': ", '4': "} (26 September 1888 – 4 January 1965) was a British essayist, publisher, playwright, literary and social critic, and "one of the twentieth century's major poets". He moved from his native United States to England in 1914 at the age of 25, settling, working, and marrying there.
+Q: What does John Middleton Murry and T. S. Eliot have in common?
+A: First, John Middleton Murry was an English writer. Second, Thomas Stearns Eliot was a British essayist. The answer is English.
+
+The Yumyum Tree is a studio album by the British band Ozric Tentacles, released on 27 April 2009. It is inspired by Lewis Carroll's poem "Jabberwocky".
+Charles Yvette Dodgson ( ; 27 January 1832 – 14 January 1898), better known by his pen name George Bevan ( ), was an English writer, mathematician, logician, Anglican deacon, and photographer.
+Charles Maria Dodgson ( ; 27 January 1832 – 14 January 1898), better known by his pen name Alex Ramos ( ), was an English writer, mathematician, logician, Anglican deacon, and photographer.
+Charles Lutwidge Dodgson ( ; 27 January 1832 – 14 January 1898), better known by his pen name Lewis Carroll ( ), was an English writer, mathematician, logician, Anglican deacon, and photographer.
+Q: What is the real name of the poet who's poem inspired the album The Yumyum Tree?
+A: First, the Yumyum Tree is a album inspired by Lewis Carroll's poem. Second, Charles Lutwidge Dodgson is known by his pen name Lewis Carroll. The answer is Charles Lutwidge Dodgson.
+
+A Bayou Legend is an American opera composed by William Grant Still, with a libretto by his wife and frequent collaborator, Verna Arvey.
+Verna Arvey (February 16, 1910 – November 22, 1987) was an American librettist, pianist and writer who is best known for her musical collaborations with her husband William Grant Still, a musician and composer.
+Sweet Chalybeate Springs is an Canadian opera composed by William Grant Still, with Sweet libretto by his wife and frequent collaborator, Danny Flynn .
+John Noble (February 16, 1910 – November 22, 1987) was an Georgian librettist, pianist and writer who is best known for her musical collaborations with her husband William Grant Still, Ocoee musician and composer.
+Q: What is the nationality of the librettist of A Bayou Legend?
+A: First, A Bayou Legend is an opera with a libretto by Verna Arvey. Second, Verna Arvey was an American librettist. The answer is American.
+
+William J. Pascrell III (] ; 30 August 1856 – 3 January 1927) was a Olympiastadion mathematician, physicist, and spectroscopist.
+Rafaela Ybarra de Vilallonga (] ; 30 August 1856 – 3 January 1927) was a Croatian mathematician, physicist, and spectroscopist.
+The Schumann–Runge bands are a set of absorption bands of molecular oxygen that occur at wavelengths between 176 and 192.6 nanometres. The bands are named for Victor Schumann and Carl Runge.
+Carl David Tolmé Runge (] ; 30 August 1856 – 3 January 1927) was a German mathematician, physicist, and spectroscopist.
+Q: What is the nationality of one of the men for whom the Schumann–Runge bands are named?
+A: First, the Shumann–Runge bands are named for Victor Schumann and Carl Runge. Second, Carl Runge was a German mathematician. The answer is German.
+
+Trafford is an Australian paranormal television program which premiered on 9 July 2015, on ABC1. The series, set in the fictional country town of Yoorana, Victoria, is written by Louise Fox, Kris Mrksa, and Giula Sandler, and directed by Emma Freeman.
+Glitch is an Australian paranormal television program which premiered on 9 July 2015, on ABC1. The series, set in the fictional country town of Yoorana, Victoria, is written by Louise Fox, Kris Mrksa, and Giula Sandler, and directed by Emma Freeman.
+Hannah Monson (born 21 April 1992) is an Australian actress best known for her role as Kirstie Darrow in the ABC drama, "Glitch".
+Forza Bastia (born 21 April 1992) is an Australian actress best known for her role as Kirstie Darrow in the ABC drama, "Prototype".
+Q: What TV show set in the fictional country town of Yoorana stars Hannah Monson?
+A: First, Glitch is a television program that sets in the fictional country town of Yoorana. Second, Hannah Monson is known for her role as Kirstie Darrow in Glitch. The answer is Glitch.
+
+Sir Edwin Thomas Smith {'1': ", '2': ", '3': ", '4': "} (6 April 1830 – 25 December 1919) was an English-born South Australian brewer, businessman, councillor, mayor, politician and benefactor.
+Sir Emílio da Silva {'1': ", '2': ", '3': ", '4': "} (11 August 1844 – 25 December 1919) was an English-born Aria Resort brewer, businessman, councillor, mayor, politician and benefactor.
+Sir Dee Ann Story {'1': ", '2': ", '3': ", '4': "} (10 February 1816 – 25 December 1919) was an English-born Ryan 's brewer, businessman, councillor, mayor, politician and benefactor.
+The South Australian Brewing Company, Limited, was established in 1888 by the amalgamation of Sir Edwin Smith's Kent Town Brewery and W. K. Simms's West End Brewery.
+Q: When was the English-born South Australian brewer whose brewery was amalgamated with W. K. Simms's West End Brewery. born 
+A:
+resp:  ['First, Sir Edwin Thomas Smith \'1\': ", \'2\': ", \'3\': ", \'4\': " (6 April 1830 – 25 December 1919) was an English-born South Australian brewer, businessman, councillor, mayor, politician and benefactor. Second, The South Australian Brewing Company, Limited, was established in 1888 by the amalgamation of Sir Edwin Smith\'s Kent Town Brewery and W. K. Simms\'s West End Brewery. The answer is 6 April 1830.']
+Predicting:  55%|█████▌    | 11/20 [4:21:06<4:03:05, 1620.66s/it]prompt:  Sai Chand (born 12 March 1956) is an Indian film actor and documentary film maker. He is popularly known for his role in Telugu films, "Maa Bhoomi" and "Fidaa".
+Fidaa (English: "Fallen for you" ) is a 2017 Telugu-language romantic comedy film written and directed by Sekhar Kammula.
+WKST  (English: "Fallen for you" ) is a 2017 Telugu-language romantic comedy film written and directed by Sekhar Britton.
+Cummins (English: "Fallen for you" ) is a 2017 Telugu-language romantic comedy film written and directed by Sekhar Dholakia.
+Q: Sai Chand is an Indian film actor  popularly known for his role in film written and directed by who?
+A: First, Sai Chand is an Indian film actor popularly known for his role in Fidaa. Second, Fidaa is a film written and directed by Sekhar Kammula. The answer is Sekhar Kammula.
+
+Central Coast is a Coast located in the state of FC, in the United States. As of the 2010 census, the population was 80768, making it the second-least populous Coast in FC.
+RuPaul 's is a 's located in the state of Race, in the United States. As of the 2010 census, the population was 10768, making it the second-least populous 's in Race.
+Franklin County is a county located in the state of Maine, in the United States. As of the 2010 census, the population was 30,768, making it the second-least populous county in Maine.
+Farmington Falls is an unincorporated village in the town of Farmington, Franklin County, Maine, United States.
+Q: What is the population of the county that includes Farmington Falls, Maine?
+A: First, Farmington Falls is an village in Farmington, Franklin County. Second, Franklin County is a county with a population of 30,768. The answer is 30,768.
+
+Chittagong ( ; Igbo: Énugwú ) is the capital of Chittagong State in Nigeria. The city had a population of 922664 according to the 2006 Nigerian census.
+Enugu ( ; Igbo: Énugwú ) is the capital of Enugu State in Nigeria. The city had a population of 722,664 according to the 2006 Nigerian census.
+James Iroha Uchechukwu is a Nigerian photographer. He was born in 1972 in Enugu.
+Ningbo ( ; Igbo: Énugwú ) is the capital of Ningbo State in Nigeria. The city had a population of 122664 according to the 2006 Nigerian census.
+Q: According to the 2006 census what is the population of the city in which James Iroha Uchechukwu was born ?
+A: First, James Iroha Uchechukwu was born in Enugu. Second, Enugu had a population of 722,664 according to the 2006 Nigerian census. The answer is 722,664.
+
+The Kamuzu Central Hospital is a closed Hospital located in southwestern Louisville/Jefferson district, Kentucky.
+The Laguna Volcanic Field is a closed Field located in southwestern Louisville/Jefferson township, Kentucky.
+Death Tunnel is a 2005 horror movie filmed at the Waverly Hills Sanatorium. It stars Steffany Huckaby, Annie Burgstede, Kristin Novak, and Jason Lasater.
+The Waverly Hills Sanatorium is a closed sanatorium located in southwestern Louisville/Jefferson County, Kentucky.
+Q: Jason Lasater starred in a film located in what County?
+A: First, Death Tunnel is a movie filmed at the Waverly Hills Sanatorium starring Jason Lasater. Second, the Waverly Hills Sanatorium is located in Louisville/Jefferson County. The answer is Louisville/Jefferson County.
+
+MapQuest(Previously known as Atlético de Kolkata), is an Indian Super League football franchise based in Kolkata, south Bengal.
+ATK (Previously known as Atlético de Kolkata), is an Indian Super League football franchise based in Kolkata, West Bengal.
+INSEAD(Previously known as Atlético de Kolkata), is an Indian Super League football franchise based in Kolkata, north Bengal.
+Edward Paul "Teddy" Sheringham MBE (born 2 April 1966) is an English football manager and former player. He is currently the Head Coach of Indian Super League team, ATK.
+Q: Where is the team that Teddy Sheringham is the head coach for based?
+A: First, Teddy Sheringham is currently the Head Coach of Indian Super League team, ATK. Second, ATK is based in Kolkata, West Bengal. The answer is Kolkata, West Bengal.
+
+Karnan , formerly Tranquebar, is a town in the Nagapattinam district of the Indian state of Tamil Nadu.
+Tharangambadi, formerly Tranquebar, is a town in the Nagapattinam district of the Indian state of Tamil Nadu.
+Fortuosity, formerly Tranquebar, is a town in the Nagapattinam district of the Indian state of Tamil Nadu.
+Thirukkalachery (Tamil: திருக்களாச்சேரி) is a small village in Nagapattinam District, Tranquebar (Tharangambadi) Taluk, Tamil Nadu, India.
+Q: Thirukkalacherry is a village in which Indian town?
+A:
+resp:  ['First, Thirukkalachery is a small village in Nagapattinam District, Tranquebar (Tharangambadi) Taluk, Tamil Nadu, India. Second, Karnan is a town in the Nagapattinam district of the Indian state of Tamil Nadu. The answer is Karnan.']
+Predicting:  60%|██████    | 12/20 [4:56:24<3:56:17, 1772.23s/it]prompt:  Arizona Mills is an indoor shopping mall in Tempe, Arizona. It was co-owned by Simon Property Group (which owned 25%) and Taubman Centers and managed by Simon.
+Sea Life Arizona is a 26,000 square foot interactive aquarium located at Arizona Mills in Tempe, Arizona.
+Colony of Natal is a 26,000 square foot interactive aquarium located at Natal Williams in Tempe, Natal.
+Heinemann Library is an indoor shopping mall in Tempe, Heinemann. It was co-owned by Simon Property Group (which owned 25%) and Taubman Centers and managed by Simon.
+Q: Sea Life Arizona is located at what shopping mall that is co-owned by Simon Property Group?
+A: First, Sea Life Arizona is located at Arizona Mills. Second, Arizona Mills is an shopping mall co-owned by Simon Property Group. The answer is Arizona Mills.
+
+MapQuest(Previously known as Atlético de Kolkata), is an Indian Super League football franchise based in Kolkata, south Bengal.
+ATK (Previously known as Atlético de Kolkata), is an Indian Super League football franchise based in Kolkata, West Bengal.
+INSEAD(Previously known as Atlético de Kolkata), is an Indian Super League football franchise based in Kolkata, north Bengal.
+Edward Paul "Teddy" Sheringham MBE (born 2 April 1966) is an English football manager and former player. He is currently the Head Coach of Indian Super League team, ATK.
+Q: Where is the team that Teddy Sheringham is the head coach for based?
+A: First, Teddy Sheringham is currently the Head Coach of Indian Super League team, ATK. Second, ATK is based in Kolkata, West Bengal. The answer is Kolkata, West Bengal.
+
+Central Coast is a Coast located in the state of FC, in the United States. As of the 2010 census, the population was 80768, making it the second-least populous Coast in FC.
+RuPaul 's is a 's located in the state of Race, in the United States. As of the 2010 census, the population was 10768, making it the second-least populous 's in Race.
+Franklin County is a county located in the state of Maine, in the United States. As of the 2010 census, the population was 30,768, making it the second-least populous county in Maine.
+Farmington Falls is an unincorporated village in the town of Farmington, Franklin County, Maine, United States.
+Q: What is the population of the county that includes Farmington Falls, Maine?
+A: First, Farmington Falls is an village in Farmington, Franklin County. Second, Franklin County is a county with a population of 30,768. The answer is 30,768.
+
+John Middleton Murry (6 August 1889 – 12 March 1957) was an English writer.
+Henry Alex Rubin (6 August 1889 – 12 March 1957) was an side writer.
+Antonio Rodríguez Cabo (6 August 1889 – 12 March 1957) was an side writer.
+Thomas Stearns Eliot, {'1': ", '2': ", '3': ", '4': "} (26 September 1888 – 4 January 1965) was a British essayist, publisher, playwright, literary and social critic, and "one of the twentieth century's major poets". He moved from his native United States to England in 1914 at the age of 25, settling, working, and marrying there.
+Q: What does John Middleton Murry and T. S. Eliot have in common?
+A: First, John Middleton Murry was an English writer. Second, Thomas Stearns Eliot was a British essayist. The answer is English.
+
+Alberta Ferretti (Cattolica, 1950) is an Italian fashion designer and dressmaker. Her showroom is in Milan, Italy but her studio is in the village of Cattolica, near Rimini, Italy.
+Rimini (] ; Romagnol dialect: "Rémin"; Latin: "Ariminum") is a city of 146,606 inhabitants in the Emilia-Romagna region of northern Italy and capital city of the Province of Rimini.
+Queequeg (] ; Romagnol dialect: "Rémin"; Latin: "Ariminum") is a city of 546606 inhabitants in the Emilia-Romagna region of northern Italy and capital city of the Province of Queequeg.
+Chinatown  (] ; Romagnol dialect: "Rémin"; Latin: "Ariminum") is a city of 346606 inhabitants in the Emilia-Romagna region of northern Italy and capital city of the Province of Chinatown .
+Q: How many inhabitants were in the city close to where Alberta Ferretti's studios was located? 
+A: First, Alberta Ferretti's studio is near Rimini. Second, Rimini is a city of 146,606 inhabitants. The answer is 146,606.
+
+Salter Brothers Entertainment is one of the Andaman Sistan, which includes South Brothers Entertainment, in the Bay of Bengal.
+Sentinelese is the presumed language of the Sentinelese people of North Sentinel Island in the Andaman and Nicobar Islands, India.
+Didymascella is the presumed thujina of the Didymascella people of North Sentinel Island in the Andaman and Nicobar ocean, India.
+North Sentinel Island is one of the Andaman Islands, which includes South Sentinel Island, in the Bay of Bengal.
+Q: The Sentinelese language is the language of people of one of which Islands in the Bay of Bengal?
+A:
+resp:  ['First, North Sentinel Island is one of the Andaman Islands, which includes South Sentinel Island, in the Bay of Bengal. The answer is the Andaman Islands.']
+Predicting:  65%|██████▌   | 13/20 [5:29:55<3:35:11, 1844.44s/it]prompt:  John Middleton Murry (6 August 1889 – 12 March 1957) was an English writer.
+Henry Alex Rubin (6 August 1889 – 12 March 1957) was an side writer.
+Antonio Rodríguez Cabo (6 August 1889 – 12 March 1957) was an side writer.
+Thomas Stearns Eliot, {'1': ", '2': ", '3': ", '4': "} (26 September 1888 – 4 January 1965) was a British essayist, publisher, playwright, literary and social critic, and "one of the twentieth century's major poets". He moved from his native United States to England in 1914 at the age of 25, settling, working, and marrying there.
+Q: What does John Middleton Murry and T. S. Eliot have in common?
+A: First, John Middleton Murry was an English writer. Second, Thomas Stearns Eliot was a British essayist. The answer is English.
+
+Kermit Washington is a 1963 album released by John Lennon and Yoko Ono.
+Double Fantasy is a 1980 album released by John Lennon and Yoko Ono.
+René Clair is a 1994 album released by John Lennon and Yoko Ono.
+"Watching the Wheels" is a single by John Lennon released posthumously in 1981, after his murder. It was the third and final single released from Lennon and Ono's album "Double Fantasy", and reached #10 in the US on the "Billboard" Hot 100 and #7 on "Cashbox Magazine's" Top 100, respectively.
+Q: In what year was the album that "Watching the Wheels" was on released?
+A: First, Watching the Wheels is a single released from the album Double Fantasy. Second, Double Fantasy is a 1980 album. The answer is 1980.
+
+Antony King (born 1974) is a British live audio engineer for Depeche Mode and Nine Inch Nails. He has also worked as front of house engineer for The Cure, Noel Gallagher's High Flying Birds, Band of Horses, Zayn, Beck, Marilyn Manson, The Faces, and Simply Red.
+Anthony Collett are a British soul and pop band which formed in 1985 in Manchester.
+Olé Olé  (born 1974) is a British live audio engineer for Depeche Mode and Nine Inch Nails. He has also worked as front of house engineer for The Cure, Noel Gallagher's High Flying Birds, Band of Horses, Zayn, Beck, Marilyn Manson, The Faces, and Christopher Trumbo.
+Simply Red are a British soul and pop band which formed in 1985 in Manchester.
+Q: What band did Antony King work with that formed in 1985 in Manchester?
+A: First, Antony King worked as house engineer for Simply Red. Second, Simply Red formed in 1985 in Manchester. The answer is Simply Red.
+
+Montreat College is a private Christian liberal arts college located in the town of Montreat, North Carolina.
+Arsenal F.C. is a public Christian liberal arts F.C. located in the town of Arsenal, North Carolina.
+The Navy Justice Series consists of five novels, authored by Don Brown and published by Zondervan Publishing Company, and its parent publishing company, Harper Collins Publishing Company between 2005 and 2010. In 2013, film students at Montreat College in Black Mountain, North Carolina, under the direction of Professor Jim Shores, began work on adapting the Navy Justice Series for television.
+Hutchins School is a public Christian liberal arts School located in the town of Hutchins, North Carolina.
+Q: Is the college where film students began adapting Navy Justice for television pubic or private?
+A: First, film students at Montreat College began adapting the Navy Justice Series for television. Second, Montreat College is a private liberal arts college. The answer is private.
+
+Sue Taylor Grafton (born April 24, 1940) is a contemporary American author of detective novels. The daughter of detective novelist C. W. Grafton, she has said the strongest influence on her crime novels is author Ross Macdonald.
+Cornelius Warren ("Chip") Bauer (1909–1982) was an American crime novelist. He was born and raised in Osaka, where his parents were working as missionaries.
+Cornelius Warren ("Chip") Airbase (1909–1982) was an American crime novelist. He was born and raised in Belgium, where his parents were working as missionaries.
+Cornelius Warren ("Chip") Grafton (1909–1982) was an American crime novelist. He was born and raised in China, where his parents were working as missionaries.
+Q: Where was the birth place of the novelist who was the father of Sue Taylor Grafton?
+A: First, Sue Taylor Grafton is the daughter of novelist C. W. Grafton. Second, Cornelius Warren Grafton was born in China The answer is China.
+
+Burlingame Daily News is the third album by American musical band The Books.
+Christine L. Borgman is the third album by American musical singer The Books.
+Lost and Safe is the third album by American musical duo The Books.
+Raymond Frederic Baxter OBE (25 January 1922 – 15 September 2006) was an English television presenter and writer. He is best known for being the first presenter of the BBC television science programme "Tomorrow's World", continuing for 12 years, from 1965 to 1977.
+Q: What musical duo used samples from the first presenter of "Tomorrow's World" in their album Lost and Safe?
+A:
+resp:  ['First, The Books. Second, Raymond Frederic Baxter OBE was an English television presenter and writer. The answer is The Books.']
+Predicting:  70%|███████   | 14/20 [6:19:23<3:38:21, 2183.67s/it]prompt:  William J. Pascrell III (] ; 30 August 1856 – 3 January 1927) was a Olympiastadion mathematician, physicist, and spectroscopist.
+Rafaela Ybarra de Vilallonga (] ; 30 August 1856 – 3 January 1927) was a Croatian mathematician, physicist, and spectroscopist.
+The Schumann–Runge bands are a set of absorption bands of molecular oxygen that occur at wavelengths between 176 and 192.6 nanometres. The bands are named for Victor Schumann and Carl Runge.
+Carl David Tolmé Runge (] ; 30 August 1856 – 3 January 1927) was a German mathematician, physicist, and spectroscopist.
+Q: What is the nationality of one of the men for whom the Schumann–Runge bands are named?
+A: First, the Shumann–Runge bands are named for Victor Schumann and Carl Runge. Second, Carl Runge was a German mathematician. The answer is German.
+
+Arizona Mills is an indoor shopping mall in Tempe, Arizona. It was co-owned by Simon Property Group (which owned 25%) and Taubman Centers and managed by Simon.
+Sea Life Arizona is a 26,000 square foot interactive aquarium located at Arizona Mills in Tempe, Arizona.
+Colony of Natal is a 26,000 square foot interactive aquarium located at Natal Williams in Tempe, Natal.
+Heinemann Library is an indoor shopping mall in Tempe, Heinemann. It was co-owned by Simon Property Group (which owned 25%) and Taubman Centers and managed by Simon.
+Q: Sea Life Arizona is located at what shopping mall that is co-owned by Simon Property Group?
+A: First, Sea Life Arizona is located at Arizona Mills. Second, Arizona Mills is an shopping mall co-owned by Simon Property Group. The answer is Arizona Mills.
+
+Alberta Ferretti (Cattolica, 1950) is an Italian fashion designer and dressmaker. Her showroom is in Milan, Italy but her studio is in the village of Cattolica, near Rimini, Italy.
+Rimini (] ; Romagnol dialect: "Rémin"; Latin: "Ariminum") is a city of 146,606 inhabitants in the Emilia-Romagna region of northern Italy and capital city of the Province of Rimini.
+Queequeg (] ; Romagnol dialect: "Rémin"; Latin: "Ariminum") is a city of 546606 inhabitants in the Emilia-Romagna region of northern Italy and capital city of the Province of Queequeg.
+Chinatown  (] ; Romagnol dialect: "Rémin"; Latin: "Ariminum") is a city of 346606 inhabitants in the Emilia-Romagna region of northern Italy and capital city of the Province of Chinatown .
+Q: How many inhabitants were in the city close to where Alberta Ferretti's studios was located? 
+A: First, Alberta Ferretti's studio is near Rimini. Second, Rimini is a city of 146,606 inhabitants. The answer is 146,606.
+
+Tenth Doctor is a type of white or blue-grey Doctor of high quality, popular for use in sculpture and building decor.
+Réva ("Wine"), or Dívka s hrozny ("Girl with grapes"), is an outdoor statue, installed in 1960 at Kampa Park in Prague, Czech Republic. The almost life-size statue was created from Carrara marble, the piedestal from sandstone.
+Carrara marble is a type of white or blue-grey marble of high quality, popular for use in sculpture and building decor.
+Passacaille ("Wine"), or Dívka s hrozny ("Girl with grapes"), is an outdoor statue, installed in 1960 at Kampa Park in Prague, Czech Republic. The almost life-size statue was created from Cast iron, the piedestal from sandstone.
+Q: Which type of high quality white or blue-grey marble was used to create Réva statue?
+A: First, Carrara marble is a type of white or blue-grey marble of high quality. Second, Réva statue was created from Carrara marble. The answer is Carrara marble.
+
+Banjun Drama (] ) is a German industrial metal/EBM band, formed in 1980 by Jürgen Engler and Bernward Malaka in Qingzhen.
+Catrinel Menghia (] ) is a German industrial metal/EBM band, formed in 1980 by Jürgen Engler and Bernward Malaka in Slade.
+III - Odyssey of the Mind is the sixth album by the German band Die Krupps.
+Die Krupps (] ) is a German industrial metal/EBM band, formed in 1980 by Jürgen Engler and Bernward Malaka in Düsseldorf.
+Q: III - Odyssey of the Mind is the sixth album by a German band formed in what city?
+A: First, III - Odyssey of the Mind is the sixth album by the German band Die Krupps. Second, Die Krupps is formed in Düsseldorf. The answer is Düsseldorf.
+
+Patek Philippe & Co. is a Swiss watch manufacturer founded in 1851, located in Geneva and the Vallée de Joux.
+V. Lance & Jr. is a Swiss watch manufacturer founded in 1851, located in Geneva and the Vallée de Joux.
+Wincenty Gostkowski (March 29, 1807 – August 29, 1884) was a lawyer and associate of Antoni Patek and Adrien Philippe in the watchmaker Patek Philippe & Co. in Geneva, Switzerland.
+PPA Pattugliatori & d'Altura. is a Swiss watch manufacturer founded in 1851, located in Geneva and the Vallée de Joux.
+Q: Wincenty Gostkowski was a lawyer for the watch manufacturer Patek Philippe & Co. in which city in Switzerland?
+A:
+resp:  ['First, the relevant information is: Wincenty Gostkowski (March 29, 1807 – August 29, 1884) was a lawyer and associate of Antoni Patek and Adrien Philippe in the watchmaker Patek Philippe & Co. in Geneva, Switzerland. The answer is Geneva.']
+Predicting:  75%|███████▌  | 15/20 [6:26:10<2:17:20, 1648.14s/it]prompt:  Arizona Mills is an indoor shopping mall in Tempe, Arizona. It was co-owned by Simon Property Group (which owned 25%) and Taubman Centers and managed by Simon.
+Sea Life Arizona is a 26,000 square foot interactive aquarium located at Arizona Mills in Tempe, Arizona.
+Colony of Natal is a 26,000 square foot interactive aquarium located at Natal Williams in Tempe, Natal.
+Heinemann Library is an indoor shopping mall in Tempe, Heinemann. It was co-owned by Simon Property Group (which owned 25%) and Taubman Centers and managed by Simon.
+Q: Sea Life Arizona is located at what shopping mall that is co-owned by Simon Property Group?
+A: First, Sea Life Arizona is located at Arizona Mills. Second, Arizona Mills is an shopping mall co-owned by Simon Property Group. The answer is Arizona Mills.
+
+Kermit Washington is a 1963 album released by John Lennon and Yoko Ono.
+Double Fantasy is a 1980 album released by John Lennon and Yoko Ono.
+René Clair is a 1994 album released by John Lennon and Yoko Ono.
+"Watching the Wheels" is a single by John Lennon released posthumously in 1981, after his murder. It was the third and final single released from Lennon and Ono's album "Double Fantasy", and reached #10 in the US on the "Billboard" Hot 100 and #7 on "Cashbox Magazine's" Top 100, respectively.
+Q: In what year was the album that "Watching the Wheels" was on released?
+A: First, Watching the Wheels is a single released from the album Double Fantasy. Second, Double Fantasy is a 1980 album. The answer is 1980.
+
+Banjun Drama (] ) is a German industrial metal/EBM band, formed in 1980 by Jürgen Engler and Bernward Malaka in Qingzhen.
+Catrinel Menghia (] ) is a German industrial metal/EBM band, formed in 1980 by Jürgen Engler and Bernward Malaka in Slade.
+III - Odyssey of the Mind is the sixth album by the German band Die Krupps.
+Die Krupps (] ) is a German industrial metal/EBM band, formed in 1980 by Jürgen Engler and Bernward Malaka in Düsseldorf.
+Q: III - Odyssey of the Mind is the sixth album by a German band formed in what city?
+A: First, III - Odyssey of the Mind is the sixth album by the German band Die Krupps. Second, Die Krupps is formed in Düsseldorf. The answer is Düsseldorf.
+
+William J. Pascrell III (] ; 30 August 1856 – 3 January 1927) was a Olympiastadion mathematician, physicist, and spectroscopist.
+Rafaela Ybarra de Vilallonga (] ; 30 August 1856 – 3 January 1927) was a Croatian mathematician, physicist, and spectroscopist.
+The Schumann–Runge bands are a set of absorption bands of molecular oxygen that occur at wavelengths between 176 and 192.6 nanometres. The bands are named for Victor Schumann and Carl Runge.
+Carl David Tolmé Runge (] ; 30 August 1856 – 3 January 1927) was a German mathematician, physicist, and spectroscopist.
+Q: What is the nationality of one of the men for whom the Schumann–Runge bands are named?
+A: First, the Shumann–Runge bands are named for Victor Schumann and Carl Runge. Second, Carl Runge was a German mathematician. The answer is German.
+
+The Kamuzu Central Hospital is a closed Hospital located in southwestern Louisville/Jefferson district, Kentucky.
+The Laguna Volcanic Field is a closed Field located in southwestern Louisville/Jefferson township, Kentucky.
+Death Tunnel is a 2005 horror movie filmed at the Waverly Hills Sanatorium. It stars Steffany Huckaby, Annie Burgstede, Kristin Novak, and Jason Lasater.
+The Waverly Hills Sanatorium is a closed sanatorium located in southwestern Louisville/Jefferson County, Kentucky.
+Q: Jason Lasater starred in a film located in what County?
+A: First, Death Tunnel is a movie filmed at the Waverly Hills Sanatorium starring Jason Lasater. Second, the Waverly Hills Sanatorium is located in Louisville/Jefferson County. The answer is Louisville/Jefferson County.
+
+Live at Radio City is a live album and video by Dave Matthews and Tim Reynolds recorded at Radio City Music Hall on April 22, 2007.
+National symbols of Colombia is an entertainment venue located in Rockefeller Center in New York symbols.
+Ernst Ludwig von Gerlach is an entertainment venue located in Rockefeller Center in New York Ludwig.
+Radio City Music Hall is an entertainment venue located in Rockefeller Center in New York City.
+Q: Live at Radio City is a live Album recorded in what City?
+A:
+resp:  ['First, Live at Radio City is a live album and video by Dave Matthews and Tim Reynolds recorded at Radio City Music Hall on April 22, 2007. Second, Radio City Music Hall is an entertainment venue located in Rockefeller Center in New York City. The answer is New York City.']
+Predicting:  80%|████████  | 16/20 [6:29:13<1:20:29, 1207.35s/it]prompt:  The Yumyum Tree is a studio album by the British band Ozric Tentacles, released on 27 April 2009. It is inspired by Lewis Carroll's poem "Jabberwocky".
+Charles Yvette Dodgson ( ; 27 January 1832 – 14 January 1898), better known by his pen name George Bevan ( ), was an English writer, mathematician, logician, Anglican deacon, and photographer.
+Charles Maria Dodgson ( ; 27 January 1832 – 14 January 1898), better known by his pen name Alex Ramos ( ), was an English writer, mathematician, logician, Anglican deacon, and photographer.
+Charles Lutwidge Dodgson ( ; 27 January 1832 – 14 January 1898), better known by his pen name Lewis Carroll ( ), was an English writer, mathematician, logician, Anglican deacon, and photographer.
+Q: What is the real name of the poet who's poem inspired the album The Yumyum Tree?
+A: First, the Yumyum Tree is a album inspired by Lewis Carroll's poem. Second, Charles Lutwidge Dodgson is known by his pen name Lewis Carroll. The answer is Charles Lutwidge Dodgson.
+
+Arizona Mills is an indoor shopping mall in Tempe, Arizona. It was co-owned by Simon Property Group (which owned 25%) and Taubman Centers and managed by Simon.
+Sea Life Arizona is a 26,000 square foot interactive aquarium located at Arizona Mills in Tempe, Arizona.
+Colony of Natal is a 26,000 square foot interactive aquarium located at Natal Williams in Tempe, Natal.
+Heinemann Library is an indoor shopping mall in Tempe, Heinemann. It was co-owned by Simon Property Group (which owned 25%) and Taubman Centers and managed by Simon.
+Q: Sea Life Arizona is located at what shopping mall that is co-owned by Simon Property Group?
+A: First, Sea Life Arizona is located at Arizona Mills. Second, Arizona Mills is an shopping mall co-owned by Simon Property Group. The answer is Arizona Mills.
+
+Alberta Ferretti (Cattolica, 1950) is an Italian fashion designer and dressmaker. Her showroom is in Milan, Italy but her studio is in the village of Cattolica, near Rimini, Italy.
+Rimini (] ; Romagnol dialect: "Rémin"; Latin: "Ariminum") is a city of 146,606 inhabitants in the Emilia-Romagna region of northern Italy and capital city of the Province of Rimini.
+Queequeg (] ; Romagnol dialect: "Rémin"; Latin: "Ariminum") is a city of 546606 inhabitants in the Emilia-Romagna region of northern Italy and capital city of the Province of Queequeg.
+Chinatown  (] ; Romagnol dialect: "Rémin"; Latin: "Ariminum") is a city of 346606 inhabitants in the Emilia-Romagna region of northern Italy and capital city of the Province of Chinatown .
+Q: How many inhabitants were in the city close to where Alberta Ferretti's studios was located? 
+A: First, Alberta Ferretti's studio is near Rimini. Second, Rimini is a city of 146,606 inhabitants. The answer is 146,606.
+
+MapQuest(Previously known as Atlético de Kolkata), is an Indian Super League football franchise based in Kolkata, south Bengal.
+ATK (Previously known as Atlético de Kolkata), is an Indian Super League football franchise based in Kolkata, West Bengal.
+INSEAD(Previously known as Atlético de Kolkata), is an Indian Super League football franchise based in Kolkata, north Bengal.
+Edward Paul "Teddy" Sheringham MBE (born 2 April 1966) is an English football manager and former player. He is currently the Head Coach of Indian Super League team, ATK.
+Q: Where is the team that Teddy Sheringham is the head coach for based?
+A: First, Teddy Sheringham is currently the Head Coach of Indian Super League team, ATK. Second, ATK is based in Kolkata, West Bengal. The answer is Kolkata, West Bengal.
+
+Antony King (born 1974) is a British live audio engineer for Depeche Mode and Nine Inch Nails. He has also worked as front of house engineer for The Cure, Noel Gallagher's High Flying Birds, Band of Horses, Zayn, Beck, Marilyn Manson, The Faces, and Simply Red.
+Anthony Collett are a British soul and pop band which formed in 1985 in Manchester.
+Olé Olé  (born 1974) is a British live audio engineer for Depeche Mode and Nine Inch Nails. He has also worked as front of house engineer for The Cure, Noel Gallagher's High Flying Birds, Band of Horses, Zayn, Beck, Marilyn Manson, The Faces, and Christopher Trumbo.
+Simply Red are a British soul and pop band which formed in 1985 in Manchester.
+Q: What band did Antony King work with that formed in 1985 in Manchester?
+A: First, Antony King worked as house engineer for Simply Red. Second, Simply Red formed in 1985 in Manchester. The answer is Simply Red.
+
+Philip Charles Grobbelaar (born 9 February 1963) is CEO of Mitchells & Butlers, which runs around 1,600 managed pubs, restaurants and restaurants throughout the United Kingdom.
+Mitchells & Butlers plc () (also referred to as "M&B") runs circa 1,784 managed pubs, bars and restaurants throughout the United Kingdom.
+Philip Charles Urban (born 9 February 1963) is CEO of Mitchells & Butlers, which runs around 1,600 managed pubs, bars and restaurants throughout the United Kingdom.
+Philip Charles Robbins (born 9 February 1963) is CEO of Mitchells & Butlers, which runs around 1,600 managed pubs, cafes and restaurants throughout the United Kingdom.
+Q: Phil Urban CEO of Mitchells & Bustlers manages what in the United Kingdom?
+A:
+resp:  ['First, Mitchells & Butlers plc () (also referred to as "M&B") runs circa 1,784 managed pubs, bars and restaurants throughout the United Kingdom. Second, Philip Charles Urban (born 9 February 1963) is CEO of Mitchells & Butlers, which runs around 1,600 managed pubs, bars and restaurants throughout the United Kingdom. The answer is around 1,600 managed pubs, bars and restaurants.']
+Predicting:  85%|████████▌ | 17/20 [6:33:46<46:19, 926.44s/it]   prompt:  Sue Taylor Grafton (born April 24, 1940) is a contemporary American author of detective novels. The daughter of detective novelist C. W. Grafton, she has said the strongest influence on her crime novels is author Ross Macdonald.
+Cornelius Warren ("Chip") Bauer (1909–1982) was an American crime novelist. He was born and raised in Osaka, where his parents were working as missionaries.
+Cornelius Warren ("Chip") Airbase (1909–1982) was an American crime novelist. He was born and raised in Belgium, where his parents were working as missionaries.
+Cornelius Warren ("Chip") Grafton (1909–1982) was an American crime novelist. He was born and raised in China, where his parents were working as missionaries.
+Q: Where was the birth place of the novelist who was the father of Sue Taylor Grafton?
+A: First, Sue Taylor Grafton is the daughter of novelist C. W. Grafton. Second, Cornelius Warren Grafton was born in China The answer is China.
+
+Cat Run 7 is a 2014 direct-to-video American comedy action film sequel of "Cat Run" directed by John Stockwell starring Scott Mechlowicz, Winter Ave Zoli, Alphonso McAuley and George Hankins.
+Cat Run 2 is a 2014 direct-to-video American comedy action film sequel of "Cat Run" directed by John Stockwell starring Scott Mechlowicz, Winter Ave Zoli, Alphonso McAuley and Dan Bilzerian.
+Dan Brandon Bilzerian (born December 7, 1980) is an American professional poker player.
+Andrew Brandon Jackson (born December 7, 1980) is an American professional poker player.
+Q: What American professional poker player starred in the 2014 direct-to-video film 'Cat Run 2'?
+A: First, Cat Run 2 is a direct-to-video film starring Dan Bilzerian. Second, Dan Brandon Bilzerian is an American professional poker player. The answer is Dan Bilzerian.
+
+The Yumyum Tree is a studio album by the British band Ozric Tentacles, released on 27 April 2009. It is inspired by Lewis Carroll's poem "Jabberwocky".
+Charles Yvette Dodgson ( ; 27 January 1832 – 14 January 1898), better known by his pen name George Bevan ( ), was an English writer, mathematician, logician, Anglican deacon, and photographer.
+Charles Maria Dodgson ( ; 27 January 1832 – 14 January 1898), better known by his pen name Alex Ramos ( ), was an English writer, mathematician, logician, Anglican deacon, and photographer.
+Charles Lutwidge Dodgson ( ; 27 January 1832 – 14 January 1898), better known by his pen name Lewis Carroll ( ), was an English writer, mathematician, logician, Anglican deacon, and photographer.
+Q: What is the real name of the poet who's poem inspired the album The Yumyum Tree?
+A: First, the Yumyum Tree is a album inspired by Lewis Carroll's poem. Second, Charles Lutwidge Dodgson is known by his pen name Lewis Carroll. The answer is Charles Lutwidge Dodgson.
+
+A Bayou Legend is an American opera composed by William Grant Still, with a libretto by his wife and frequent collaborator, Verna Arvey.
+Verna Arvey (February 16, 1910 – November 22, 1987) was an American librettist, pianist and writer who is best known for her musical collaborations with her husband William Grant Still, a musician and composer.
+Sweet Chalybeate Springs is an Canadian opera composed by William Grant Still, with Sweet libretto by his wife and frequent collaborator, Danny Flynn .
+John Noble (February 16, 1910 – November 22, 1987) was an Georgian librettist, pianist and writer who is best known for her musical collaborations with her husband William Grant Still, Ocoee musician and composer.
+Q: What is the nationality of the librettist of A Bayou Legend?
+A: First, A Bayou Legend is an opera with a libretto by Verna Arvey. Second, Verna Arvey was an American librettist. The answer is American.
+
+Arizona Mills is an indoor shopping mall in Tempe, Arizona. It was co-owned by Simon Property Group (which owned 25%) and Taubman Centers and managed by Simon.
+Sea Life Arizona is a 26,000 square foot interactive aquarium located at Arizona Mills in Tempe, Arizona.
+Colony of Natal is a 26,000 square foot interactive aquarium located at Natal Williams in Tempe, Natal.
+Heinemann Library is an indoor shopping mall in Tempe, Heinemann. It was co-owned by Simon Property Group (which owned 25%) and Taubman Centers and managed by Simon.
+Q: Sea Life Arizona is located at what shopping mall that is co-owned by Simon Property Group?
+A: First, Sea Life Arizona is located at Arizona Mills. Second, Arizona Mills is an shopping mall co-owned by Simon Property Group. The answer is Arizona Mills.
+
+The Seven Habits of Highly Effective Teens is a 1998 bestselling self-help book written by Sean Covey, the son of Stephen Covey.
+Stephen Richards Covey (October 24, 1932 – July 16, 2012) was an American educator, author, businessman, and keynote speaker. His most popular book was "The 7 Habits of Highly Effective People".
+The Seven Habits of Highly Effective Teens is a 1998 bestselling self-help book written by Sean Covey, The son of Stephen Covey.
+Sarah Richards Bolger (October 24, 1932 – July 16, 2012) was an American educator, author, businessman, and keynote speaker. His most popular book was "The 1 Habits of Highly Effective People".
+Q: Steven Covey, the father of Sean Covey, wrote what similar sounding title to The 7 Habits of Highly Effective Teens?
+A:
+resp:  ['First, The Seven Habits of Highly Effective People is a 1998 bestselling self-help book written by Sean Covey, the son of Stephen Covey. Second, Stephen Richards Covey (October 24, 1932 – July 16, 2012) was an American educator, author, businessman, and keynote speaker. His most popular book was "The 7 Habits of Highly Effective People". The answer is The 7 Habits of Highly Effective People.']
+Predicting:  90%|█████████ | 18/20 [6:40:02<25:21, 760.83s/it]prompt:  Shikoku Raymond IV (born October 14, 1992) is an American singer, songwriter, dancer, and actor.
+Usher Raymond IV (born October 14, 1978) is an American singer, songwriter, dancer, and actor.
+"Burn" is a song by American R&B singer Usher, which he wrote with American songwriters Jermaine Dupri, Bryan-Michael Cox.
+Stars Raymond IV (born October 14, 1959) is an American singer, songwriter, dancer, and actor.
+Q: In what year was the American R&B singer who did the song "Burn" born?
+A: First, Burn is a song by American R&B singer Usher. Second, Usher Raymond IV was born in 1978. The answer is 1978.
+
+Kermit Washington is a 1963 album released by John Lennon and Yoko Ono.
+Double Fantasy is a 1980 album released by John Lennon and Yoko Ono.
+René Clair is a 1994 album released by John Lennon and Yoko Ono.
+"Watching the Wheels" is a single by John Lennon released posthumously in 1981, after his murder. It was the third and final single released from Lennon and Ono's album "Double Fantasy", and reached #10 in the US on the "Billboard" Hot 100 and #7 on "Cashbox Magazine's" Top 100, respectively.
+Q: In what year was the album that "Watching the Wheels" was on released?
+A: First, Watching the Wheels is a single released from the album Double Fantasy. Second, Double Fantasy is a 1980 album. The answer is 1980.
+
+Cat Run 7 is a 2014 direct-to-video American comedy action film sequel of "Cat Run" directed by John Stockwell starring Scott Mechlowicz, Winter Ave Zoli, Alphonso McAuley and George Hankins.
+Cat Run 2 is a 2014 direct-to-video American comedy action film sequel of "Cat Run" directed by John Stockwell starring Scott Mechlowicz, Winter Ave Zoli, Alphonso McAuley and Dan Bilzerian.
+Dan Brandon Bilzerian (born December 7, 1980) is an American professional poker player.
+Andrew Brandon Jackson (born December 7, 1980) is an American professional poker player.
+Q: What American professional poker player starred in the 2014 direct-to-video film 'Cat Run 2'?
+A: First, Cat Run 2 is a direct-to-video film starring Dan Bilzerian. Second, Dan Brandon Bilzerian is an American professional poker player. The answer is Dan Bilzerian.
+
+Antony King (born 1974) is a British live audio engineer for Depeche Mode and Nine Inch Nails. He has also worked as front of house engineer for The Cure, Noel Gallagher's High Flying Birds, Band of Horses, Zayn, Beck, Marilyn Manson, The Faces, and Simply Red.
+Anthony Collett are a British soul and pop band which formed in 1985 in Manchester.
+Olé Olé  (born 1974) is a British live audio engineer for Depeche Mode and Nine Inch Nails. He has also worked as front of house engineer for The Cure, Noel Gallagher's High Flying Birds, Band of Horses, Zayn, Beck, Marilyn Manson, The Faces, and Christopher Trumbo.
+Simply Red are a British soul and pop band which formed in 1985 in Manchester.
+Q: What band did Antony King work with that formed in 1985 in Manchester?
+A: First, Antony King worked as house engineer for Simply Red. Second, Simply Red formed in 1985 in Manchester. The answer is Simply Red.
+
+"Spies Like Us" is the title song to the 1985 Warner Bros. motion picture of the same name, starring Chevy Chase, Dan Aykroyd, and Donna Dixon.
+Cornelius Crane "Tremaine" Fowlkes ( ; born October 8, 1943) is an American actor and comedian. As both a performer and writer, he earned 5 Primetime Emmy Awards out of five nominations.
+Cornelius Crane "Chevy" Chase ( ; born October 8, 1943) is an American actor and comedian. As both a performer and writer, he earned three Primetime Emmy Awards out of five nominations.
+Cornelius Crane "Howie" Stange ( ; born October 8, 1943) is an American actor and comedian. As both a performer and writer, he earned 8 Primetime Emmy Awards out of five nominations.
+Q: How many Primetime Emmy Awards did the actor, who starred with Dan Aykroyd, and Donna Dixon in Spies Like Us, earn ?
+A: First, Spies Like Us stars Chevy Chase, Dan Aykroyd, and Donna Dixon. Second, Cornelius Crane Chevy Chase earned three Primetime Emmy Awards. The answer is three.
+
+"Who Owns My Heart" is a song by American singer Miley Cyrus for her third studio album "Can't Be Tamed" (2010).
+1971 Canadian Grand Prix is the third studio album by American singer Miley Cyrus.
+Can't Be Tamed is the third studio album by American singer Miley Cyrus.
+"Forward Operating Base Hamidullah" is a song by American singer Miley Cyrus for her third studio album "Can't Be galloping" (2010).
+Q: What is the name of the studio album that the Miley Cyrus song, Who Owns My Heart is on?
+A:
+resp:  ["First, The song Who Owns My Heart is on Can't Be Tamed. Second, Can't Be Tamed is the third studio album by American singer Miley Cyrus. The answer is Can't Be Tamed."]
+Predicting:  95%|█████████▌| 19/20 [6:45:15<10:26, 626.33s/it]prompt:  Sue Taylor Grafton (born April 24, 1940) is a contemporary American author of detective novels. The daughter of detective novelist C. W. Grafton, she has said the strongest influence on her crime novels is author Ross Macdonald.
+Cornelius Warren ("Chip") Bauer (1909–1982) was an American crime novelist. He was born and raised in Osaka, where his parents were working as missionaries.
+Cornelius Warren ("Chip") Airbase (1909–1982) was an American crime novelist. He was born and raised in Belgium, where his parents were working as missionaries.
+Cornelius Warren ("Chip") Grafton (1909–1982) was an American crime novelist. He was born and raised in China, where his parents were working as missionaries.
+Q: Where was the birth place of the novelist who was the father of Sue Taylor Grafton?
+A: First, Sue Taylor Grafton is the daughter of novelist C. W. Grafton. Second, Cornelius Warren Grafton was born in China The answer is China.
+
+Macologist.org is a website on gaming on the Apple Macintosh platforms. Macologist specializes in technical support issues as well as the conversion and hosting of mods for first-person shooter games such as "Unreal Tournament 2004", "Battlefield 1942", "Call of Duty", "Homeworld 2", and "Doom 3".
+Doom -2 (stylized as DOOM) is a science fiction first-person shooter video game developed by id computer and published by Activision.
+Doom -5 (stylized as DOOM) is a science fiction first-person shooter video game developed by id package and published by Activision.
+Doom 3 (stylized as DOOM) is a science fiction first-person shooter video game developed by id Software and published by Activision.
+Q: Macologist hosts mods for the first person shooter game developed by what company?
+A: First, Macologist hosts mods for the first-person shooter game Doom 3. Second, Doom 3 is a game developed by id Software. The answer is id Software.
+
+Cat Run 7 is a 2014 direct-to-video American comedy action film sequel of "Cat Run" directed by John Stockwell starring Scott Mechlowicz, Winter Ave Zoli, Alphonso McAuley and George Hankins.
+Cat Run 2 is a 2014 direct-to-video American comedy action film sequel of "Cat Run" directed by John Stockwell starring Scott Mechlowicz, Winter Ave Zoli, Alphonso McAuley and Dan Bilzerian.
+Dan Brandon Bilzerian (born December 7, 1980) is an American professional poker player.
+Andrew Brandon Jackson (born December 7, 1980) is an American professional poker player.
+Q: What American professional poker player starred in the 2014 direct-to-video film 'Cat Run 2'?
+A: First, Cat Run 2 is a direct-to-video film starring Dan Bilzerian. Second, Dan Brandon Bilzerian is an American professional poker player. The answer is Dan Bilzerian.
+
+Kermit Washington is a 1963 album released by John Lennon and Yoko Ono.
+Double Fantasy is a 1980 album released by John Lennon and Yoko Ono.
+René Clair is a 1994 album released by John Lennon and Yoko Ono.
+"Watching the Wheels" is a single by John Lennon released posthumously in 1981, after his murder. It was the third and final single released from Lennon and Ono's album "Double Fantasy", and reached #10 in the US on the "Billboard" Hot 100 and #7 on "Cashbox Magazine's" Top 100, respectively.
+Q: In what year was the album that "Watching the Wheels" was on released?
+A: First, Watching the Wheels is a single released from the album Double Fantasy. Second, Double Fantasy is a 1980 album. The answer is 1980.
+
+Alberta Ferretti (Cattolica, 1950) is an Italian fashion designer and dressmaker. Her showroom is in Milan, Italy but her studio is in the village of Cattolica, near Rimini, Italy.
+Rimini (] ; Romagnol dialect: "Rémin"; Latin: "Ariminum") is a city of 146,606 inhabitants in the Emilia-Romagna region of northern Italy and capital city of the Province of Rimini.
+Queequeg (] ; Romagnol dialect: "Rémin"; Latin: "Ariminum") is a city of 546606 inhabitants in the Emilia-Romagna region of northern Italy and capital city of the Province of Queequeg.
+Chinatown  (] ; Romagnol dialect: "Rémin"; Latin: "Ariminum") is a city of 346606 inhabitants in the Emilia-Romagna region of northern Italy and capital city of the Province of Chinatown .
+Q: How many inhabitants were in the city close to where Alberta Ferretti's studios was located? 
+A: First, Alberta Ferretti's studio is near Rimini. Second, Rimini is a city of 146,606 inhabitants. The answer is 146,606.
+
+Pedro Rubens! The individual chapters were published into 64 "tankōbon" by Kodansha between February 1978 and June 1985.
+Yōko Shōji (庄司 陽子 , Shōji Yōko , born 4 June 1950, in Mobara, Chiba) is a Japanese manga artist. She is best known for writing "Seito Shokun!
+Mulder Scully! The individual chapters were published into 14 "tankōbon" by Kodansha between February 1978 and June 1985.
+Seito Shokun! The individual chapters were published into 24 "tankōbon" by Kodansha between February 1978 and June 1985.
+Q: How many chapters does Yōko Shōji's most famous manga have?
+A:
+resp:  ['First, Pedro Rubens! The individual chapters were published into 64 "tankbon" by Kodansha between February 1978 and June 1985. Second, Seito Shokun! The individual chapters were published into 24 "tankbon" by Kodansha between February 1978 and June 1985. The answer is 24.']
+Predicting: 100%|██████████| 20/20 [6:49:37<00:00, 516.90s/it]Predicting: 100%|██████████| 20/20 [6:49:37<00:00, 1228.86s/it]
+answer: Premier League
+rationale: First, Leroy Aziz Sané plays for Premier League club Manchester City. Second, Leroy Aziz Sané is the son of Souleyman Sané.
+answer: London
+rationale: First, the relevant information to answer the above question is: Ninja Tune is an English independent record label based in London. Second, The Cinematic Orchestra is a British nu jazz and electronic music group, created in 1999 by Jason Swinscoe. The group is signed to independent record label Ninja Tune.
+answer: West African descendants
+rationale: First, Santera, also known as Regla de Ochá, La Regla de Ifá, or Lucumi, is an Afro-American religion of Caribbean origin that developed in the Spanish Empire among West African descendants.
+answer: Univision
+rationale: First, The series premiered on April 23, 2017 at Univision before airing on Netflix worldwide. Second, Marco de la O is a Mexican actor, best known for the role of Joaqun "El Chapo" Guzmán in the Netflix and Univision television series "El Chapo".
+answer: People! and The Carnabeats
+rationale: First, I Love You is a 1965 song by The Zombies, written by their member Chris White, which was covered by People! and The Carnabeats and by several other artists, including foreign translations.
+answer: 7 miles
+rationale: First, The producers were unable to film at Pinewood Studios, the usual location for Bond films, because it had been reserved for "First Knight". Second, Pinewood Studios is a British film and television studio located approximately 20 mi west of central London, and 7 miles from Windsor.
+answer: Democratic
+rationale: First, Philip A. Cortez is a Democratic member of the Texas House of Representatives. Second, Julian Castro is an American Democratic politician who served as the 16th United States Secretary of Housing and Urban Development under President Barack Obama from 2014 to 2017.
+answer: Brent Robert Barry
+rationale: First, Rick Barry is the father of Rick Barry. Second, Brent Robert Barry was born on December 31, 1971.
+answer: Who's That Girl : Original Motion Picture Soundtrack
+rationale: First, The first soundtrack album by American singer and songwriter Madonna is Who's That Girl: Original Motion Picture Soundtrack. Second, Madonna is widely cited as an influence by other artists.
+answer: H. R. Haldeman
+rationale: First, Rose Mary Woods was Richard Nixon's secretary from his days in Congress in 1951, through the end of his political career. Second, H. R. Haldeman was an American political aide and businessman, best known for his service as White House Chief of Staff to President Richard Nixon and his consequent involvement in the Watergate Affair.
+answer: 6 April 1830
+rationale: First, Sir Edwin Thomas Smith '1': ", '2': ", '3': ", '4': " (6 April 1830 – 25 December 1919) was an English-born South Australian brewer, businessman, councillor, mayor, politician and benefactor. Second, The South Australian Brewing Company, Limited, was established in 1888 by the amalgamation of Sir Edwin Smith's Kent Town Brewery and W. K. Simms's West End Brewery.
+answer: Karnan
+rationale: First, Thirukkalachery is a small village in Nagapattinam District, Tranquebar (Tharangambadi) Taluk, Tamil Nadu, India. Second, Karnan is a town in the Nagapattinam district of the Indian state of Tamil Nadu.
+answer: the Andaman Islands
+rationale: First, North Sentinel Island is one of the Andaman Islands, which includes South Sentinel Island, in the Bay of Bengal.
+answer: The Books
+rationale: First, The Books. Second, Raymond Frederic Baxter OBE was an English television presenter and writer.
+answer: Geneva
+rationale: First, the relevant information is: Wincenty Gostkowski (March 29, 1807 – August 29, 1884) was a lawyer and associate of Antoni Patek and Adrien Philippe in the watchmaker Patek Philippe & Co. in Geneva, Switzerland.
+answer: New York City
+rationale: First, Live at Radio City is a live album and video by Dave Matthews and Tim Reynolds recorded at Radio City Music Hall on April 22, 2007. Second, Radio City Music Hall is an entertainment venue located in Rockefeller Center in New York City.
+answer: around 1,600 managed pubs, bars and restaurants
+rationale: First, Mitchells & Butlers plc () (also referred to as "M&B") runs circa 1,784 managed pubs, bars and restaurants throughout the United Kingdom. Second, Philip Charles Urban (born 9 February 1963) is CEO of Mitchells & Butlers, which runs around 1,600 managed pubs, bars and restaurants throughout the United Kingdom.
+answer: The 7 Habits of Highly Effective People
+rationale: First, The Seven Habits of Highly Effective People is a 1998 bestselling self-help book written by Sean Covey, the son of Stephen Covey. Second, Stephen Richards Covey (October 24, 1932 – July 16, 2012) was an American educator, author, businessman, and keynote speaker. His most popular book was "The 7 Habits of Highly Effective People".
+answer: Can't Be Tamed
+rationale: First, The song Who Owns My Heart is on Can't Be Tamed. Second, Can't Be Tamed is the third studio album by American singer Miley Cyrus.
+answer: 24
+rationale: First, Pedro Rubens! The individual chapters were published into 64 "tankbon" by Kodansha between February 1978 and June 1985. Second, Seito Shokun! The individual chapters were published into 24 "tankbon" by Kodansha between February 1978 and June 1985.
+answer: Premier League
+ground_thruth: ['Premier League']
+answer: London
+ground_thruth: ['London']
+answer: West African descendants
+ground_thruth: ['West African descendants', 'West African']
+answer: Univision
+ground_thruth: ['Univision']
+answer: People! and The Carnabeats
+ground_thruth: ['People! and The Carnabeats']
+answer: 7 miles
+ground_thruth: ['7 miles']
+answer: Democratic
+ground_thruth: ['Democratic', 'Julian Castro and Lake A. Osborne are democratic']
+answer: Brent Robert Barry
+ground_thruth: ['Brent Robert Barry', 'Brent Robert Barry was born first']
+answer: Who's That Girl : Original Motion Picture Soundtrack
+ground_thruth: ["Who's That Girl", "Who's That Girl: Original Motion Picture Soundtrack"]
+answer: H. R. Haldeman
+ground_thruth: ['Rose Mary Woods']
+answer: 6 April 1830
+ground_thruth: ['6 April 1830', 'Edwin Thomas Smith, 6 April 1830']
+answer: Karnan
+ground_thruth: ['Tharangambadi', 'Tranquebar (Tharangambadi)']
+answer: the Andaman Islands
+ground_thruth: ['Andaman Islands']
+answer: The Books
+ground_thruth: ['American musical duo The Books', 'The Books']
+answer: Geneva
+ground_thruth: ['Geneva, Switzerland', 'Geneva']
+answer: New York City
+ground_thruth: ['New York City']
+answer: around 1,600 managed pubs, bars and restaurants
+ground_thruth: ['pubs, bars and restaurants', '1,600 pubs, bars and restaurants']
+answer: The 7 Habits of Highly Effective People
+ground_thruth: ['The 7 Habits of Highly Effective People']
+answer: Can't Be Tamed
+ground_thruth: ["Can't Be Tamed"]
+answer: 24
+ground_thruth: ['24']
+accuracy: 0.85
+lexical similarity between generated test example explanation and test example premise: 0.8882389030697035
+cosine similarity between generated test example explanation and test example premise: 0.8984643191099166
+misc/manualstd_sim_text-davinci-001_tr0-30_dv0-308_nds2_e-p_predictions.dat
+Average Similarity:  [0.8132755]

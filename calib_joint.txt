@@ -1,0 +1,28 @@
+/home/kiranpurohit/miniconda3/envs/explain/lib/python3.9/site-packages/torch/cuda/__init__.py:107: UserWarning: CUDA initialization: The NVIDIA driver on your system is too old (found version 10000). Please update your GPU driver by downloading and installing a new version from the URL: http://www.nvidia.com/Download/index.aspx Alternatively, go to: https://pytorch.org to install a PyTorch version that has been compiled with your version of the CUDA driver. (Triggered internally at ../c10/cuda/CUDAFunctions.cpp:109.)
+  return torch._C._cuda_getDeviceCount() > 0
+completion_start_ind: 292
+Completion_end_tok: 315
+top_choices: {' False': -0.07698366, ' Neither': -2.9165547, '\n': -4.2795634, 'False': -6.9167724, ' True': -6.044015}
+completion_start_ind: 289
+Completion_end_tok: 300
+top_choices: {' False': -0.0515628, ' Neither': -3.7726564, '\n': -4.75294, 'False': -6.5131326, ' True': -4.210424}
+completion_start_ind: 287
+Completion_end_tok: 302
+top_choices: {' False': -2.7532907, ' Neither': -4.853686, '\n': -2.429318, ' Both': -6.4966755, ' True': -0.18335779}
+completion_start_ind: 319
+Completion_end_tok: 338
+top_choices: {' False': -3.4370582, ' Neither': -4.510157, '\n': -2.6563134, ' Both': -5.874066, ' True': -0.13063125}
+completion_start_ind: 292
+Completion_end_tok: 315
+top_choices: {' False': -0.07698366, ' Neither': -2.9165547, '\n': -4.2795634, 'False': -6.9167724, ' True': -6.044015}
+completion_start_ind: 289
+Completion_end_tok: 300
+top_choices: {' False': -0.0515628, ' Neither': -3.7726564, '\n': -4.75294, 'False': -6.5131326, ' True': -4.210424}
+completion_start_ind: 287
+Completion_end_tok: 302
+top_choices: {' False': -2.7532907, ' Neither': -4.853686, '\n': -2.429318, ' Both': -6.4966755, ' True': -0.18335779}
+completion_start_ind: 319
+Completion_end_tok: 338
+top_choices: {' False': -3.4370582, ' Neither': -4.510157, '\n': -2.6563134, ' Both': -5.874066, ' True': -0.13063125}
+Orig ACC 75.00
+Calib ACC 75.00

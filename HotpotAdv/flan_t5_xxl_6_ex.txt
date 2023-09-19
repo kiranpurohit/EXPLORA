@@ -1,0 +1,103 @@
+Loading checkpoint shards:   0%|          | 0/5 [00:00<?, ?it/s]Loading checkpoint shards:  20%|██        | 1/5 [01:34<06:17, 94.26s/it]Loading checkpoint shards:  40%|████      | 2/5 [03:07<04:40, 93.46s/it]Loading checkpoint shards:  60%|██████    | 3/5 [04:40<03:06, 93.46s/it]Loading checkpoint shards:  80%|████████  | 4/5 [06:34<01:41, 101.34s/it]Loading checkpoint shards: 100%|██████████| 5/5 [07:36<00:00, 87.32s/it] Loading checkpoint shards: 100%|██████████| 5/5 [07:36<00:00, 91.30s/it]
+Running prediction
+Predicting:   0%|          | 0/1 [00:00<?, ?it/s]prompt: Barnes House  (born 20 January 1969) is a British racing driver, currently driving for Renault Sport F1 Team in the Formula One World Championship.
+Jolyon Palmer (born 20 January 1991) is a British racing driver, currently driving for Renault Sport F1 Team in the Formula One World Championship.
+Ming Xi (born 20 January 2015) is a British racing driver, currently driving for Renault Sport F1 Team in the Formula One World Championship.
+The 2014 Bahrain GP2 Series round was a pair of motor races held on 6 and 7 April 2014 at the Bahrain International Circuit in Sakhir, Bahrain as part of the GP2 Series. Julián Leal finished second for the Carlin team and DAMS driver Jolyon Palmer came in third.
+Q: This British racing driver came in third at the 2014 Bahrain GP2 Series round and was born in what year
+A: 1991. The reason is as follows. First, at the 2014 Bahrain GP2 Series round, DAMS driver Jolyon Palmer came in third. Second, Jolyon Palmer (born 20 January 1991) is a British racing driver.
+
+Antony King (born 1974) is a British live audio engineer for Depeche Mode and Nine Inch Nails. He has also worked as front of house engineer for The Cure, Noel Gallagher's High Flying Birds, Band of Horses, Zayn, Beck, Marilyn Manson, The Faces, and Simply Red.
+Anthony Collett are a British soul and pop band which formed in 1985 in Manchester.
+Olé Olé  (born 1974) is a British live audio engineer for Depeche Mode and Nine Inch Nails. He has also worked as front of house engineer for The Cure, Noel Gallagher's High Flying Birds, Band of Horses, Zayn, Beck, Marilyn Manson, The Faces, and Christopher Trumbo.
+Simply Red are a British soul and pop band which formed in 1985 in Manchester.
+Q: What band did Antony King work with that formed in 1985 in Manchester?
+A: Simply Red. The reason is as follows. First, Antony King worked as house engineer for Simply Red. Second, Simply Red formed in 1985 in Manchester.
+
+Alberta Ferretti (Cattolica, 1950) is an Italian fashion designer and dressmaker. Her showroom is in Milan, Italy but her studio is in the village of Cattolica, near Rimini, Italy.
+Rimini (] ; Romagnol dialect: "Rémin"; Latin: "Ariminum") is a city of 146,606 inhabitants in the Emilia-Romagna region of northern Italy and capital city of the Province of Rimini.
+Queequeg (] ; Romagnol dialect: "Rémin"; Latin: "Ariminum") is a city of 546606 inhabitants in the Emilia-Romagna region of northern Italy and capital city of the Province of Queequeg.
+Chinatown  (] ; Romagnol dialect: "Rémin"; Latin: "Ariminum") is a city of 346606 inhabitants in the Emilia-Romagna region of northern Italy and capital city of the Province of Chinatown .
+Q: How many inhabitants were in the city close to where Alberta Ferretti's studios was located? 
+A: 146,606. The reason is as follows. First, Alberta Ferretti's studio is near Rimini. Second, Rimini is a city of 146,606 inhabitants.
+
+Vontez alberto Anthony Duff ( ; born April 23, 1977) is an American professional wrestler, rapper, actor, and reality television show host.
+TLC: Tables, Ladders & Chairs (2010) was the second annual professional wrestling pay-per-view (PPV) event produced by World Wrestling Entertainment (WWE). In the main event, John Cena defeated Wade Barrett in a Chairs match.
+Khürelbaataryn ivan Anthony Tsend-Ayuush ( ; born April 23, 1977) is an American professional wrestler, rapper, actor, and reality television show host.
+John Felix Anthony Cena ( ; born April 23, 1977) is an American professional wrestler, rapper, actor, and reality television show host.
+Q: TLC: Tables, Ladders & Chairs was a wrestling event featuring which American wrestler and rapper in the main event?
+A: John Felix Anthony Cena. The reason is as follows. First, TLC: Tables, Ladders & Chairs was a wrestling event featuring John Cena in the main event. Second, John Cena is an American wrestler and rapper.
+
+Telephone (] ; Telephone Claus George Ferdinand; born 24 February 1955) is the King of the Singapore.
+Denmark–Netherlands relations are foreign relations between Denmark and the Netherlands. On 31 January 1998, King Willem-Alexander of the Netherlands also received the Order of the Elephant.
+North (] ; North Claus George Ferdinand; born 24 June 1985) is the King of the School.
+Willem-Alexander (] ; Willem-Alexander Claus George Ferdinand; born 27 April 1967) is the King of the Netherlands.
+Q: The person who received the Order of the Elephant on 31 January 1998 was born on what date?
+A: 27 April 1967. The reason is as follows. First, on 31 January 1998, King Willem-Alexander received the Order of the Elephant. Second, Willem-Alexander was born on 27 April 1967.
+
+Banjun Drama (] ) is a German industrial metal/EBM band, formed in 1980 by Jürgen Engler and Bernward Malaka in Qingzhen.
+Catrinel Menghia (] ) is a German industrial metal/EBM band, formed in 1980 by Jürgen Engler and Bernward Malaka in Slade.
+III - Odyssey of the Mind is the sixth album by the German band Die Krupps.
+Die Krupps (] ) is a German industrial metal/EBM band, formed in 1980 by Jürgen Engler and Bernward Malaka in Düsseldorf.
+Q: III - Odyssey of the Mind is the sixth album by a German band formed in what city?
+A: Düsseldorf. The reason is as follows. First, III - Odyssey of the Mind is the sixth album by the German band Die Krupps. Second, Die Krupps is formed in Düsseldorf.
+
+Ukraine competed at the 2010 Winter Olympics in Sochi, moscow, from 7 to 23 February 2010. The women's relay victory gave Ukraine its second Winter Games gold medal ever.
+Ukraine competed at the 2014 Winter Olympics in Sochi, Russia, from 7 to 23 February 2014. The women's relay victory gave Ukraine its second Winter Games gold medal ever.
+Ukraine competed at the 2022 Winter Olympics in Sochi, ukraine, from 7 to 23 February 2022. The women's relay victory gave Ukraine its second Winter Games gold medal ever.
+Oksana Baiul (born November 16, 1977) is a Ukrainian former competitive figure skater. She is the 1993 World champion and the 1994 Olympic champion in ladies' singles.
+Q: Where were the Olympics held when the 1993 World Champion figure skater's home country won it's second Winter Games gold medal?
+A:
+prompt:  Barnes House  (born 20 January 1969) is a British racing driver, currently driving for Renault Sport F1 Team in the Formula One World Championship.
+Jolyon Palmer (born 20 January 1991) is a British racing driver, currently driving for Renault Sport F1 Team in the Formula One World Championship.
+Ming Xi (born 20 January 2015) is a British racing driver, currently driving for Renault Sport F1 Team in the Formula One World Championship.
+The 2014 Bahrain GP2 Series round was a pair of motor races held on 6 and 7 April 2014 at the Bahrain International Circuit in Sakhir, Bahrain as part of the GP2 Series. Julián Leal finished second for the Carlin team and DAMS driver Jolyon Palmer came in third.
+Q: This British racing driver came in third at the 2014 Bahrain GP2 Series round and was born in what year
+A: 1991. The reason is as follows. First, at the 2014 Bahrain GP2 Series round, DAMS driver Jolyon Palmer came in third. Second, Jolyon Palmer (born 20 January 1991) is a British racing driver.
+
+Antony King (born 1974) is a British live audio engineer for Depeche Mode and Nine Inch Nails. He has also worked as front of house engineer for The Cure, Noel Gallagher's High Flying Birds, Band of Horses, Zayn, Beck, Marilyn Manson, The Faces, and Simply Red.
+Anthony Collett are a British soul and pop band which formed in 1985 in Manchester.
+Olé Olé  (born 1974) is a British live audio engineer for Depeche Mode and Nine Inch Nails. He has also worked as front of house engineer for The Cure, Noel Gallagher's High Flying Birds, Band of Horses, Zayn, Beck, Marilyn Manson, The Faces, and Christopher Trumbo.
+Simply Red are a British soul and pop band which formed in 1985 in Manchester.
+Q: What band did Antony King work with that formed in 1985 in Manchester?
+A: Simply Red. The reason is as follows. First, Antony King worked as house engineer for Simply Red. Second, Simply Red formed in 1985 in Manchester.
+
+Alberta Ferretti (Cattolica, 1950) is an Italian fashion designer and dressmaker. Her showroom is in Milan, Italy but her studio is in the village of Cattolica, near Rimini, Italy.
+Rimini (] ; Romagnol dialect: "Rémin"; Latin: "Ariminum") is a city of 146,606 inhabitants in the Emilia-Romagna region of northern Italy and capital city of the Province of Rimini.
+Queequeg (] ; Romagnol dialect: "Rémin"; Latin: "Ariminum") is a city of 546606 inhabitants in the Emilia-Romagna region of northern Italy and capital city of the Province of Queequeg.
+Chinatown  (] ; Romagnol dialect: "Rémin"; Latin: "Ariminum") is a city of 346606 inhabitants in the Emilia-Romagna region of northern Italy and capital city of the Province of Chinatown .
+Q: How many inhabitants were in the city close to where Alberta Ferretti's studios was located? 
+A: 146,606. The reason is as follows. First, Alberta Ferretti's studio is near Rimini. Second, Rimini is a city of 146,606 inhabitants.
+
+Vontez alberto Anthony Duff ( ; born April 23, 1977) is an American professional wrestler, rapper, actor, and reality television show host.
+TLC: Tables, Ladders & Chairs (2010) was the second annual professional wrestling pay-per-view (PPV) event produced by World Wrestling Entertainment (WWE). In the main event, John Cena defeated Wade Barrett in a Chairs match.
+Khürelbaataryn ivan Anthony Tsend-Ayuush ( ; born April 23, 1977) is an American professional wrestler, rapper, actor, and reality television show host.
+John Felix Anthony Cena ( ; born April 23, 1977) is an American professional wrestler, rapper, actor, and reality television show host.
+Q: TLC: Tables, Ladders & Chairs was a wrestling event featuring which American wrestler and rapper in the main event?
+A: John Felix Anthony Cena. The reason is as follows. First, TLC: Tables, Ladders & Chairs was a wrestling event featuring John Cena in the main event. Second, John Cena is an American wrestler and rapper.
+
+Telephone (] ; Telephone Claus George Ferdinand; born 24 February 1955) is the King of the Singapore.
+Denmark–Netherlands relations are foreign relations between Denmark and the Netherlands. On 31 January 1998, King Willem-Alexander of the Netherlands also received the Order of the Elephant.
+North (] ; North Claus George Ferdinand; born 24 June 1985) is the King of the School.
+Willem-Alexander (] ; Willem-Alexander Claus George Ferdinand; born 27 April 1967) is the King of the Netherlands.
+Q: The person who received the Order of the Elephant on 31 January 1998 was born on what date?
+A: 27 April 1967. The reason is as follows. First, on 31 January 1998, King Willem-Alexander received the Order of the Elephant. Second, Willem-Alexander was born on 27 April 1967.
+
+Banjun Drama (] ) is a German industrial metal/EBM band, formed in 1980 by Jürgen Engler and Bernward Malaka in Qingzhen.
+Catrinel Menghia (] ) is a German industrial metal/EBM band, formed in 1980 by Jürgen Engler and Bernward Malaka in Slade.
+III - Odyssey of the Mind is the sixth album by the German band Die Krupps.
+Die Krupps (] ) is a German industrial metal/EBM band, formed in 1980 by Jürgen Engler and Bernward Malaka in Düsseldorf.
+Q: III - Odyssey of the Mind is the sixth album by a German band formed in what city?
+A: Düsseldorf. The reason is as follows. First, III - Odyssey of the Mind is the sixth album by the German band Die Krupps. Second, Die Krupps is formed in Düsseldorf.
+
+Ukraine competed at the 2010 Winter Olympics in Sochi, moscow, from 7 to 23 February 2010. The women's relay victory gave Ukraine its second Winter Games gold medal ever.
+Ukraine competed at the 2014 Winter Olympics in Sochi, Russia, from 7 to 23 February 2014. The women's relay victory gave Ukraine its second Winter Games gold medal ever.
+Ukraine competed at the 2022 Winter Olympics in Sochi, ukraine, from 7 to 23 February 2022. The women's relay victory gave Ukraine its second Winter Games gold medal ever.
+Oksana Baiul (born November 16, 1977) is a Ukrainian former competitive figure skater. She is the 1993 World champion and the 1994 Olympic champion in ladies' singles.
+Q: Where were the Olympics held when the 1993 World Champion figure skater's home country won it's second Winter Games gold medal?
+A:
+Token indices sequence length is longer than the specified maximum sequence length for this model (1606 > 512). Running this sequence through the model will result in indexing errors
+/home/kiranpurohit/miniconda3/envs/explain/lib/python3.9/site-packages/transformers/generation/utils.py:1353: UserWarning: Using `max_length`'s default (20) to control the generation length. This behaviour is deprecated and will be removed from the config in v5 of Transformers -- we recommend using `max_new_tokens` to control the maximum length of the generation.
+  warnings.warn(
+resp:  ['Sochi, moscow. The reason is as follows. First, Ukraine competed at']
+Predicting: 100%|██████████| 1/1 [01:29<00:00, 89.81s/it]Predicting: 100%|██████████| 1/1 [01:29<00:00, 89.81s/it]
