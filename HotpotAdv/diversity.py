@@ -1,11 +1,10 @@
+from html.entities import name2codepoint
 import os
 import argparse
-import openai
 import pickle
 import spacy
 import numpy as np
 import random
-
 from tqdm import tqdm
 
 from utils import *
@@ -237,7 +236,7 @@ def post_process_manual_prediction_and_confidence(pred,newdict,count,style):
     #post_process_manual_confidance(pred, style)
 
 
-def evaluate_manual_predictions(dev_set, newdict, style="p-e", do_print=False):
+def evaluate_manual_predictions(dev_set,original_dev_set, newdict, style="p-e", do_print=False):
     acc_records = []
     rat_records = []
     f1_records, pre_records, rec_records = [], [], []
@@ -249,20 +248,26 @@ def evaluate_manual_predictions(dev_set, newdict, style="p-e", do_print=False):
     score1=0
     score2=0
     for ex in dev_set:
-        gt_rat = ' '.join(ex['rationale'])
+        #gt_rat = ' '.join(ex['rationale'])
         p_ans = newdict[str(count)+'answer']
         p_rat = newdict[str(count)+'rationale']
         count+=1
         print("answer:",p_ans)
-        print("ground_thruth:",ex["answer_choices"])
-        score1+=rationale_coverage_quality(p_rat,convert_paragraphs_to_context(ex))
-        score2+=get_similarity(p_rat,convert_paragraphs_to_context(ex))
-        acc, (f1, pre, rec), gt_ans = hotpot_evaluation_with_multi_answers(p_ans, ex["answer_choices"])
+        print("ground_thruth:",original_dev_set[ex]["answer_choices"])
+        score1+=rationale_coverage_quality(p_rat,convert_paragraphs_to_context(original_dev_set[ex]))
+        score2+=get_similarity(p_rat,convert_paragraphs_to_context(original_dev_set[ex]))
+        acc, (f1, pre, rec), gt_ans = hotpot_evaluation_with_multi_answers(p_ans, original_dev_set[ex]["answer_choices"])
         acc_records.append(acc)
     mean_of_array = lambda x: sum(x) / len(x)
+    n=len(acc_records)
     print("accuracy:", mean_of_array(acc_records))
-    print("lexical similarity between generated test example explanation and test example premise:",score1/20)
-    print("cosine similarity between generated test example explanation and test example premise:",score2/20)
+    print("cosine similarity between generated test example explanation and test example premise:",score2/n)
+    print("lexical similarity between generated test example explanation and test example premise:",score1/n)
+ 
+    #change the pickle file value to 1,2,3,4,5.pkl
+    with open("1_temp_seed7_0.5.pkl", 'wb') as f:
+        pickle.dump(acc_records, f)
+
 
 
 
@@ -306,13 +311,14 @@ def test_few_shot_manual_prediction(args):
     dev_set = read_hotpot_data(f"data/sim_dev.json", args.num_distractor)
     dev_set = dev_set[args.dev_slice:(args.dev_slice + args.num_dev)]
 
-    # file = open("misc/manualstd_sim_text-davinci-001_tr0-30_dv0-308_nds2_e-p_predictions.dat",'rb')
-    # newdict1 = pickle.load(file)
-    # file.close()
 
     random.seed(7)
 
-    rand_dev_set = random.sample(dev_set,20)
+    rand_dev_set=[]
+    for i in range(0,308):
+        rand_dev_set.append(i)
+    rand_dev_set = random.sample(rand_dev_set,20)
+
 
     pairwise_ice_sim = []
 
@@ -326,21 +332,40 @@ def test_few_shot_manual_prediction(args):
 
     # with open('pairwise_ice_bcs_sim.pkl', 'wb') as f:
     #     pickle.dump(pairwise_ice_sim, f)
-
     # exit(0)
+
+
+
+    #loading pairwise similarity b/w in-context examples
     file = open("pairwise_ice_bcs_sim.pkl",'rb')
     pairwise_ice_sim = pickle.load(file)
     file.close()
 
+    #loading generated explanations for test examples
+    file1 = open("misc/manualstd_sim_text-davinci-001_tr0-32_dv0-308_nds2_e-p_gen_explanations_test.dat",'rb')
+    newdict1 = pickle.load(file1)
+    file1.close()
+
+    #loading generated explanations for in-context examples
+    file2 = open("misc/manualstd_sim_text-davinci-001_tr0-32_dv0-32_nds2_e-p_gen_explanations_in_context.dat",'rb')
+    newdict2 = pickle.load(file2)
+    file2.close()
+
     predictions=[]
 
     averages = []
-
+    
     for x in tqdm(rand_dev_set, total=len(rand_dev_set), desc="Predicting"):
 
         similarities = []
+        incontextcount=0
         for ex in train_set:
-            similarities.append(get_similarity(convert_paragraphs_to_context(x),convert_paragraphs_to_context(ex)))
+            similarities.append(get_similarity(convert_paragraphs_to_context(dev_set[x]),convert_paragraphs_to_context(ex)))
+            #similarities.append(get_similarity(convert_paragraphs_to_context(dev_set[x]),ex['manual_rationale']))
+            #similarities.append(get_similarity(convert_paragraphs_to_context(dev_set[x]),newdict2[str(incontextcount)+"rationale"]))
+            #similarities.append(get_similarity(newdict1[str(x)+'rationale'],convert_paragraphs_to_context(ex)))
+            #similarities.append(get_similarity(newdict1[str(x)+'rationale'],ex['manual_rationale']))
+            incontextcount+=1
         
         similarities = np.array(similarities).reshape(-1, 1)
         
@@ -373,7 +398,7 @@ def test_few_shot_manual_prediction(args):
         
         averages.append(sum(similarities[selected_data_indices])/len(selected_data_indices))
         
-        predictions.append(in_context_manual_prediction(x, new_train_set, engine=args.engine, style=args.style, length_test_only=args.run_length_test))
+        predictions.append(in_context_manual_prediction(dev_set[x], new_train_set, engine=args.engine, style=args.style, length_test_only=args.run_length_test))
 
 
     if args.run_length_test:
@@ -391,12 +416,16 @@ def test_few_shot_manual_prediction(args):
     file = open(filename,'wb')    #data we wrote in file
     pickle.dump(newdict,file)
     file.close()
+
+    analyze_few_shot_manual_prediction(rand_dev_set,args)
+
+
         # read un indexed dev
     #print(predictions)
     #     dump_json(predictions, result_cache_name(args))
     # [post_process_manual_prediction_and_confidence(p, args.style) for p in predictions]
     # # acc
-    analyze_few_shot_manual_prediction(rand_dev_set,args)
+
 
     print("Average Similarity: ", sum(averages)/len(averages))
 
@@ -410,11 +439,11 @@ def analyze_few_shot_manual_prediction(rand_dev_set,args):
     newdict = pickle.load(file)
     file.close()
 
-    if args.show_result:
-        dev_set = dev_set[-TEST_PART:]
-        #predictions = predictions[-TEST_PART:]
+    # if args.show_result:
+    #     dev_set = dev_set[-TEST_PART:]
+    #     #predictions = predictions[-TEST_PART:]
 
-    evaluate_manual_predictions(rand_dev_set, newdict, args.style, do_print=False)
+    evaluate_manual_predictions(rand_dev_set,dev_set, newdict, args.style, do_print=False)
     print(result_cache_name(args))
 
 if __name__=='__main__':
