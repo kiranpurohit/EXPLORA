@@ -35,17 +35,18 @@ def conditional_strip_prompt_prefix(x, p):
 
 import os
 import torch as torch
-import openai
-from transformers import GPT2TokenizerFast, BertTokenizer, BertModel, logging
+#import openai
+#from transformers import GPT2TokenizerFast,
+from transformers import BertTokenizer, BertModel, logging
 from sklearn.metrics.pairwise import cosine_similarity
 
 from transformers import AutoModelForSeq2SeqLM, AutoTokenizer
 
 logging.set_verbosity_error()
 
-_TOKENIZER = GPT2TokenizerFast.from_pretrained('gpt2')
-GPT3_LENGTH_LIMIT = 2049
-openai.api_key = os.getenv("OPENAI_API_KEY")
+# _TOKENIZER = GPT2TokenizerFast.from_pretrained('gpt2')
+# GPT3_LENGTH_LIMIT = 2049
+# openai.api_key = os.getenv("OPENAI_API_KEY")
 
 flan_model = AutoModelForSeq2SeqLM.from_pretrained("google/flan-t5-xl")
 flan_tokenizer = AutoTokenizer.from_pretrained("google/flan-t5-xl")
@@ -75,7 +76,7 @@ def get_similarity(sent1,sent2):
 
 def flan_generate(x):
     inputs = flan_tokenizer(x, return_tensors="pt")
-    outputs = flan_model.generate(**inputs, max_new_tokens=144)
+    outputs = flan_model.generate(**inputs, max_new_tokens=144, do_sample=True, temperature=0.5)
     return(flan_tokenizer.batch_decode(outputs, skip_special_tokens=True))
 
 def gpt_style_tokenize(x):
