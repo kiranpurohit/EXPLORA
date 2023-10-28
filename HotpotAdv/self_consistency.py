@@ -344,7 +344,7 @@ def test_few_shot_manual_prediction(args):
 
             expls_per_test.append(genexp)
         
-        print("\n\nPrinting all explanations for each test example\n")
+        print("\n\nPrinting all explanations for test example",number,"\n")
         print(expls_per_test,"\n\n")
         #For all test ex 
         # overall_incontext_list.append(incontext_ex)
@@ -367,7 +367,7 @@ def test_few_shot_manual_prediction(args):
             #print(overlap_score_each)
 
             for j in range(len(expls_per_test)-1):           
-                # Threshold of 80% match fixed
+                # Threshold of some% match fixed
                 if(overlap_score_each[j]>=0.97):
                     matches[cur_index]+=1
                     if(len(temp_list)==0): avg_match_score[cur_index] = overlap_score_each[j]
@@ -378,7 +378,7 @@ def test_few_shot_manual_prediction(args):
                         temp_list.append(j)
             temp_list.append(i)
             matches_list.append(temp_list)
-            print("For gen_expl", cur_index, "the overlap scores with other gen_expl")
+            print("For gen_expl", cur_index, "the overlap scores with other explanations for test ex",number)
             print(overlap_score_each)
             print("Matches for gen_expl", cur_index, "are", matches)
             print("Match List for gen_expl", cur_index, "are", matches_list)
@@ -395,7 +395,7 @@ def test_few_shot_manual_prediction(args):
             elif(matches[i]==max_val):
                 if(avg_match_score[i]>avg_match_score[max_index]):
                     max_index = i
-        print("Final match count")
+        print("Match count for test example", number)
         print(matches)
         print("Avg overlap score")
         print(avg_match_score)
@@ -415,6 +415,19 @@ def test_few_shot_manual_prediction(args):
 
         print("Test example // selected in-context examples")
         print(number ," // ", matrix_ic_test[number])
+
+        ICE_set=[]
+        for ind in incontext_ex[max_index]:
+            ICE_set.append(train_set[ind])
+        prompt, stop_signal = prompt_for_manual_prediction(ex, ICE_set, style=args.style)
+
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
+        print("FINAL Selected in-context examples for test example",number,"\n")
+        print(prompt)
+
+        print("Generated explanation for test example ",number,"using selected ICE is")
+        print(expls_per_test[max_index])
+        print("~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~")
 
         #It is for storing the best explanation
         predictions[number]=expls_per_test[max_index]
