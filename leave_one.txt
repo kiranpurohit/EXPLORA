@@ -1,90 +1,0 @@
-Running prediction
-Predicting:   0%|          | 0/4 [00:00<?, ?it/s]huggingface/tokenizers: The current process just got forked, after parallelism has already been used. Disabling parallelism to avoid deadlocks...
-To disable this warning, you can either:
-	- Avoid using `tokenizers` before the fork if possible
-	- Explicitly set the environment variable TOKENIZERS_PARALLELISM=(true | false)
-Predicting:  25%|██▌       | 1/4 [00:01<00:04,  1.54s/it]Sleeping
-Waking up
-Predicting:  50%|█████     | 2/4 [01:03<01:14, 37.37s/it]Predicting:  75%|███████▌  | 3/4 [01:05<00:20, 20.94s/it]Sleeping
-Waking up
-Predicting: 100%|██████████| 4/4 [02:08<00:00, 37.60s/it]Predicting: 100%|██████████| 4/4 [02:08<00:00, 32.13s/it]
-completion_start_ind: 237
-Completion_end_tok: 250
-top_choices: {
-  " False": -5.101696,
-  " Neither": -5.574753,
-  "\n": -4.183274,
-  " Both": -6.554196,
-  " True": -0.029766735
-}
-completion_start_ind: 194
-Completion_end_tok: 204
-top_choices: {
-  " False": -2.5738668,
-  " Neither": -3.5536242,
-  "\n": -2.938462,
-  " true": -5.4791284,
-  " True": -0.19133836
-}
-completion_start_ind: 237
-Completion_end_tok: 247
-top_choices: {
-  " False": -3.5658631,
-  " Neither": -6.25582,
-  "\n": -4.418702,
-  " Both": -6.5620275,
-  " True": -0.04693127
-}
-completion_start_ind: 233
-Completion_end_tok: 256
-top_choices: {
-  " False": -0.7173417,
-  " There": -4.159326,
-  " Neither": -2.1089318,
-  "\n": -3.5836804,
-  " True": -1.0899098
-}
-ACC 0.75
-Running prediction
-Predicting:   0%|          | 0/4 [00:00<?, ?it/s]Predicting:  25%|██▌       | 1/4 [00:01<00:04,  1.52s/it]Sleeping
-Waking up
-Predicting:  50%|█████     | 2/4 [01:04<01:14, 37.45s/it]Predicting:  75%|███████▌  | 3/4 [01:05<00:20, 20.89s/it]Sleeping
-Waking up
-Predicting: 100%|██████████| 4/4 [02:07<00:00, 37.22s/it]Predicting: 100%|██████████| 4/4 [02:07<00:00, 31.89s/it]
-completion_start_ind: 288
-Completion_end_tok: 301
-top_choices: {
-  " False": -1.4987754,
-  " Neither": -3.3253343,
-  "\n": -2.9029293,
-  " The": -4.6761,
-  " True": -0.41444585
-}
-completion_start_ind: 290
-Completion_end_tok: 299
-top_choices: {
-  " False": -0.124580614,
-  " Neither": -3.317158,
-  "\n": -4.2080274,
-  "False": -6.8195114,
-  " True": -2.7930243
-}
-completion_start_ind: 292
-Completion_end_tok: 305
-top_choices: {
-  " False": -0.04001496,
-  " Neither": -3.5679328,
-  "\n": -4.956,
-  "False": -6.5,
-  " True": -6.8274975
-}
-completion_start_ind: 280
-Completion_end_tok: 287
-top_choices: {
-  " False": -0.1379491,
-  " Neither": -3.4886894,
-  "\n": -4.748846,
-  "False": -6.5850015,
-  " True": -2.4663792
-}
-ACC 0.25
