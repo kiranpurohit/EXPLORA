@@ -217,7 +217,7 @@ for ex in tqdm(dev_set,total=len(dev_set),desc="Generating"):
     print("\nAnswer: ", answer)
     print("GT: ", ex["answer"])
     ground_truth = ex["answer"]
-    if answer!=None and (ground_truth.lower() in answer.lower() or answer.lower() in ground_truth.lower()):
+    if answer!="" and (ground_truth.lower() in answer.lower() or answer.lower() in ground_truth.lower()):
         matches+=1
     else:
         mismatches+=1
