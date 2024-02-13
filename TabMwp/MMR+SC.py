@@ -203,16 +203,19 @@ if __name__ == "__main__":
         # print(len(tmp_list))
         
         n = self_con(tmp_list)
+        
         answer = n[0][0]
         if answer=="" and len(n)>1: answer = n[1][0]
+            
         print("\nAnswer: ", answer)
         gt = ex["answer"]
         print("GT: ", gt)
-        if gt.lower() in answer.lower() or answer.lower() in gt.lower():
+        
+        if answer!="" and (gt.lower() in answer.lower() or answer.lower() in gt.lower()):
             matches+=1
         else:
             mismatches+=1
         exnum += 1
-        print("Hits:", matches)
-        print("Accuracy:", matches/exnum)
+        # print("Hits:", matches)
+print("Accuracy:", matches/exnum)
     
