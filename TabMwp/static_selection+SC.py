@@ -1,5 +1,5 @@
 from huggingface_hub import login
-access_token_read = "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"
+access_token_read = "YOUR TOKEN"
 login(token = access_token_read)
 
 import numpy as np
@@ -148,7 +148,7 @@ def LLM_avg_error(exemplars_set, val_data):
             # print("\nGen Answer:", answer)
             # print("Ground Truth:", ground_truth)
 
-            if ground_truth.lower() in answer.lower() or answer.lower() in ground_truth.lower():
+            if answer!="" and (ground_truth.lower() in answer.lower() or answer.lower() in ground_truth.lower()):
                 matches+=1
             else:
                 mismatches+=1
@@ -171,7 +171,7 @@ def LLM_error_indicator(exemplars_set, val_data):
             # print("\nGen Answer:", answer)
             # print("Ground Truth:", ground_truth)
 
-            if ground_truth.lower() in answer.lower() or answer.lower() in ground_truth.lower():
+            if answer!="" and (ground_truth.lower() in answer.lower() or answer.lower() in ground_truth.lower()):
                 loss=0
             else:
                 loss=1
@@ -1065,7 +1065,7 @@ def get_open_source_completions(test_data, data):
         print("\nGen Answer:", answer)
         print("Ground Truth:", ground_truth)
 
-        if ground_truth.lower() in answer.lower() or answer.lower() in ground_truth.lower():
+        if answer!="" and (ground_truth.lower() in answer.lower() or answer.lower() in ground_truth.lower()):
             matches+=1
         else:
             mismatches+=1
