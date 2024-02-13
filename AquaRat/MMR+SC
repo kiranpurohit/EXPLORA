@@ -271,7 +271,7 @@ def test_few_shot_manual_prediction():
         dev_set.append(result1)
     # dev_set =open("AQUA_RAT/test.json")
     # dev_set=json.load(dev_set)
-    dev_set=dev_set[:2]
+    #dev_set=dev_set[:2]
 
 
     with open('AQUA_RAT/train.jsonl', 'r') as json_file:
@@ -286,7 +286,7 @@ def test_few_shot_manual_prediction():
     for json_str in json_list:
         result = json.loads(json_str)
         train_set.append(result)
-    train_set=train_set[:20]
+    #train_set=train_set[:20]
 
 
     doc_embeddings=[]
