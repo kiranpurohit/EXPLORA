@@ -8,147 +8,121 @@ Original file is located at
 """
 
 
+from huggingface_hub import login
+access_token_read = "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"
+login(token = access_token_read)
+
+#import numpy as np
+from numpy import linalg
+import random
+import pandas as pd
+from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.model_selection import train_test_split
+from sklearn.cluster import KMeans
+from sklearn.metrics import mean_absolute_error
+import torch
+
+import pickle 
+import json
+from tqdm import tqdm
+
+random.seed(7)
+#np.random.seed(7)
+torch.manual_seed(7)
+
+import transformers
+import os
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+model_name = "mistralai/Mistral-7B-Instruct-v0.1"
+model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.float16)
+
+# CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 ./cuda_executable
+if torch.cuda.is_available():
+    device = torch.device("cuda")
+else:
+    device = torch.device("cpu")
+
+model = model.to(device)
+pipeline = transformers.pipeline(
+    "text-generation",
+    model=model_name,
+    torch_dtype=torch.float16,
+    device_map="auto",
+)
+
+tokenizer = AutoTokenizer.from_pretrained(model_name, torch_dtype=torch.float16)
+
+def prompt_for_manual_prediction(ex, shots):
+    stop_signal = "\n\n"
+    showcase_examples = [
+            "Q: {}\nO: {} \nA: {}. The option is {}\n".format(
+                 s["question"],s["options"],
+                s["rationale"], s["correct"]) for s in shots
+        ]
 
 
-import faiss
-from numpy import random
 
+
+   
+
+
+    input_example = "\nQ: {}\n O: {}\nA:".format(ex['question'], ex['options'])
+    prompt = "\n".join(showcase_examples + [input_example])
+
+    return prompt, stop_signal
+
+
+
+
+
+
+def in_context_manual_prediction(ex, training_data):
+    template,stop = prompt_for_manual_prediction(ex, training_data)
+
+    messages=[{
+                "role": "user",
+                "content": "You are a helpful, respectful and honest assistant helping to solve math word problems or tasks requiring reasoning or math, use the Chain-of-Thought methodology by following given examples to explain your step-by-step calculations or logic.Do not generate examples in your answer",
+            }]
+    text={"role": "assistant", "content":""" Follow given examples and solve the Test Question at end in similar manner by decomposing the original questions
+         Examples:{}""".format(template)}
+    messages.append(text)
+
+
+    prompt = pipeline.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    outputs = pipeline(prompt, max_new_tokens=200, do_sample=True, num_return_sequences=10, temperature=0.5, top_k=10, top_p=1.0)
+        
+    out_text = []
+    for x in range(0, 10):
+        out_text.append(outputs[x]["generated_text"])
+    return out_text
+
+
+
+
+
+
+
+
+#import faiss
 from transformers import BertTokenizer, BertModel, logging
 from sklearn.metrics.pairwise import cosine_similarity
-
-from transformers import BitsAndBytesConfig
 import torch
 import random
 from tqdm import tqdm
-
-
 from sklearn.model_selection import train_test_split
-import numpy as np
 import os
 import json
 import pickle
-
-from numpy import random
-
-# import gradio as gr
-# from gradio_client import Client
-import openai
-from tenacity import retry, stop_after_attempt, wait_random_exponential
+#import openai
+#SSfrom tenacity import retry, stop_after_attempt, wait_random_exponential
 import json
-
 
 
 tokenizer_bert = BertTokenizer.from_pretrained('bert-base-uncased')
 model_bert = BertModel.from_pretrained('bert-base-uncased')
 
 logging.set_verbosity_error()
-
-system_message = """The following is a conversation between a Human and an AI Assistant.
-The assistant is helpful, respectful and honest, and it always answers as helpfully as possible, while being safe.
-The Assistant's answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content.
-Please ensure that the Assistant's responses are socially unbiased and positive in nature.
-If a question by the human does not make any sense, or is not factually coherent, the Assistant should explain why instead of answering something not correct.
-If the Assistant does not know the answer to a question, please don't share false information.
-####
-
-"""
-
-# Replace with your API keys and endpoint URLs
-#api_keys = ["<API_KEY_1>", "<API_KEY_2>", "<API_KEY_3>"]
-#endpoint_urls = ["<ENDPOINT_URL_1>", "<ENDPOINT_URL_2>", "<ENDPOINT_URL_3>"]
-#llm_names = ["LLM 1", "LLM 2", "LLM 3"]
-
-api_keys = ["EMPTY", "EMPTY", "EMPTY"]#, "EMPTY"]
-endpoint_urls = ["https://6621-203-110-242-13.ngrok-free.app"]#["https://d06d-130-75-87-254.ngrok-free.app"]#, "https://akdeniz27-llama-2-70b-chat-hf-with-easyllm.hf.space/"]
-llm_names = []
-
-for api_key, endpoint_url in zip(api_keys, endpoint_urls):
-    if 'hf.space' in endpoint_url:
-        model_name = endpoint_url.replace('https://', '').replace('.hf.space', '').replace('/', '')
-    else:
-        openai.api_key = api_key
-        openai.api_base = f"{endpoint_url}/v1"
-        model_names = openai.Model.list()
-        model_name = model_names["data"][0]["id"]
-    llm_names.append(model_name)
-
-# Function to retrieve LLM outputs using the given API key and endpoint
-@retry(wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(5))
-def get_completion(prompt, api_key, endpoint_url, hard_code_exception=False):
-    # if new_sheet_name=='poem_properties':
-    #     if hard_code_exception==True:
-    #         max_tokens=128
-    #     else:
-    #         max_tokens=150
-    # else:
-
-    max_tokens=200
-    if 'hf.space' in endpoint_url:
-        client = Client(endpoint_url)
-        result = client.predict(
-                        prompt, # str in 'Message' Textbox component
-                        api_name="/chat"
-        )
-        return result.strip()
-    openai.api_key = api_key
-    openai.api_base = f"{endpoint_url}/v1"
-    model_names = openai.Model.list()
-    model_name = model_names["data"][0]["id"]
-
-    res = openai.Completion.create(
-        model=model_name,  # Replace with your model name
-        prompt=system_message + prompt,
-        # messages=[
-        #     {"role": "system", "content": system_message},
-        #     {"role": "user", "content": prompt},
-        # ],
-        temperature=0.9,
-        top_k=10,
-        top_p=1.0,
-        n=10,
-        max_tokens=200,
-    )
-    out_text = []
-    for x in range(0, 10):
-        out_text.append(res['choices'][x]['text'].strip())
-    return out_text
-
-
-
-def compare_llm_outputs(user_query, hard_code_exception=False):
-    # results = [get_completion(user_query, api_keys[i], endpoint_urls[i], hard_code_exception=hard_code_exception) for i in range(len(endpoint_urls))]
-    results = get_completion(user_query, api_keys[0], endpoint_urls[0], hard_code_exception=hard_code_exception)
-
-    return results
-    # return res['choices'][0]['message']['content'].strip()
-
-
-def self_con(tmp_list):
-    ans_list = []
-    for tmp in tmp_list:
-        # tmp_list.append(compare_llm_outputs(user_query))
-        # tmp = compare_llm_outputs(user_query)
-        # print(tmp)
-        ans = ""
-        if len(tmp.split("The option is "))>1:
-            ans = tmp.split("The option is ")[1][0]
-            print(ans)
-            # ans = ans.split("\n")[0]
-        # ans = ans.replace("$", "")
-        # ans = ans.strip()
-        ans_list.append(ans)
-
-    # print(ans_list)
-
-    d = {}
-    for i in ans_list:
-        if i in d:
-            d[i] += 1
-        else:
-            d[i] = 1
-    print(d)
-    n = sorted(d.items(), key=lambda x:x[1], reverse=True)
-    return n
 
 
 def mmr(doc_embeddings, query_embedding, lambda_param, top_k):
@@ -214,42 +188,32 @@ def mmr(doc_embeddings, query_embedding, lambda_param, top_k):
 
 
 
-def prompt_for_manual_prediction(ex, shots):
-    stop_signal = "\n\n"
-    showcase_examples = [
-            "Q: {}\nO: {} \nA: {}. The option is {}\n".format(
-                 s["question"],s["options"],
-                s["rationale"], s["correct"]) for s in shots
-        ]
+def self_con(tmp_list):
+    ans_list = []
+    for tmp in tmp_list:
+        # tmp_list.append(compare_llm_outputs(user_query))
+        # tmp = compare_llm_outputs(user_query)
+        # print(tmp)
+        ans = ""
+        if len(tmp.split("The option is "))>6:
+            ans = tmp.split("The option is ")[6][0]
+            print(ans)
+            # ans = ans.split("\n")[0]
+        # ans = ans.replace("$", "")
+        # ans = ans.strip()
+        ans_list.append(ans)
 
+    # print(ans_list)
 
-
-
-    # prompt = "\n".join(showcase_examples)
-    # prompt=prompt+"\n\n{text}\n"
-
-
-    input_example = "\nQ: {}\n O: {}\nA:".format(ex['question'], ex['options'])
-    prompt = "\n".join(showcase_examples + [input_example])
-
-    return prompt, stop_signal
-
-
-
-def in_context_manual_prediction(ex, training_data):
-    template, stop_signal = prompt_for_manual_prediction(ex, training_data)
-    #print("template:",template)
-
-    outputs=compare_llm_outputs(template)
-    print("outputs:",outputs)
-    ans=outputs[0].split("The option is ")
-   
-
-    if(len(ans)>1):
-      
-      return ans[1][0].strip()
-    else:
-      return ""
+    d = {}
+    for i in ans_list:
+        if i in d:
+            d[i] += 1
+        else:
+            d[i] = 1
+    print(d)
+    n = sorted(d.items(), key=lambda x:x[1], reverse=True)
+    return n
     
 
 
@@ -261,7 +225,7 @@ def in_context_manual_prediction(ex, training_data):
 
 def test_few_shot_manual_prediction():
     print("Running prediction")
-    with open('AQUA_RAT/dev.jsonl', 'r') as json_file1:
+    with open('dev.jsonl', 'r') as json_file1:
         json_list1 = list(json_file1)
     dev_set=[]
 
@@ -269,12 +233,10 @@ def test_few_shot_manual_prediction():
     for json_str in json_list1:
         result1 = json.loads(json_str)
         dev_set.append(result1)
-    # dev_set =open("AQUA_RAT/test.json")
-    # dev_set=json.load(dev_set)
-    #dev_set=dev_set[:2]
+    dev_set=dev_set[:2]
 
 
-    with open('AQUA_RAT/train.jsonl', 'r') as json_file:
+    with open('train.jsonl', 'r') as json_file:
         json_list = list(json_file)
 
     train_set=[]
@@ -286,12 +248,7 @@ def test_few_shot_manual_prediction():
     for json_str in json_list:
         result = json.loads(json_str)
         train_set.append(result)
-    #train_set=train_set[:20]
-
-
-    doc_embeddings=[]
-    
-
+    train_set=train_set[:20]
     for i in train_set:
         inputs_sentence1 = tokenizer_bert(i["question"], return_tensors='pt', padding=True, truncation=True)
         with torch.no_grad():
@@ -299,27 +256,15 @@ def test_few_shot_manual_prediction():
         embedding_sentence1 = outputs_sentence1.last_hidden_state.mean(dim=1).numpy()[0]
         doc_embeddings.append(embedding_sentence1)
 
-
-
     
-    # context_similarity=0
-
-    
-
-
-
-
     print("started Running:")
     matches=0
     mismatches=0
 
     for ex in tqdm(dev_set,total=len(dev_set),desc="predicting"):
-        # for train_ex in train_set:
-        #     context_similarity+=get_similarity(train_ex[])
-       
+        #user_query,stop=prompt_for_manual_prediction(ex,new_rand_train)
 
-
-        query = tokenizer_bert(ex['question'], return_tensors='pt', padding=True, truncation=True)
+         query = tokenizer_bert(ex['question'], return_tensors='pt', padding=True, truncation=True)
         with torch.no_grad():
             outputs_sentence1 = model_bert(**query)
         query_embedding=outputs_sentence1.last_hidden_state.mean(dim=1).numpy()[0]
@@ -338,7 +283,7 @@ def test_few_shot_manual_prediction():
           train_set_1.append(train_set[i])
         user_query,stop=prompt_for_manual_prediction(ex,train_set_1)
 
-        tmp_list = compare_llm_outputs(user_query)
+        tmp_list = in_context_manual_prediction(ex,train_set_1)
         # print(len(tmp_list))
         
         n = self_con(tmp_list)
@@ -354,10 +299,3 @@ def test_few_shot_manual_prediction():
     print("EM:",matches/(matches+mismatches))
 
 test_few_shot_manual_prediction()
-
-
-
-
-
-
-
