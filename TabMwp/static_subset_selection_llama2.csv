@@ -1,0 +1,670 @@
+,question,choices,answer,unit,table_title,table,table_for_pd,row_num,column_num,solution,ques_type,ans_type,grade,split,cluster,index
+7812,Caleb's class recorded how many states each student has visited. What is the median of the numbers?,,8,,States visited,"Name | Number of states
+Caleb | 8
+Desmond | 8
+Gwen | 4
+Sasha | 9
+Baldwin | 9","{'Name': ['Caleb', 'Desmond', 'Gwen', 'Sasha', 'Baldwin'], 'Number of states': ['8', '8', '4', '9', '9']}",6,2,"Read the numbers from the table.
+
+8, 8, 4, 9, 9
+
+First, arrange the numbers from least to greatest:
+
+4, 8, 8, 9, 9
+
+Now find the number in the middle.
+
+4, 8, 8, 9, 9
+
+The number in the middle is 8.
+
+The median is 8.",free_text,integer_number,7,train,0,13078
+16491,A statistics lab required students to draw cards numbered between 1 and 6 and track the results. Which number was drawn the most times?,,4,,Drawing a number between 1 and 6,"Number drawn | Frequency
+1 | 10
+2 | 7
+3 | 11
+4 | 17
+5 | 13
+6 | 3","{'Number drawn': ['1', '2', '3', '4', '5', '6'], 'Frequency': ['10', '7', '11', '17', '13', '3']}",7,2,"Look at the frequency column. Find the greatest frequency. The greatest frequency is 17, which is in the row for 4. 4 was drawn the most times.",free_text,integer_number,8,train,1,15734
+38244,How much money does Jada need to buy spaghetti and meatballs and grilled eggplant?,,10,$,,"pasta with tomato sauce | $5.00
+spaghetti and meatballs | $4.00
+steamed broccoli | $6.00
+green salad | $4.00
+grilled eggplant | $6.00
+cheese pizza | $4.00","{'Column 1': ['pasta with tomato sauce', 'spaghetti and meatballs', 'steamed broccoli', 'green salad', 'grilled eggplant', 'cheese pizza'], 'Column 2': ['$5.00', '$4.00', '$6.00', '$4.00', '$6.00', '$4.00']}",6,2,"Add the price of spaghetti and meatballs and the price of grilled eggplant:
+
+$4.00 + $6.00 = $10.00
+
+Jada needs $10.00.",free_text,integer_number,4,train,2,6215
+3297,Look at this table. Is this relation a function?,"['yes', 'no']",no,,,"x | y
+3 | 16
+0 | 20
+3 | 19","{'x': ['3', '0', '3'], 'y': ['16', '20', '19']}",4,2,"Look at the x-values in the table.
+
+The x-value 3 is paired with multiple y-values, so the relation is not a function.",multi_choice,boolean_text,8,train,3,669
+3037,Look at the following schedule. When does the Tigers versus Wolves game end?,"['3:15 P.M.', '12:45 P.M.', '1:10 P.M.', '11:55 A.M.']",11:55 A.M.,,Soccer tournament schedule,"Game | Begin | End
+Hawks versus Jaguars | 10:10 A.M. | 11:40 A.M.
+Tigers versus Wolves | 10:25 A.M. | 11:55 A.M.
+Waves versus Alligators | 11:15 A.M. | 12:45 P.M.
+Cardinals versus Cobras | 11:40 A.M. | 1:10 P.M.
+Fire versus Blizzard | 12:55 P.M. | 2:25 P.M.
+Dolphins versus Bears | 1:25 P.M. | 2:55 P.M.
+Thunder versus Eagles | 1:45 P.M. | 3:15 P.M.","{'Game': ['Hawks versus Jaguars', 'Tigers versus Wolves', 'Waves versus Alligators', 'Cardinals versus Cobras', 'Fire versus Blizzard', 'Dolphins versus Bears', 'Thunder versus Eagles'], 'Begin': ['10:10 A.M.', '10:25 A.M.', '11:15 A.M.', '11:40 A.M.', '12:55 P.M.', '1:25 P.M.', '1:45 P.M.'], 'End': ['11:40 A.M.', '11:55 A.M.', '12:45 P.M.', '1:10 P.M.', '2:25 P.M.', '2:55 P.M.', '3:15 P.M.']}",8,3,"Find the Tigers versus Wolves game on the schedule. Find the end time for the Tigers versus Wolves game.
+
+Tigers versus Wolves: 11:55 A. M.",multi_choice,extractive_text,3,train,4,4264
+18078,An archer recalled how many times he hit the bull's-eye in the past 5 days. What is the mean of the numbers?,,4,,Bull's-eyes,"Day | Number of bull's-eyes
+Thursday | 5
+Friday | 4
+Saturday | 4
+Sunday | 2
+Monday | 5","{'Day': ['Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday'], ""Number of bull's-eyes"": ['5', '4', '4', '2', '5']}",6,2,"Read the numbers from the table.
+
+5, 4, 4, 2, 5
+
+First, count how many numbers are in the group.
+
+There are 5 numbers.
+
+Now add all the numbers together:
+
+5 + 4 + 4 + 2 + 5 = 20
+
+Now divide the sum by the number of numbers:
+
+20 ÷ 5 = 4
+
+The mean is 4.",free_text,integer_number,8,train,0,12863
+27751,An agricultural agency is researching how much cheese people have been eating in different parts of the world. How much cheese was consumed per capita in Canada in 2006?,,11,kg,Cheese consumption per capita (kg),"Country | 1996 | 2006
+Austria | 10 | 17
+Canada | 10 | 11
+Argentina | 11 | 11","{'Column 1': ['Country', 'Austria', 'Canada', 'Argentina'], 'Column 2': ['1996', '10', '10', '11'], 'Column 3': ['2006', '17', '11', '11']}",4,3,"First, find the row for Canada. Then find the number in the 2006 column.
+
+This number is 11. In 2006, people in Canada consumed 11 kilograms of cheese per capita.",free_text,integer_number,5,train,1,7434
+21075,What is the total cost for 5 kilograms of yellow bananas?,,5.20,$,,"Cavendish bananas | $0.87/kg
+yellow bananas | $1.04/kg
+pink bananas | $1.00/kg
+plantains | $0.45/kg
+bananitos | $1.11/kg","{'Column 1': ['Cavendish bananas', 'yellow bananas', 'pink bananas', 'plantains', 'bananitos'], 'Column 2': ['$0.87/kg', '$1.04/kg', '$1.00/kg', '$0.45/kg', '$1.11/kg']}",5,2,"Find the cost of the yellow bananas. Multiply the price per kilogram by the number of kilograms.
+
+$1.04 × 5 = $5.20
+
+The total cost is $5.20.",free_text,decimal_number,7,train,2,14733
+5468,"Look at the table. Then answer the question. At a price of $860, is there a shortage or a surplus?","['shortage', 'surplus']",surplus,,,"Price | Quantity demanded | Quantity supplied
+$140 | 22,500 | 4,000
+$320 | 20,000 | 8,100
+$500 | 17,500 | 12,200
+$680 | 15,000 | 16,300
+$860 | 12,500 | 20,400","{'Price': ['$140', '$320', '$500', '$680', '$860'], 'Quantity demanded': ['22,500', '20,000', '17,500', '15,000', '12,500'], 'Quantity supplied': ['4,000', '8,100', '12,200', '16,300', '20,400']}",6,3,"At the price of $860, the quantity demanded is less than the quantity supplied. There is too much of the good or service for sale at that price. So, there is a surplus.
+",multi_choice,boolean_text,5,train,3,14055
+36111,Look at the following schedule. When does the jump rope race begin?,"['1:30 P.M.', '3:20 P.M.', '4:10 P.M.', '2:15 P.M.']",1:30 P.M.,,Field day schedule,"Event | Begin | End
+egg relay | 11:45 A.M. | 12:30 P.M.
+water balloon toss | 12:40 P.M. | 1:20 P.M.
+jump rope race | 1:30 P.M. | 2:10 P.M.
+obstacle course | 2:15 P.M. | 3:15 P.M.
+hula hoop contest | 3:20 P.M. | 4:00 P.M.
+three-legged race | 4:10 P.M. | 5:00 P.M.","{'Event': ['egg relay', 'water balloon toss', 'jump rope race', 'obstacle course', 'hula hoop contest', 'three-legged race'], 'Begin': ['11:45 A.M.', '12:40 P.M.', '1:30 P.M.', '2:15 P.M.', '3:20 P.M.', '4:10 P.M.'], 'End': ['12:30 P.M.', '1:20 P.M.', '2:10 P.M.', '3:15 P.M.', '4:00 P.M.', '5:00 P.M.']}",7,3,"Find the jump rope race on the schedule. Find the beginning time for the jump rope race.
+
+jump rope race: 1:30 P. M.",multi_choice,extractive_text,3,train,4,6384
+10057,The art club made a table showing the ages of its members. What is the range of the numbers?,,4,,Club members' ages,"Name | Age (years)
+Sasha | 6
+Farid | 10
+Tracy | 9
+Zeke | 8
+Kinsley | 8","{'Name': ['Sasha', 'Farid', 'Tracy', 'Zeke', 'Kinsley'], 'Age (years)': ['6', '10', '9', '8', '8']}",6,2,"Read the numbers from the table.
+
+6, 10, 9, 8, 8
+
+First, find the greatest number. The greatest number is 10.
+
+Next, find the least number. The least number is 6.
+
+Subtract the least number from the greatest number:
+
+10 − 6 = 4
+
+The range is 4.",free_text,integer_number,6,train,0,1121
+22868,"For a few weeks, a music producer kept track of newly released songs on a music streaming website. He recorded the music genre and number of times the song was played on its release date. What is the probability that a randomly selected song was country and had 0-500 plays? Simplify any fractions.",,3/20,,," | 0-500 plays | 501-1,000 plays
+Country | 3 | 5
+Rock | 5 | 7","{'Column 1': ['', 'Country', 'Rock'], 'Column 2': ['0-500 plays', '3', '5'], 'Column 3': ['501-1,000 plays', '5', '7']}",3,3,"Let A be the event ""the song was country"" and B be the event ""the song had 0-500 plays"".
+To find the probability that a song was country and had 0-500 plays, first identify the sample space and the event.
+The outcomes in the sample space are the different songs. Each song is equally likely to be selected, so this is a uniform probability model.
+The event is A and B, ""the song was country and had 0-500 plays"".
+Since this is a uniform probability model, count the number of outcomes in the event A and B and count the total number of outcomes. Then, divide them to compute the probability.
+
+Find the number of outcomes in the event A and B.
+A and B is the event ""the song was country and had 0-500 plays"", so look at the table to see how many songs were country and had 0-500 plays.
+The number of songs that were country and had 0-500 plays is 3.
+
+Find the total number of outcomes.
+Add all the numbers in the table to find the total number of songs.
+3 + 5 + 5 + 7 = 20
+
+Find P(A and B).
+Since all outcomes are equally likely, the probability of event A and B is the number of outcomes in event A and B divided by the total number of outcomes.
+P(A and B) = \frac{# of outcomes in A and B}{total # of outcomes}
+ = \frac{3}{20}
+The probability that a song was country and had 0-500 plays is \frac{3}{20}.",free_text,decimal_number,8,train,1,4369
+18732,How much money does Kelsey need to buy a stuffed animal and a video game?,,31.19,$,,"stuffed animal | $10.53
+toy piano | $24.05
+video game | $20.66
+trampoline | $92.47","{'Column 1': ['stuffed animal', 'toy piano', 'video game', 'trampoline'], 'Column 2': ['$10.53', '$24.05', '$20.66', '$92.47']}",4,2,"Add the price of a stuffed animal and the price of a video game:
+
+$10.53 + $20.66 = $31.19
+
+Kelsey needs $31.19.",free_text,decimal_number,8,train,2,1753
+11684,"Look at the table. Then answer the question. At a price of $205, is there a shortage or a surplus?","['shortage', 'surplus']",surplus,,,"Price | Quantity demanded | Quantity supplied
+$45 | 17,400 | 20,400
+$205 | 13,500 | 20,900
+$365 | 9,600 | 21,400
+$525 | 5,700 | 21,900
+$685 | 1,800 | 22,400","{'Price': ['$45', '$205', '$365', '$525', '$685'], 'Quantity demanded': ['17,400', '13,500', '9,600', '5,700', '1,800'], 'Quantity supplied': ['20,400', '20,900', '21,400', '21,900', '22,400']}",6,3,"At the price of $205, the quantity demanded is less than the quantity supplied. There is too much of the good or service for sale at that price. So, there is a surplus.
+",multi_choice,boolean_text,5,train,3,12312
+11843,Look at the following schedule. Dylan just missed the 10.45 A.M. train at the science museum. What time is the next train?,"['11:00 A.M.', '12:30 P.M.', '11:30 A.M.', '12:15 P.M.']",11:00 A.M.,,Light rail train schedule,"science museum | 10:30 A.M. | 10:45 A.M. | 11:00 A.M.
+grocery store | 11:00 A.M. | 11:15 A.M. | 11:30 A.M.
+town square | 11:30 A.M. | 11:45 A.M. | 12:00 P.M.
+city hall | 12:00 P.M. | 12:15 P.M. | 12:30 P.M.
+park | 12:30 P.M. | 12:45 P.M. | 1:00 P.M.
+downtown | 1:00 P.M. | 1:15 P.M. | 1:30 P.M.","{'Column 1': ['science museum', 'grocery store', 'town square', 'city hall', 'park', 'downtown'], 'Column 2': ['10:30 A.M.', '11:00 A.M.', '11:30 A.M.', '12:00 P.M.', '12:30 P.M.', '1:00 P.M.'], 'Column 3': ['10:45 A.M.', '11:15 A.M.', '11:45 A.M.', '12:15 P.M.', '12:45 P.M.', '1:15 P.M.'], 'Column 4': ['11:00 A.M.', '11:30 A.M.', '12:00 P.M.', '12:30 P.M.', '1:00 P.M.', '1:30 P.M.']}",6,4,"Find 10:45 A. M. in the row for the science museum.
+
+Look for the next train in that row.
+
+The next train is at 11:00 A. M.",multi_choice,extractive_text,4,train,4,4894
+1612,Olivia graphed the daily low temperature for 7 days. What is the median of the numbers?,,9,,Daily low temperature,"Day | Temperature (Â°C)
+Thursday | 8
+Friday | 7
+Saturday | 10
+Sunday | 5
+Monday | 10
+Tuesday | 10
+Wednesday | 9","{'Day': ['Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday'], 'Temperature (Â°C)': ['8', '7', '10', '5', '10', '10', '9']}",8,2,"Read the numbers from the table.
+
+8, 7, 10, 5, 10, 10, 9
+
+First, arrange the numbers from least to greatest:
+
+5, 7, 8, 9, 10, 10, 10
+
+Now find the number in the middle.
+
+5, 7, 8, 9, 10, 10, 10
+
+The number in the middle is 9.
+
+The median is 9.",free_text,integer_number,7,train,0,5912
+12121,"Danny is the proud owner of an eclectic bow tie collection. He keeps track of how many bow ties he has, and organizes them by pattern and material. What is the probability that a randomly selected bow tie is designed with swirls and is made of cotton? Simplify any fractions.",,3/20,,," | Velvet | Cotton
+Zigzags | 7 | 5
+Swirls | 5 | 3","{'': ['Zigzags', 'Swirls'], 'Velvet': ['7', '5'], 'Cotton': ['5', '3']}",3,3,"Let A be the event ""the bow tie is designed with swirls"" and B be the event ""the bow tie is made of cotton"".
+To find the probability that a bow tie is designed with swirls and is made of cotton, first identify the sample space and the event.
+The outcomes in the sample space are the different bow ties. Each bow tie is equally likely to be selected, so this is a uniform probability model.
+The event is A and B, ""the bow tie is designed with swirls and is made of cotton"".
+Since this is a uniform probability model, count the number of outcomes in the event A and B and count the total number of outcomes. Then, divide them to compute the probability.
+
+Find the number of outcomes in the event A and B.
+A and B is the event ""the bow tie is designed with swirls and is made of cotton"", so look at the table to see how many bow ties are designed with swirls and are made of cotton.
+The number of bow ties that are designed with swirls and are made of cotton is 3.
+
+Find the total number of outcomes.
+Add all the numbers in the table to find the total number of bow ties.
+7 + 5 + 5 + 3 = 20
+
+Find P(A and B).
+Since all outcomes are equally likely, the probability of event A and B is the number of outcomes in event A and B divided by the total number of outcomes.
+P(A and B) = \frac{# of outcomes in A and B}{total # of outcomes}
+ = \frac{3}{20}
+The probability that a bow tie is designed with swirls and is made of cotton is \frac{3}{20}.",free_text,decimal_number,8,train,1,4960
+3047,How much money does Xavier need to buy 4 Quarter horses and 7 Clydesdale horses?,,"40,766",$,,"Quarter horse | $6,877.00
+Andalusian horse | $3,352.00
+Clydesdale horse | $1,894.00
+Thoroughbred horse | $1,554.00
+Appaloosa horse | $2,869.00
+Arabian horse | $8,838.00","{'Column 1': ['Quarter horse', 'Andalusian horse', 'Clydesdale horse', 'Thoroughbred horse', 'Appaloosa horse', 'Arabian horse'], 'Column 2': ['$6,877.00', '$3,352.00', '$1,894.00', '$1,554.00', '$2,869.00', '$8,838.00']}",6,2,"Find the cost of 4 Quarter horses.
+
+$6,877.00 × 4 = $27,508.00
+
+Find the cost of 7 Clydesdale horses.
+
+$1,894.00 × 7 = $13,258.00
+
+Now find the total cost.
+
+$27,508.00 + $13,258.00 = $40,766.00
+
+Xavier needs $40,766.00.",free_text,integer_number,7,train,2,15785
+2350,The table shows a function. Is the function linear or nonlinear?,"['linear', 'nonlinear']",nonlinear,,,"x | y
+6 | 6
+7 | 14
+8 | 18","{'x': ['6', '7', '8'], 'y': ['6', '14', '18']}",4,2,"To determine whether the function is linear or nonlinear, see whether it has a constant rate of change.
+Pick the points in any two rows of the table and calculate the rate of change between them. The first two rows are a good place to start.
+Call the values in the first row x1 and y1. Call the values in the second row x2 and y2.
+Rate of change = \frac{y2 - y1}{x2 - x1}
+ = \frac{14 - 6}{7 - 6}
+ = \frac{8}{1}
+ = 8
+Now pick any other two rows and calculate the rate of change between them.
+Call the values in the second row x1 and y1. Call the values in the third row x2 and y2.
+Rate of change = \frac{y2 - y1}{x2 - x1}
+ = \frac{18 - 14}{8 - 7}
+ = \frac{4}{1}
+ = 4
+The rate of change is not the same for each pair of points. So, the function does not have a constant rate of change.
+The function is nonlinear.",multi_choice,boolean_text,8,train,3,8718
+4836,Look at the following schedule. When does the train arrive at the library?,"['12:50 P.M.', '12:25 P.M.', '12:15 P.M.', '11:35 A.M.']",12:25 P.M.,,Light rail train schedule,"Location | Time
+zoo | 10:50 A.M.
+art museum | 11:10 A.M.
+high school | 11:35 A.M.
+science museum | 11:55 A.M.
+university | 12:15 P.M.
+library | 12:25 P.M.
+basketball stadium | 12:50 P.M.
+grocery store | 12:55 P.M.
+swimming pool | 1:25 P.M.","{'Location': ['zoo', 'art museum', 'high school', 'science museum', 'university', 'library', 'basketball stadium', 'grocery store', 'swimming pool'], 'Time': ['10:50 A.M.', '11:10 A.M.', '11:35 A.M.', '11:55 A.M.', '12:15 P.M.', '12:25 P.M.', '12:50 P.M.', '12:55 P.M.', '1:25 P.M.']}",10,2,"Find the library on the schedule. Find the arrival time for the library.
+
+library: 12:25 P. M.",multi_choice,extractive_text,3,train,4,9933
+26785,A technical support line tracked how many calls it received each day. What is the median of the numbers?,,18,,Phone calls received,"Day | Number of calls
+Saturday | 11
+Sunday | 24
+Monday | 21
+Tuesday | 18
+Wednesday | 11","{'Day': ['Saturday', 'Sunday', 'Monday', 'Tuesday', 'Wednesday'], 'Number of calls': ['11', '24', '21', '18', '11']}",6,2,"Read the numbers from the table.
+
+11, 24, 21, 18, 11
+
+First, arrange the numbers from least to greatest:
+
+11, 11, 18, 21, 24
+
+Now find the number in the middle.
+
+11, 11, 18, 21, 24
+
+The number in the middle is 18.
+
+The median is 18.",free_text,integer_number,5,train,0,1318
+14561,A school district compared how many students attend each elementary school. Which school has the fewest students?,"['Canyon Elementary', 'Pine Elementary', 'Roseville Elementary', 'Eastside Elementary']",Pine Elementary,,Elementary school attendance,"School | Number of students
+Canyon Elementary | 562
+Pine Elementary | 526
+Roseville Elementary | 568
+Eastside Elementary | 552","{'School': ['Canyon Elementary', 'Pine Elementary', 'Roseville Elementary', 'Eastside Elementary'], 'Number of students': ['562', '526', '568', '552']}",5,2,"Find the least number in the table. Remember to compare the numbers starting with the highest place value. The least number is 526.
+
+Now find the corresponding school. Pine Elementary corresponds to 526.",multi_choice,extractive_text,2,train,1,1757
+13965,Russell has $649.00. Does he have enough to buy a wooden bench and an iron bench?,"['yes', 'no']",yes,,,"iron bench | $314.00
+leaf blower | $294.00
+picnic table | $233.00
+wooden bench | $327.00
+barbecue grill | $127.00","{'Column 1': ['iron bench', 'leaf blower', 'picnic table', 'wooden bench', 'barbecue grill'], 'Column 2': ['$314.00', '$294.00', '$233.00', '$327.00', '$127.00']}",5,2,"Add the price of a wooden bench and the price of an iron bench:
+
+$327.00 + $314.00 = $641.00
+
+$641.00 is less than $649.00. Russell does have enough money.",multi_choice,boolean_text,8,train,2,5691
+30630,The table shows a function. Is the function linear or nonlinear?,"['linear', 'nonlinear']",linear,,,"x | y
+12 | 12
+13 | 14
+14 | 16","{'x': ['12', '13', '14'], 'y': ['12', '14', '16']}",4,2,"To determine whether the function is linear or nonlinear, see whether it has a constant rate of change.
+Pick the points in any two rows of the table and calculate the rate of change between them. The first two rows are a good place to start.
+Call the values in the first row x1 and y1. Call the values in the second row x2 and y2.
+Rate of change = \frac{y2 - y1}{x2 - x1}
+ = \frac{14 - 12}{13 - 12}
+ = \frac{2}{1}
+ = 2
+Now pick any other two rows and calculate the rate of change between them.
+Call the values in the second row x1 and y1. Call the values in the third row x2 and y2.
+Rate of change = \frac{y2 - y1}{x2 - x1}
+ = \frac{16 - 14}{14 - 13}
+ = \frac{2}{1}
+ = 2
+The two rates of change are the same.
+If you checked the rate of change between rows 1 and 3, you would find that it is also 2.
+This means the rate of change is the same for each pair of points. So, the function has a constant rate of change.
+The function is linear.",multi_choice,boolean_text,8,train,3,322
+3120,Look at the following schedule. When does the train arrive at Centerville?,"['1:05 P.M.', '1:55 P.M.', '3:05 P.M.', '11:15 A.M.']",11:15 A.M.,,Train schedule,"Location | Arrive | Depart
+Livingston | 9:20 A.M. | 9:30 A.M.
+Springdale | 10:05 A.M. | 10:15 A.M.
+Centerville | 11:15 A.M. | 11:20 A.M.
+Greenwood | 1:05 P.M. | 1:20 P.M.
+Hampton | 1:55 P.M. | 2:05 P.M.
+Lakeside | 3:05 P.M. | 3:20 P.M.
+Middletown | 3:50 P.M. | 4:05 P.M.
+Sparrowtown | 5:50 P.M. | 5:55 P.M.","{'Location': ['Livingston', 'Springdale', 'Centerville', 'Greenwood', 'Hampton', 'Lakeside', 'Middletown', 'Sparrowtown'], 'Arrive': ['9:20 A.M.', '10:05 A.M.', '11:15 A.M.', '1:05 P.M.', '1:55 P.M.', '3:05 P.M.', '3:50 P.M.', '5:50 P.M.'], 'Depart': ['9:30 A.M.', '10:15 A.M.', '11:20 A.M.', '1:20 P.M.', '2:05 P.M.', '3:20 P.M.', '4:05 P.M.', '5:55 P.M.']}",9,3,"Find Centerville on the schedule. Find the arrival time for Centerville.
+
+Centerville: 11:15 A. M.",multi_choice,extractive_text,3,train,4,6213
+29353,Haley recalled how many goals she had made in soccer practice each day. What is the median of the numbers?,,5,,Goals made,"Day | Number of goals
+Thursday | 7
+Friday | 2
+Saturday | 7
+Sunday | 5
+Monday | 0","{'Day': ['Thursday', 'Friday', 'Saturday', 'Sunday', 'Monday'], 'Number of goals': ['7', '2', '7', '5', '0']}",6,2,"Read the numbers from the table.
+
+7, 2, 7, 5, 0
+
+First, arrange the numbers from least to greatest:
+
+0, 2, 5, 7, 7
+
+Now find the number in the middle.
+
+0, 2, 5, 7, 7
+
+The number in the middle is 5.
+
+The median is 5.",free_text,integer_number,5,train,0,35
+4525,Connor and his brother are at a store shopping for a beanbag chair for their school's library. The store sells beanbag chairs with different fabrics and types of filling. What is the probability that a randomly selected beanbag chair is made from suede and is filled with beads? Simplify any fractions.,,4/19,,," | Foam | Beads
+Velvet | 4 | 6
+Suede | 5 | 4","{'': ['Velvet', 'Suede'], 'Foam': ['4', '5'], 'Beads': ['6', '4']}",3,3,"Let A be the event ""the beanbag chair is made from suede"" and B be the event ""the beanbag chair is filled with beads"".
+To find the probability that a beanbag chair is made from suede and is filled with beads, first identify the sample space and the event.
+The outcomes in the sample space are the different beanbag chairs. Each beanbag chair is equally likely to be selected, so this is a uniform probability model.
+The event is A and B, ""the beanbag chair is made from suede and is filled with beads"".
+Since this is a uniform probability model, count the number of outcomes in the event A and B and count the total number of outcomes. Then, divide them to compute the probability.
+
+Find the number of outcomes in the event A and B.
+A and B is the event ""the beanbag chair is made from suede and is filled with beads"", so look at the table to see how many beanbag chairs are made from suede and are filled with beads.
+The number of beanbag chairs that are made from suede and are filled with beads is 4.
+
+Find the total number of outcomes.
+Add all the numbers in the table to find the total number of beanbag chairs.
+4 + 5 + 6 + 4 = 19
+
+Find P(A and B).
+Since all outcomes are equally likely, the probability of event A and B is the number of outcomes in event A and B divided by the total number of outcomes.
+P(A and B) = \frac{# of outcomes in A and B}{total # of outcomes}
+ = \frac{4}{19}
+The probability that a beanbag chair is made from suede and is filled with beads is \frac{4}{19}.",free_text,decimal_number,8,train,1,1051
+30763,How much more does a blender cost than a CD player?,,11.24,$,,"CD player | $18.55
+radio | $20.46
+telephone | $48.32
+CD | $17.75
+blender | $29.79
+microphone | $22.09","{'Column 1': ['CD player', 'radio', 'telephone', 'CD', 'blender', 'microphone'], 'Column 2': ['$18.55', '$20.46', '$48.32', '$17.75', '$29.79', '$22.09']}",6,2,"Subtract the price of a CD player from the price of a blender.
+
+$29.79 - $18.55 = $11.24
+
+A blender costs $11.24 more than a CD player.",free_text,decimal_number,5,train,2,14395
+5342,"Look at the table. Then answer the question. At a price of $1,395, is there a shortage or a surplus?","['shortage', 'surplus']",surplus,,,"Price | Quantity demanded | Quantity supplied
+$915 | 21,100 | 2,600
+$1,075 | 17,700 | 6,300
+$1,235 | 14,300 | 10,000
+$1,395 | 10,900 | 13,700
+$1,555 | 7,500 | 17,400","{'Price': ['$915', '$1,075', '$1,235', '$1,395', '$1,555'], 'Quantity demanded': ['21,100', '17,700', '14,300', '10,900', '7,500'], 'Quantity supplied': ['2,600', '6,300', '10,000', '13,700', '17,400']}",6,3,"At the price of $1,395, the quantity demanded is less than the quantity supplied. There is too much of the good or service for sale at that price. So, there is a surplus.
+",multi_choice,boolean_text,5,train,3,3150
+30074,Look at the following schedule. How long does it take to get from the school to the mall?,"['1 hour and 45 minutes', '2 hours and 30 minutes', '15 minutes', '30 minutes']",2 hours and 30 minutes,,Bus schedule,"the post office | 8:00 A.M. | 9:15 A.M. | 9:45 A.M.
+the library | 9:00 A.M. | 10:15 A.M. | 10:45 A.M.
+the doctor's office | 9:30 A.M. | 10:45 A.M. | 11:15 A.M.
+the playground | 10:30 A.M. | 11:45 A.M. | 12:15 P.M.
+the school | 10:45 A.M. | 12:00 P.M. | 12:30 P.M.
+the grocery store | 11:30 A.M. | 12:45 P.M. | 1:15 P.M.
+the science museum | 12:30 P.M. | 1:45 P.M. | 2:15 P.M.
+the mall | 1:15 P.M. | 2:30 P.M. | 3:00 P.M.","{'Column 1': ['the post office', 'the library', ""the doctor's office"", 'the playground', 'the school', 'the grocery store', 'the science museum', 'the mall'], 'Column 2': ['8:00 A.M.', '9:00 A.M.', '9:30 A.M.', '10:30 A.M.', '10:45 A.M.', '11:30 A.M.', '12:30 P.M.', '1:15 P.M.'], 'Column 3': ['9:15 A.M.', '10:15 A.M.', '10:45 A.M.', '11:45 A.M.', '12:00 P.M.', '12:45 P.M.', '1:45 P.M.', '2:30 P.M.'], 'Column 4': ['9:45 A.M.', '10:45 A.M.', '11:15 A.M.', '12:15 P.M.', '12:30 P.M.', '1:15 P.M.', '2:15 P.M.', '3:00 P.M.']}",8,4,"Read the times in the first column for the school and the mall.
+
+Find the elapsed time between 10:45 A. M. and 1:15 P. M. The elapsed time is 2 hours and 30 minutes.
+
+No matter which column of times you look at, the elapsed time is always 2 hours and 30 minutes.",multi_choice,other_text,4,train,4,7349
+30924,Alice looked at her calendar to figure out how much time she spent babysitting each month. What is the range of the numbers?,,3,,Hours of babysitting,"Month | Hours
+April | 21
+May | 22
+June | 22
+July | 19
+August | 22","{'Month': ['April', 'May', 'June', 'July', 'August'], 'Hours': ['21', '22', '22', '19', '22']}",6,2,"Read the numbers from the table.
+
+21, 22, 22, 19, 22
+
+First, find the greatest number. The greatest number is 22.
+
+Next, find the least number. The least number is 19.
+
+Subtract the least number from the greatest number:
+
+22 − 19 = 3
+
+The range is 3.",free_text,integer_number,5,train,0,12502
+14094,"For Earth Day, Arlington High's environmental club tracked the number of seeds planted by its members. How many members planted exactly 5 seeds?",,20,,Planting seeds in the garden,"Seeds planted | Frequency
+0 | 15
+1 | 1
+2 | 19
+3 | 6
+4 | 4
+5 | 20","{'Seeds planted': ['0', '1', '2', '3', '4', '5'], 'Frequency': ['15', '1', '19', '6', '4', '20']}",7,2,"Find the row for 5 seeds and read the frequency. The frequency is 20.
+
+20 members planted exactly 5 seeds.",free_text,integer_number,8,train,1,775
+36920,How much more does a jersey signed by a famous hockey player cost than a book signed by a famous author?,,60.06,$,,"CD signed by a famous band | $66.50
+DVD signed by a famous comedian | $56.83
+photograph signed by a famous singer | $54.44
+jersey signed by a famous hockey player | $94.34
+book signed by a famous author | $34.28","{'Column 1': ['CD signed by a famous band', 'DVD signed by a famous comedian', 'photograph signed by a famous singer', 'jersey signed by a famous hockey player', 'book signed by a famous author'], 'Column 2': ['$66.50', '$56.83', '$54.44', '$94.34', '$34.28']}",5,2,"Subtract the price of a book signed by a famous author from the price of a jersey signed by a famous hockey player.
+
+$94.34 - $34.28 = $60.06
+
+A jersey signed by a famous hockey player costs $60.06 more than a book signed by a famous author.",free_text,decimal_number,4,train,2,6596
+15242,Look at this table. Is this relation a function?,"['yes', 'no']",no,,,"x | y
+14 | 9
+14 | 10
+15 | 15","{'x': ['14', '14', '15'], 'y': ['9', '10', '15']}",4,2,"Look at the x-values in the table.
+
+The x-value 14 is paired with multiple y-values, so the relation is not a function.",multi_choice,boolean_text,8,train,3,353
+18830,Look at the following schedule. Which movie ends at 1.10 P.M.?,"['Pirates in Pirate Ships', 'Kung Fu Madness', 'Two People Happy Together', 'The Caped Hero Returns']",Two People Happy Together,,Movie schedule,"Movie | Begin | End
+The Caped Hero Returns | 9:00 A.M. | 10:00 A.M.
+Scary Ghost Movie | 9:25 A.M. | 11:35 A.M.
+Two People Happy Together | 11:05 A.M. | 1:10 P.M.
+Pirates in Pirate Ships | 12:20 P.M. | 2:55 P.M.
+Music Band: True Story of the Musicians | 2:25 P.M. | 5:05 P.M.
+Kung Fu Madness | 4:20 P.M. | 5:35 P.M.
+The Life of a President | 4:55 P.M. | 6:35 P.M.","{'Movie': ['The Caped Hero Returns', 'Scary Ghost Movie', 'Two People Happy Together', 'Pirates in Pirate Ships', 'Music Band: True Story of the Musicians', 'Kung Fu Madness', 'The Life of a President'], 'Begin': ['9:00 A.M.', '9:25 A.M.', '11:05 A.M.', '12:20 P.M.', '2:25 P.M.', '4:20 P.M.', '4:55 P.M.'], 'End': ['10:00 A.M.', '11:35 A.M.', '1:10 P.M.', '2:55 P.M.', '5:05 P.M.', '5:35 P.M.', '6:35 P.M.']}",8,3,Find 1:10 P. M. on the schedule. Two People Happy Together ends at 1:10 P. M.,multi_choice,extractive_text,3,train,4,13221
+19749,The school district compared how many swings each elementary school has. What is the mean of the numbers?,,6,,Swings,"School | Number of swings
+Shoreline Elementary | 4
+Jefferson Elementary | 10
+Hillside Elementary | 6
+Newberry Elementary | 2
+Valley Elementary | 7
+Roseville Elementary | 8
+Boyd Elementary | 5","{'School': ['Shoreline Elementary', 'Jefferson Elementary', 'Hillside Elementary', 'Newberry Elementary', 'Valley Elementary', 'Roseville Elementary', 'Boyd Elementary'], 'Number of swings': ['4', '10', '6', '2', '7', '8', '5']}",8,2,"Read the numbers from the table.
+
+4, 10, 6, 2, 7, 8, 5
+
+First, count how many numbers are in the group.
+
+There are 7 numbers.
+
+Now add all the numbers together:
+
+4 + 10 + 6 + 2 + 7 + 8 + 5 = 42
+
+Now divide the sum by the number of numbers:
+
+42 ÷ 7 = 6
+
+The mean is 6.",free_text,integer_number,6,train,0,936
+8617,The advertising agency counted the number of billboards in each city in the state. How many cities have at least 77 billboards?,,3,cities,Billboards per city,"Stem | Leaf 
+3 | 9
+4 | 
+5 | 0
+6 | 9
+7 | 6
+8 | 8, 9
+9 | 0","{'Stem': ['3', '4', '5', '6', '7', '8', '9'], 'Leaf ': ['9', '', '0', '9', '6', '8, 9', '0']}",8,2,"Find the row with stem 7. Count all the leaves greater than or equal to 7.
+
+Count all the leaves in the rows with stems 8 and 9.
+
+You counted 3 leaves, which are blue in the stem-and-leaf plots above. 3 cities have at least 77 billboards.",free_text,integer_number,7,train,1,9630
+15031,Hunter has $3.50. Does he have enough to buy a can of green beans and a can of peaches?,"['yes', 'no']",yes,,,"can of fruit cocktail | $2.58
+can of peaches | $1.97
+can of pears | $1.46
+can of green beans | $1.20","{'Column 1': ['can of fruit cocktail', 'can of peaches', 'can of pears', 'can of green beans'], 'Column 2': ['$2.58', '$1.97', '$1.46', '$1.20']}",4,2,"Add the price of a can of green beans and the price of a can of peaches:
+
+$1.20 + $1.97 = $3.17
+
+$3.17 is less than $3.50. Hunter does have enough money.",multi_choice,boolean_text,4,train,2,2591
+36592,Compare pattern A to pattern B. Which statement is true? ,"['Each term in pattern B is 7 more than the corresponding term in pattern A.', 'Each term in pattern B can be found by multiplying the corresponding term in pattern A by 2 and then adding 7.']",Each term in pattern B is 7 more than the corresponding term in pattern A.,,,"Pattern A | add | 5 0 | 5 | 10 | 15
+Pattern B | add | 5 7 | 12 | 17 | 22","{'Column 1': ['Pattern A', 'Pattern B'], 'Column 2': ['add', 'add'], 'Column 3': ['5 0', '5 7'], 'Column 4': ['5', '12'], 'Column 5': ['10', '17'], 'Column 6': ['15', '22']}",2,6,"Look at the corresponding terms in the table. For example, the first pair of corresponding terms is 0 and 7.
+Read the first statement.
+Each term in pattern B is 7 more than the corresponding term in pattern A.
+This statement is true for all of the corresponding terms.
+0 + 7 = 7
+5 + 7 = 12
+10 + 7 = 17
+15 + 7 = 22
+Read the second statement.
+Each term in pattern B can be found by multiplying the corresponding term in pattern A by2 and then adding 7.
+This statement is not true for some of the corresponding terms. For example, if you multiply 5 by2 and then add 7, you do not get 12.",multi_choice,other_text,5,train,3,10143
+27948,"Look at the following schedule. Liz is at Cherry Avenue. If she wants to arrive at North Avenue at 1.15 P.M., what time should she get on the train?","['12:30 P.M.', '9:15 A.M.', '10:45 A.M.', '11:00 A.M.']",10:45 A.M.,,Subway train schedule,"Spring Road | 9:00 A.M. | 9:15 A.M. | 9:30 A.M. | 10:00 A.M. | 11:00 A.M.
+Highland Avenue | 9:30 A.M. | 9:45 A.M. | 10:00 A.M. | 10:30 A.M. | 11:30 A.M.
+Poplar Street | 10:00 A.M. | 10:15 A.M. | 10:30 A.M. | 11:00 A.M. | 12:00 P.M.
+Lake Street | 10:15 A.M. | 10:30 A.M. | 10:45 A.M. | 11:15 A.M. | 12:15 P.M.
+Cherry Avenue | 10:30 A.M. | 10:45 A.M. | 11:00 A.M. | 11:30 A.M. | 12:30 P.M.
+Hill Street | 11:30 A.M. | 11:45 A.M. | 12:00 P.M. | 12:30 P.M. | 1:30 P.M.
+Mill Avenue | 12:15 P.M. | 12:30 P.M. | 12:45 P.M. | 1:15 P.M. | 2:15 P.M.
+North Avenue | 1:00 P.M. | 1:15 P.M. | 1:30 P.M. | 2:00 P.M. | 3:00 P.M.","{'Column 1': ['Spring Road', 'Highland Avenue', 'Poplar Street', 'Lake Street', 'Cherry Avenue', 'Hill Street', 'Mill Avenue', 'North Avenue'], 'Column 2': ['9:00 A.M.', '9:30 A.M.', '10:00 A.M.', '10:15 A.M.', '10:30 A.M.', '11:30 A.M.', '12:15 P.M.', '1:00 P.M.'], 'Column 3': ['9:15 A.M.', '9:45 A.M.', '10:15 A.M.', '10:30 A.M.', '10:45 A.M.', '11:45 A.M.', '12:30 P.M.', '1:15 P.M.'], 'Column 4': ['9:30 A.M.', '10:00 A.M.', '10:30 A.M.', '10:45 A.M.', '11:00 A.M.', '12:00 P.M.', '12:45 P.M.', '1:30 P.M.'], 'Column 5': ['10:00 A.M.', '10:30 A.M.', '11:00 A.M.', '11:15 A.M.', '11:30 A.M.', '12:30 P.M.', '1:15 P.M.', '2:00 P.M.'], 'Column 6': ['11:00 A.M.', '11:30 A.M.', '12:00 P.M.', '12:15 P.M.', '12:30 P.M.', '1:30 P.M.', '2:15 P.M.', '3:00 P.M.']}",8,6,"Look at the row for North Avenue. Find the train that arrives at North Avenue at 1:15 P. M.
+
+Look up the column until you find the row for Cherry Avenue.
+
+Liz should get on the train at 10:45 A. M.",multi_choice,extractive_text,4,train,4,7715
+11854,The students in Mr. Robertson's class recorded the number of siblings that each has. How many students have fewer than 2 siblings?,,31,,Siblings,"Number of siblings | Frequency
+0 | 19
+1 | 12
+2 | 13
+3 | 9","{'Number of siblings': ['0', '1', '2', '3'], 'Frequency': ['19', '12', '13', '9']}",5,2,"Find the rows for 0 and 1 sibling. Add the frequencies for these rows.
+
+Add:
+
+19 + 12 = 31
+
+31 students have fewer than 2 siblings.",free_text,integer_number,7,train,0,12081
+23529,Brittany conducted a blind taste test on some of her friends in order to determine if organic fruits tasted different than non-organic fruits. Each friend ate one type of fruit. What is the probability that a randomly selected friend preferred organic and tasted peaches? Simplify any fractions.,,7/19,,," | Apples | Peaches
+Organic | 2 | 7
+Non-organic | 7 | 3","{'': ['Organic', 'Non-organic'], 'Apples': ['2', '7'], 'Peaches': ['7', '3']}",3,3,"Let A be the event ""the friend preferred organic"" and B be the event ""the friend tasted peaches"".
+To find the probability that a friend preferred organic and tasted peaches, first identify the sample space and the event.
+The outcomes in the sample space are the different friends. Each friend is equally likely to be selected, so this is a uniform probability model.
+The event is A and B, ""the friend preferred organic and tasted peaches"".
+Since this is a uniform probability model, count the number of outcomes in the event A and B and count the total number of outcomes. Then, divide them to compute the probability.
+
+Find the number of outcomes in the event A and B.
+A and B is the event ""the friend preferred organic and tasted peaches"", so look at the table to see how many friends preferred organic and tasted peaches.
+The number of friends who preferred organic and tasted peaches is 7.
+
+Find the total number of outcomes.
+Add all the numbers in the table to find the total number of friends.
+2 + 7 + 7 + 3 = 19
+
+Find P(A and B).
+Since all outcomes are equally likely, the probability of event A and B is the number of outcomes in event A and B divided by the total number of outcomes.
+P(A and B) = \frac{# of outcomes in A and B}{total # of outcomes}
+ = \frac{7}{19}
+The probability that a friend preferred organic and tasted peaches is \frac{7}{19}.",free_text,decimal_number,8,train,1,14031
+4945,How much money does Hannah need to buy a ballet ticket and 7 orchestra tickets?,,443,$,,"dance performance ticket | $29.00
+play ticket | $32.00
+figure skating ticket | $41.00
+ballet ticket | $37.00
+opera ticket | $76.00
+orchestra ticket | $58.00","{'Column 1': ['dance performance ticket', 'play ticket', 'figure skating ticket', 'ballet ticket', 'opera ticket', 'orchestra ticket'], 'Column 2': ['$29.00', '$32.00', '$41.00', '$37.00', '$76.00', '$58.00']}",6,2,"Find the cost of 7 orchestra tickets.
+
+$58.00 × 7 = $406.00
+
+Now find the total cost.
+
+$37.00 + $406.00 = $443.00
+
+Hannah needs $443.00.",free_text,integer_number,8,train,2,9361
+32013,"Look at the table. Then answer the question. At a price of $1,045, is there a shortage or a surplus?","['shortage', 'surplus']",surplus,,,"Price | Quantity demanded | Quantity supplied
+$665 | 15,500 | 16,200
+$855 | 13,700 | 17,300
+$1,045 | 11,900 | 18,400
+$1,235 | 10,100 | 19,500
+$1,425 | 8,300 | 20,600","{'Price': ['$665', '$855', '$1,045', '$1,235', '$1,425'], 'Quantity demanded': ['15,500', '13,700', '11,900', '10,100', '8,300'], 'Quantity supplied': ['16,200', '17,300', '18,400', '19,500', '20,600']}",6,3,"At the price of $1,045, the quantity demanded is less than the quantity supplied. There is too much of the good or service for sale at that price. So, there is a surplus.
+",multi_choice,boolean_text,5,train,3,9826
+7900,Look at the following schedule. Marshall got on the train at Rollercoaster Land at 5.45 A.M. What time will he get to Floral Gardens?,"['3:30 P.M.', '5:00 P.M.', '5:15 A.M.', '6:45 A.M.']",6:45 A.M.,,Train schedule,"Comfy Pillows Resort | 4:15 A.M. | 2:30 P.M. | 10:00 P.M.
+Skyscraper City | 4:45 A.M. | 3:00 P.M. | 10:30 P.M.
+Pleasant River Campground | 5:15 A.M. | 3:30 P.M. | 11:00 P.M.
+Rollercoaster Land | 5:45 A.M. | 4:00 P.M. | 11:30 P.M.
+Floral Gardens | 6:45 A.M. | 5:00 P.M. | 12:30 A.M.
+Chickenville | 7:15 A.M. | 5:30 P.M. | 1:00 A.M.
+Happy Cow Farm | 7:45 A.M. | 6:00 P.M. | 1:30 A.M.","{'Column 1': ['Comfy Pillows Resort', 'Skyscraper City', 'Pleasant River Campground', 'Rollercoaster Land', 'Floral Gardens', 'Chickenville', 'Happy Cow Farm'], 'Column 2': ['4:15 A.M.', '4:45 A.M.', '5:15 A.M.', '5:45 A.M.', '6:45 A.M.', '7:15 A.M.', '7:45 A.M.'], 'Column 3': ['2:30 P.M.', '3:00 P.M.', '3:30 P.M.', '4:00 P.M.', '5:00 P.M.', '5:30 P.M.', '6:00 P.M.'], 'Column 4': ['10:00 P.M.', '10:30 P.M.', '11:00 P.M.', '11:30 P.M.', '12:30 A.M.', '1:00 A.M.', '1:30 A.M.']}",7,4,"Find 5:45 A. M. in the row for Rollercoaster Land. That column shows the schedule for the train that Marshall is on.
+
+Look down the column until you find the row for Floral Gardens.
+
+Marshall will get to Floral Gardens at 6:45 A. M.",multi_choice,extractive_text,4,train,4,8071
+28013,The teachers at a middle school counted how many computers they had in their classrooms. What is the mean of the numbers?,,9,,Computers in classrooms,"Teacher | Number of computers
+Mrs. Tan | 4
+Mr. Watson | 9
+Ms. Cohen | 11
+Mr. Lim | 6
+Ms. Rojas | 3
+Mrs. Jansen | 7
+Mrs. Rossi | 16
+Mr. Schmidt | 16","{'Teacher': ['Mrs. Tan', 'Mr. Watson', 'Ms. Cohen', 'Mr. Lim', 'Ms. Rojas', 'Mrs. Jansen', 'Mrs. Rossi', 'Mr. Schmidt'], 'Number of computers': ['4', '9', '11', '6', '3', '7', '16', '16']}",9,2,"Read the numbers from the table.
+
+4, 9, 11, 6, 3, 7, 16, 16
+
+First, count how many numbers are in the group.
+
+There are 8 numbers.
+
+Now add all the numbers together:
+
+4 + 9 + 11 + 6 + 3 + 7 + 16 + 16 = 72
+
+Now divide the sum by the number of numbers:
+
+72 ÷ 8 = 9
+
+The mean is 9.",free_text,integer_number,5,train,0,15575
+25872,"Abby kept track of the number of games her soccer team won each year. According to the table, what was the rate of change between 2007 and 2008?",,-5,games per year,Games won by Abby's soccer team,"Year | Games won
+2006 | 7
+2007 | 40
+2008 | 35
+2009 | 47
+2010 | 48","{'Year': ['2006', '2007', '2008', '2009', '2010'], 'Games won': ['7', '40', '35', '47', '48']}",6,2,"Plug the numbers into the formula for rate of change and simplify.
+Rate of change
+ = \frac{change in value}{change in time}
+ = \frac{35 games - 40 games}{2008 - 2007}
+ = \frac{35 games - 40 games}{1 year}
+ = \frac{-5 games}{1 year}
+ = -5 games per year
+The rate of change between 2007 and 2008 was - 5 games per year.",free_text,integer_number,8,train,1,6197
+34056,How much money does Lily need to buy 6 Mustang horses and 6 Clydesdale horses?,,"90,360",$,,"Palomino horse | $4,169
+Quarter horse | $3,003
+Mustang horse | $7,845
+Pinto horse | $1,034
+Arabian horse | $3,916
+Clydesdale horse | $7,215","{'Column 1': ['Palomino horse', 'Quarter horse', 'Mustang horse', 'Pinto horse', 'Arabian horse', 'Clydesdale horse'], 'Column 2': ['$4,169', '$3,003', '$7,845', '$1,034', '$3,916', '$7,215']}",6,2,"Find the cost of 6 Mustang horses.
+
+$7,845 × 6 = $47,070
+
+Find the cost of 6 Clydesdale horses.
+
+$7,215 × 6 = $43,290
+
+Now find the total cost.
+
+$47,070 + $43,290 = $90,360
+
+Lily needs $90,360.",free_text,integer_number,8,train,2,1635
+27945,The table shows a function. Is the function linear or nonlinear?,"['linear', 'nonlinear']",linear,,,"x | y
+2 | 15
+3 | 8
+4 | 1","{'x': ['2', '3', '4'], 'y': ['15', '8', '1']}",4,2,"To determine whether the function is linear or nonlinear, see whether it has a constant rate of change.
+Pick the points in any two rows of the table and calculate the rate of change between them. The first two rows are a good place to start.
+Call the values in the first row x1 and y1. Call the values in the second row x2 and y2.
+Rate of change = \frac{y2 - y1}{x2 - x1}
+ = \frac{8 - 15}{3 - 2}
+ = \frac{-7}{1}
+ = -7
+Now pick any other two rows and calculate the rate of change between them.
+Call the values in the second row x1 and y1. Call the values in the third row x2 and y2.
+Rate of change = \frac{y2 - y1}{x2 - x1}
+ = \frac{1 - 8}{4 - 3}
+ = \frac{-7}{1}
+ = -7
+The two rates of change are the same.
+7.
+This means the rate of change is the same for each pair of points. So, the function has a constant rate of change.
+The function is linear.",multi_choice,boolean_text,8,train,3,13051
+31027,Look at the following schedule. When does the advanced ballet class begin?,"['5:30 P.M.', '10:40 A.M.', '1:50 P.M.', '2:40 P.M.']",1:50 P.M.,,Dance studio schedule,"Class | Begin | End
+intermediate ballet | 9:10 A.M. | 10:35 A.M.
+modern dance | 10:40 A.M. | 11:10 A.M.
+beginning ballet | 11:20 A.M. | 11:50 A.M.
+hip hop dance | 12:05 P.M. | 1:00 P.M.
+salsa dance | 1:10 P.M. | 1:40 P.M.
+advanced ballet | 1:50 P.M. | 2:25 P.M.
+western dance | 2:40 P.M. | 3:40 P.M.
+swing dance | 3:45 P.M. | 5:25 P.M.
+tap dance | 5:30 P.M. | 6:00 P.M.
+ballroom dance | 6:05 P.M. | 7:40 P.M.","{'Class': ['intermediate ballet', 'modern dance', 'beginning ballet', 'hip hop dance', 'salsa dance', 'advanced ballet', 'western dance', 'swing dance', 'tap dance', 'ballroom dance'], 'Begin': ['9:10 A.M.', '10:40 A.M.', '11:20 A.M.', '12:05 P.M.', '1:10 P.M.', '1:50 P.M.', '2:40 P.M.', '3:45 P.M.', '5:30 P.M.', '6:05 P.M.'], 'End': ['10:35 A.M.', '11:10 A.M.', '11:50 A.M.', '1:00 P.M.', '1:40 P.M.', '2:25 P.M.', '3:40 P.M.', '5:25 P.M.', '6:00 P.M.', '7:40 P.M.']}",11,3,"Find the advanced ballet class on the schedule. Find the beginning time for the advanced ballet class.
+
+advanced ballet: 1:50 P. M.",multi_choice,extractive_text,3,train,4,2010
