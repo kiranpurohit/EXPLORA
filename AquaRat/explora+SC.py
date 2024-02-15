@@ -10,7 +10,7 @@ import torch
 
 import pickle 
 import json
-import openai
+#import openai
 from tqdm import tqdm
 from tenacity import retry, stop_after_attempt, wait_random_exponential
 
@@ -27,92 +27,50 @@ else:
 
 
 
+from huggingface_hub import login
+access_token_read = "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"
+login(token = access_token_read)
 
+#import numpy as np
+from numpy import linalg
+import random
+import pandas as pd
+from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.model_selection import train_test_split
+from sklearn.cluster import KMeans
+from sklearn.metrics import mean_absolute_error
+import torch
 
+import pickle 
+import json
+from tqdm import tqdm
 
+random.seed(7)
+#np.random.seed(7)
+torch.manual_seed(7)
 
-system_message = """The following is a conversation between a Human and an AI Assistant.
-The assistant is helpful, respectful and honest, and it always answers as helpfully as possible, while being safe.
-The Assistant's answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content.
-Please ensure that the Assistant's responses are socially unbiased and positive in nature.
-If a question by the human does not make any sense, or is not factually coherent, the Assistant should explain why instead of answering something not correct.
-If the Assistant does not know the answer to a question, please don't share false information.
-####
+import transformers
+import os
+from transformers import AutoModelForCausalLM, AutoTokenizer
 
-"""
+model_name = "mistralai/Mistral-7B-Instruct-v0.1"
+model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.float16)
 
+# CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 ./cuda_executable
+if torch.cuda.is_available():
+    device = torch.device("cuda")
+else:
+    device = torch.device("cpu")
 
+model = model.to(device)
+pipeline = transformers.pipeline(
+    "text-generation",
+    model=model_name,
+    torch_dtype=torch.float16,
+    device_map="auto",
+)
 
-
-
-# Replace with your API keys and endpoint URLs
-#api_keys = ["<API_KEY_1>", "<API_KEY_2>", "<API_KEY_3>"]
-#endpoint_urls = ["<ENDPOINT_URL_1>", "<ENDPOINT_URL_2>", "<ENDPOINT_URL_3>"]
-#llm_names = ["LLM 1", "LLM 2", "LLM 3"]
-
-api_keys = ["EMPTY", "EMPTY", "EMPTY"]#, "EMPTY"]
-endpoint_urls = ["https://9083-203-110-242-13.ngrok-free.app"]#"https://6069-130-75-87-254.ngrok-free.app"], "https://akdeniz27-llama-2-70b-chat-hf-with-easyllm.hf.space/"]
-llm_names = []
-
-for api_key, endpoint_url in zip(api_keys, endpoint_urls):
-    if 'hf.space' in endpoint_url:
-        model_name = endpoint_url.replace('https://', '').replace('.hf.space', '').replace('/', '')
-    else:
-        openai.api_key = api_key
-        openai.api_base = f"{endpoint_url}/v1"
-        model_names = openai.Model.list()
-        model_name = model_names["data"][0]["id"]
-    llm_names.append(model_name)
-
-# Function to retrieve LLM outputs using the given API key and endpoint
-@retry(wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(5))
-def get_completion(prompt, api_key, endpoint_url, hard_code_exception=False):
-    # if new_sheet_name=='poem_properties':
-    #     if hard_code_exception==True:
-    #         max_tokens=128
-    #     else:
-    #         max_tokens=150
-    # else:
-
-    max_tokens=200
-    if 'hf.space' in endpoint_url:
-        client = Client(endpoint_url)
-        result = client.predict(
-                        prompt, # str in 'Message' Textbox component
-                        api_name="/chat"
-        )
-        return result.strip()
-    openai.api_key = api_key
-    openai.api_base = f"{endpoint_url}/v1"
-    model_names = openai.Model.list()
-    model_name = model_names["data"][0]["id"]
-
-    res = openai.Completion.create(
-        model=model_name,  # Replace with your model name
-        prompt=system_message + prompt,
-        # messages=[
-        #     {"role": "system", "content": system_message},
-        #     {"role": "user", "content": prompt},
-        # ],
-        temperature=0.9,
-        top_k=10,
-        top_p=1.0,
-        n=10,
-        max_tokens=200,
-    )
-    out_text = []
-    for x in range(0, 10):
-        out_text.append(res['choices'][x]['text'].strip())
-    return out_text
-
-
-
-def compare_llm_outputs(user_query, hard_code_exception=False):
-    # results = [get_completion(user_query, api_keys[i], endpoint_urls[i], hard_code_exception=hard_code_exception) for i in range(len(endpoint_urls))]
-    results = get_completion(user_query, api_keys[0], endpoint_urls[0], hard_code_exception=hard_code_exception)
-
-    return results
-
+tokenizer = AutoTokenizer.from_pretrained(model_name, torch_dtype=torch.float16)
 
 def prompt_for_manual_prediction(ex, shots):
 
@@ -130,10 +88,47 @@ def prompt_for_manual_prediction(ex, shots):
     # prompt=prompt+"\n\n{text}\n"
 
 
-    input_example = "\nQ: {}\n O: {}\n A:".format(ex['question'], ex['options'])
+    input_example = "\nQ: {}\n O: {}\nA:".format(ex['question'], ex['options'])
     prompt = "\n".join(showcase_examples + [input_example])
 
     return prompt
+
+
+
+
+
+
+def in_context_manual_prediction(ex, training_data):
+    template,stop = prompt_for_manual_prediction(ex, training_data)
+
+    messages=[{
+                "role": "user",
+                "content": "You are a helpful, respectful and honest assistant helping to solve math word problems or tasks requiring reasoning or math, use the Chain-of-Thought methodology by following given examples to explain your step-by-step calculations or logic.Do not generate examples in your answer",
+            }]
+    text={"role": "assistant", "content":""" Follow given examples and solve the Test Question at end in similar manner by decomposing the original questions
+         Examples:{}""".format(template)}
+    messages.append(text)
+
+
+    prompt = pipeline.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    outputs = pipeline(prompt, max_new_tokens=200, do_sample=True, num_return_sequences=10, temperature=0.5, top_k=10, top_p=1.0)
+        
+    out_text = []
+    for x in range(0, 10):
+        out_text.append(outputs[x]["generated_text"])
+    return out_text
+
+
+
+
+
+
+
+
+
+
+
+    
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
 
 
@@ -162,8 +157,8 @@ def self_con(tmp_list):
         # tmp = compare_llm_outputs(user_query)
         # print(tmp)
         ans = ""
-        if len(tmp.split("The option is "))>1:
-            ans = tmp.split("The option is ")[1][0]
+        if len(tmp.split("The option is "))>6:
+            ans = tmp.split("The option is ")[6][0]
             print(ans)
             # ans = ans.split("\n")[0]
         # ans = ans.replace("$", "")
@@ -362,42 +357,24 @@ def LLM_avg_error(exemplars_set, val_data):
             prompt = prompt_for_manual_prediction(row, exemplars)
             #chain_answer = safe_completion(prompt=prompt, max_tokens=_MAX_TOKENS, stop=stop_signal, temp=0.0, logprobs=5)
 
-            outputs=compare_llm_outputs(prompt)
-            ans=outputs[0].split("The option is ")
-            #answer=in_context_manual_prediction(row,exemplars)
-
-
-            if(len(ans)>1):
-      #print("the option:",ans[1][0])
-                answer= ans[1][0].strip()
+            tmp_list = in_context_manual_prediction(row,exemplars)
+            #print(tmp[0])
+            
+            #n = self_con(tmp_list)
+            # answer = n[0][0]
+            # if answer=="" and len(n)>1: answer = n[1][0]
+            # ans = ""
+            if len(tmp_list[0].split("The option is "))>6:
+                ans = tmp_list[0].split("The option is ")[6][0]
+            answer=ans
+            
+            print("\nAnswer: ", answer)
+            gt = ex["correct"]
+            print("GT: ", gt)
+            if(answer==gt):
+              matches+=1
             else:
-                answer=""
-            # chain_answer = chain_answer[0]
-
-            # text = chain_answer
-            # text = text.strip()
-
-            # # place holder
-            # answer = "null"
-            # rationale = "null"
-
-            # sep = get_sep_text(chain_answer)
-            # if sep is not None:
-            #     segments = text.split(sep)
-            #     answer = segments[1].strip().strip('.')
-            #     rationale = segments[0].strip()
-            # else:
-            #     answer = text
-
-            ground_truth = row["correct"]
-
-            print("\nanswer:",answer)
-            print("ground_truth:",ground_truth)
-
-            if answer==ground_truth:
-                matches+=1
-            else:
-                mismatches+=1
+              mismatches+=1
 
         error.append(mismatches/(matches+mismatches))
 
@@ -422,46 +399,22 @@ def LLM_error_indicator(exemplars_set, val_data):
     # increment error if model predicted answer is not equal to the ground truth answer for the test question by passing the exemplars
     for exemplars in tqdm(exemplars_set,total=len(exemplars_set),desc="predicting"):
         for index, row in val_data.iterrows():
-            #print("exemplars:",exemplars)
-            #print("row:",row)
-            prompt = prompt_for_manual_prediction(row, exemplars)
-    #         #chain_answer = safe_completion(prompt=prompt, max_tokens=_MAX_TOKENS, stop=stop_signal, temp=0.0, logprobs=5)
-            outputs=compare_llm_outputs(prompt)
-            ans=outputs[0].split("The option is ")
+            tmp_list = in_context_manual_prediction(row,exemplars)
+            #print(tmp[0])
+            
+            #n = self_con(tmp_list)
+            # answer = n[0][0]
+            # if answer=="" and len(n)>1: answer = n[1][0]
+            # ans = ""
+            if len(tmp_list[0].split("The option is "))>6:
+                ans = tmp_list[0].split("The option is ")[6][0]
+            answer=ans
+            
+            print("\nAnswer: ", answer)
+            gt = ex["correct"]
+            print("GT: ", gt)
 
-
-            if(len(ans)>1):
-      #print("the option:",ans[1][0])
-                answer= ans[1][0].strip()
-            else:
-                answer=""
-
-            #answer=in_context_manual_prediction(row,exemplars)
-
-
-            # chain_answer = chain_answer[0]
-
-            # text = chain_answer
-            # text = text.strip()
-
-            # # place holder
-            # answer = "null"
-            # rationale = "null"
-
-            # sep = get_sep_text(chain_answer)
-            # if sep is not None:
-            #     segments = text.split(sep)
-            #     answer = segments[1].strip().strip('.')
-            #     rationale = segments[0].strip()
-            # else:
-            #     answer = text
-
-            ground_truth = row["correct"]
-
-            print("\nanswer:",answer)
-            print("ground_truth:",ground_truth)
-
-            if answer==ground_truth:
+            if answer==gt:
                 loss=0
             else:
                 loss=1
@@ -483,7 +436,7 @@ def LLM_error_indicator(exemplars_set, val_data):
 def static_subset_selection(val_data, train_data, k, test_data):
 
     #test_data = test_data[:15]
-    val_data = val_data[:20]
+    val_data = val_data[:2]
     # val_data=20, k=5, L=100, U=10, V=5, L-U=90
     
     knn_instance = FsbdSearch()
@@ -538,7 +491,7 @@ def static_subset_selection(val_data, train_data, k, test_data):
     L_indices = []
 
     # Initialize L, 40 random set of subsets from train_data 
-    for i in range(100):
+    for i in range(10):
         subset = []
         for name, group in train_data.groupby('cluster'):
             # subset.append(group.sample(k//num_gr))   
@@ -551,9 +504,9 @@ def static_subset_selection(val_data, train_data, k, test_data):
     # Initialize U, 10 random set of subsets from L 
     ind_L = np.arange(0,len(L)).tolist()
     
-    ind_total = random.sample(ind_L, 15)
-    ind_U = ind_total[:10]
-    ind_V = ind_total[10:]
+    ind_total = random.sample(ind_L, 5)
+    ind_U = ind_total[:3]
+    ind_V = ind_total[3:]
 
     ind_L_minus_U = [x for x in ind_L if x not in ind_U]    
 
@@ -823,7 +776,7 @@ def static_subset_selection(val_data, train_data, k, test_data):
     # !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!! WHILE LOOP !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
     # *~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*~*
     t=0
-    while t<10:#t=10
+    while t<1:#t=10
 
         ################################################################################
         # min_alpha_i (LLM_loss-W*alpha)^2
@@ -1349,7 +1302,7 @@ def get_open_source_completions(test_data, data):
     question_df = {"question":[],"answers":[]}
 
     train_data, val_data = train_test_split(data, test_size=0.3, random_state=42)
-    val_data=val_data[:20]
+    val_data=val_data[:2]
 
     exemplars = static_subset_selection(val_data, train_data, 5, test_data)
     print("while loop completed!")
@@ -1373,29 +1326,25 @@ def get_open_source_completions(test_data, data):
 
     for index, row in test_data.iterrows():
 
-        prompt = prompt_for_manual_prediction(row, exemplars)
-
-        outputs=compare_llm_outputs(prompt)
-        n = self_con(outputs)
+        tmp_list = in_context_manual_prediction(row,exemplars)
+        #print(tmp[0])
+        
+        n = self_con(tmp_list)
         answer = n[0][0]
         if answer=="" and len(n)>1: answer = n[1][0]
+        ans = ""
+        # if len(tmp[0].split("The option is "))>1:
+        #     ans = tmp[0].split("The option is ")[1][0]
+        # answer=ans
+        
         print("\nAnswer: ", answer)
-        gt = row["correct"]
+        gt = ex["correct"]
         print("GT: ", gt)
-    
-        question_df['question'].append(row["question"])
-        question_df["answers"].append(outputs)
-        final_questions = pd.DataFrame(question_df)
-        final_questions.to_csv("output/aquarat/Llama_static_aquarat_question_answer_latest12.tsv",sep="\t",index=False)
-
-        if answer==gt:
-            matches+=1
+        if(answer==gt):
+          matches+=1
         else:
-            mismatches+=1
-
-
-   
-    print("EM", matches/(matches+mismatches))
+          mismatches+=1
+    print("EM:",matches/(matches+mismatches))
 
     return final_questions
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
