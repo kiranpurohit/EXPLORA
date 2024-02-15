@@ -1,0 +1,239 @@
+,question,options,rationale,correct,cluster,index
+64116,"The game of blackjack is played with a deck consisting of 13 cards (one of each of the numbers 2-10, one jack, one queen, one king, and one of ace) in each of four suits: clubs, diamonds, hearts, and spades.
+In a game of blackjack, if your first card is a spade, what are the W odds that it is an ace?","['A)1/52', 'B)1/26', 'C)1/13', 'D)1/4', 'E)5/13']","The question should ask about the probability not the odds.
+There are 13 spades, the probability W that the spade we already have is an ace is therefore 1/13.
+Answer: C.",C,0,55
+70440,The area of an isosceles trapezoid with sides of length 5 and bases of length 10 and 16 is?,"['A)48', 'B)40', 'C)52', 'D)54', 'E)58']","Isosceles trapezoid indicates that if we draw perpendicular from two vertex of the smaller side, the longer side with side 16 will be divided into 3 parts= 10, 3 and 3 (Making one square and two right triangles)
+For the right triangle, height will be= (5^2-3^2)^1/2= 4
+And the area of trapezoid = 1/2 (B1+B2)H= 1/2*26*4= 52
+C is the answer",C,1,46523
+66761,"A train speeds past a pole in 15 sec and a platform 110 m long in 25 sec, its length is?","['A)165', 'B)150', 'C)988', 'D)177', 'E)171']","Let the length of the train be x m and its speed be y m/sec.
+Then, x/y = 15 => y = x/15
+(x + 110)/25 = x/15 => x = 165 m.
+Answer: A",A,2,47952
+70540,"If x is an odd integer, which of the following is an odd integer?","['A)2x+2', 'B)x^2', 'C)2x+4x', 'D)1+2x+x^2', 'E)3x-1']","Plug in an odd integer; in this case 3
+(2*3)+2 = 8 Even
+3^2 = 9 Odd
+(2*3)+(4*3) = 6 + 12 = 18 Even
+1+(2*3)+3^2 = 1+ 6 + 9 = 16 Even
+(3*3)-1 = 9 - 1 = 8 Even
+Answer: B",B,3,48318
+30116,"A person spends 40% of his salary on food, 25% on house rent, 15% on entertainment and 5% on conveyance. If his savings at the end of the month is Rs. 2700, then his salary per month in rupees is:","['A)4000', 'B)6000', 'C)18000', 'D)10000', 'E)None of these']","Total expenditure = 40 + 25 + 15 + 5 = 85%
+Saving = (100 - 85) = 15%
+15/100 × Salary = 2700, Salary = 18000 Rs.
+Answer:C.",C,4,64268
+90926,The average age of three boys is 15 years and their ages are in proportion 3:5:7. What is the age in years of the youngest boy?,"['A)9', 'B)10', 'C)11', 'D)12', 'E)13']","Explanation:
+3x + 5x + 7x = 45
+x =3
+3x = 9
+A)",A,0,1469
+18780,"Can you deduce the pattern and find the next number in the series?
+6, 14, 26, 98, __?","['A)276', 'B)277', 'C)278', 'D)279', 'E)None of these']","Solution:
+276
+Explanation:
+6 = 1^1 + 2^1 + 3^1
+14 = 1^2 + 2^2 + 3^2
+36 = 1^3 + 2^3 + 3^3
+98 = 1^4 + 2^4 + 3^4
+Thus the next number will be
+1^5 + 2^5 + 3^5 = 276
+Answer A",A,1,29560
+77054,"In covering a distance of 42 km, A takes 2 hours more than B. If A doubles his speed, then he would take 1 hour less than B. A's speed is:","['A)5 km/h', 'B)7 km/h', 'C)10 km/h', 'D)15 km/h', 'E)25 km/h']","Let A's speed be X km/hr.
+Then, 42/x - 42/2x = 3
+6x = 42
+x = 7 km/hr.
+Answer : B.",B,2,11108
+54611,Let the number which when multiplied by 15 is increased by 196.,"['A)14', 'B)20', 'C)26', 'D)28', 'E)30']","Solution
+Let the number be x .
+Then, 15x - x = 196
+‹=›14x = 196
+x ‹=› 14.
+Answer A",A,3,22115
+37309,"A certain sum of money at simple interest amounted Rs.980 in 3 years at 5% per annum, find the sum?","['A)867', 'B)855', 'C)299', 'D)852', 'E)903']","980 = P [1 + (3*5)/100]
+P = 852
+Answer: D",D,4,40669
+54258,"While working alone at their respective constant rates, server J uploads 480 files in 4 hours and server Y uploads 480 files in 8 hours. If all files uploaded by these servers are the same size, how long would it take the two servers, working at the same time and at their respective constant rates, to process a total of 480 files?","['A) 2 hr', 'B) 2hr 20 min', 'C) 2hr 40 min', 'D) 5 hr 40 min', 'E) 6hr']","Server J processes 480/4 files per hour = 120 per hour
+Server Y processes 180/8 files per hour = 60 per hour
+Total files processed per hour when J and Y work together = 120+60 per hour = 180 files per hour
+480/180 = 2 2/3 hours=C",C,0,10889
+12442,"If one third of one fourth of number is 15, then three tenth of number is","['A)34', 'B)44', 'C)54', 'D)64', 'E)74']","Explanation:
+Let the number is x,
+1/3of1/4∗x=15
+=>x=15×12=180
+=>so3/10×x=3/10×180=54
+Option C",C,1,50892
+23834,The diameter of a garden roller is 1.4 m and it is 3 m long. How much area will it cover in 5 revolutions ? (use Ï€ = 22â„7),"['A)60 m2', 'B)64 m2', 'C)68 m2', 'D)66 m2', 'E)None of these']","Required area covered in 5 revolutions
+= 5 Ã— 2Ï€rh = 5 Ã— 2 Ã— 22â„7 Ã— 0.7 Ã— 3 = 66 m2
+Answer D",D,2,61421
+61895,What is the minimum value of z for which z^2 + z - 3/2 > 0 is not true?,"['A) -5/2', 'B) -3/2', 'C) -3', 'D) 1/4', 'E) 1/2']",I think C -3 is the best ans...,C,3,45232
+43212,How much time will take for an amount of Rs. 480 to yield Rs. 81 as interest at 4.5% per annum of simple interest?,"['A)8 years', 'B)4 years', 'C)3 years 9 months', 'D)9 years', 'E)5 years']","Time = (100 * 81) / (480 * 4.5)
+= 3 years 9 months
+Answer: C",C,4,31106
+71223,"There are 8 red, 7 blue and 6 green balls, 1 ball is picked up randomly thenwhat is the probability that neither blue nor green?","['A)2/21', 'B)3/17', 'C)4/26', 'D)3/19', 'E)8/21']","Total number of balls = (8 + 7 + 6) = 21
+Let E = event that the ball drawn is neither blue nor green =e vent that the ball drawn is red.
+Therefore, n(E) = 8.
+P(E) = 8/21.",E,0,13264
+61701,"8, 24, 12, 36, 18, 54, (....)","['A)27', 'B)68', 'C)107', 'D)108', 'E)28']","8 × 3 = 24
+24 ÷ 2 = 12
+12 × 3 = 36
+36 ÷ 2 = 18
+18 × 3 = 54
+54 ÷ 2 = 27
+Answer is A",A,1,24253
+35461,A train running at a speed of 60 kmph crosses a pole in 9 seconds.What is the length of the train?,"['A)120 m', 'B)180 m', 'C)190 m', 'D)150 m', 'E)160 m']","60 kmph=50/3 m/sec
+50/3*9=150 m
+ANSWER:D",D,2,3149
+16839,"If |z|/w = 5,which of the following must be true?","['A)z = -5w', 'B)z = 5w', 'C)z^2 = 25w^2', 'D)z^2 = 25w^3', 'E)z^3 = 125w^3']","|z|/w = 5.
+|z| = 5w.
+Then z = 5w or -5w and so z^2 = 25w^2.
+The answer is C.",C,3,22478
+2500,"If the cost price of 50 articles is equal to the selling price of 15 articles, then the gain or loss percent is?","['A)16', 'B)127', 'C)12', 'D)18', 'E)233']","Percentage of profit = 35/15 * 100 = 233%
+Answer: E",E,4,44052
+29410,"50% of the apartments in a certain building have windows and hardwood floors. 25% of the apartments without windows have hardwood floors. If 40% of the apartments do not have hardwood floors, what M percent of the apartments with windows have hardwood floors?","['A)10', 'B)16 2/3', 'C)40', 'D)50', 'E)83 1/3']","yup you need to construct a matrix
+X********| Windows'|No Windows'''| total
+hardFl****'|50*****''|10*********'|60
+Not hardFl*|10******|30*********'|40
+Total*****|60******'|40*********'|100
+so M percent of the apartments with windows have hardwood floors = 50/60 *100
+= 83 1/3
+so E is the answer.[/u]",E,0,56113
+53507,54671 - 18456 - 33466 = ?,"['A)2749', 'B)5449', 'C)6749', 'D)6449', 'E)6468']","A
+If we calculate we will get 2749",A,1,27968
+15500,A train of length 250 m crosses a bridge of length 120m in 20 seconds. What is the speed of train?,"['A)33', 'B)27', 'C)66.6', 'D)22', 'E)72']","Sol : (length of train+ length of bridge) = speed of train x Time
+(250+120) = 20 x Speed
+Speed = 370/20= 18.5 m/s =66.6 km/h
+ANSWER=C",C,2,21992
+69965,"If x and y are prime numbers such that x > y > 1, then x^2 − y^2 must be divisible by which one of the following numbers?","['A) 3', 'B) 4', 'C) 5', 'D) 9', 'E) 12']","If x=3 and y=2, then x^2-y^2=5 and 5 is divisible only by 5 from the options, thus it must be correct.
+Answer: C.",C,3,25925
+47402,"How much interest will $10,000 earn in 3 months at an annual rate of 6%?","['A)$250', 'B)$150', 'C)$450', 'D)$550', 'E)$650']","Soln:-
+6 months = 1/4 of year;
+6% = 6/100=3/50;
+$10,000(principal)*3/50(interest rate)*1/4(time)=$150.
+ANSWER:B",B,4,42124
+33208,"The slant height of a cone is 12 cm and radius of the base is 4cm, find the curved surface of the cone.","['A)33', 'B)77', 'C)48', 'D)99', 'E)61']","π * 12 * 4 = 48
+Answer:C",C,0,44183
+10535,A student multiplied a number by 3/5 instead of 5/3. What is the percentage error in the calculation?,"['A)34%', 'B)44%', 'C)54%', 'D)64%', 'E)None of these']","Explanation :
+Let, the number be x.
+According to the question, the error is :-
+=>(5x/3)−(3x/5).
+=>16x/5.
+Hence, the percentage error is :-
+=>16x/15 /5x/3∗100.
+=>64%.
+Answer : D",D,1,41951
+84142,"In a 1000 m race, A beats B by 200 meters or 25 seconds. Find the speed of B?","['A)5 m/s', 'B)8 m/s', 'C)9 m/s', 'D)4 m/s', 'E)2 m/s']","B
+8 m/s
+Since A beats B by 200 m or 25 seconds, i
+t implies that B covers 200 m in 25 seconds.
+Hence speed of B = 200/25 = 8 m/s.",B,2,23592
+63655,"In the formula A = (2r)^3, if r is halved, then A is multiplied by ?","['A)64', 'B)1/8', 'C)1', 'D)8', 'E)1/64']","Say r=2 => A1 = 64
+when r=1; V2 = 8
+V2 = 1/8*V1.
+Answer : B",B,3,21988
+70463,In what time will Rs.4400 lent at 3% per annum on simple interest earn as much interest as Rs.5000 will earn in 5 years at 4% per annum on simple interest?,"['A)7 4/3', 'B)7 4/6', 'C)7 4/7', 'D)7 1/2', 'E)7 1/5']","(4400*3*R)/100 = (5000*5*4)/100
+R = 7 4/7
+Answer: C",C,4,63487
+29020,"Calculate the number of bricks, each measuring 25 cm x 15 cm x 8 cm required to construct a wall of dimensions 10 m x 4 cm x 6 m when 10% of its volume is occupied by mortar ?","['A)720', 'B)600', 'C)660', 'D)6000', 'E)650']","Explanation:
+Let the number of bricks be 'N'
+10 x 4/100 x 6 x 90/100 = 25/100 x 15/100 x 8/100 x N
+10 x 4 x 6 x 90 = 15 x 2 x N => N = 720.
+ANSWER IS A",A,0,24891
+76198,"Solve This
+6 + 7 = 12
+8 + 9 = 16
+5 + 6 = 10
+7 + 8 = 14
+Then, 9 + 9 = ??","['A)11', 'B)12', 'C)17', 'D)14', 'E)18']","17
+ANSWER:C",C,1,5035
+51067,"Excluding stoppages, the speed of a train is 45 kmph and including stoppages it is 34 kmph. Of how many minutes does the train stop per hour?","['A)E982', 'B)27', 'C)12', 'D)14.6', 'E)28']","Explanation:
+T = 11/45 * 60 = 14.6
+Answer: Option D",D,2,9319
+55355,"If A is a positive integer, which of the following must be divisible by 6?","['A)A(A^2−2)', 'B)A^2*(A−5)', 'C)A(A+2)^3', 'D)A^2*(A−5)', 'E)(A−1)*A*(A+1)']","option E) (A−1)*A*(A+1) which represents the product of three consecutive integers
+the product of 3 consecutive integers is divisible by both 2 and 3 and so also divisible by 6.
+Answer is E",E,3,57963
+39007,"If the sales tax reduced from 3 1/2 % to 3 1/3%, then what difference does it make to a person who purchases an article with market price of Rs. 9000 ?","['A)11', 'B)13', 'C)15', 'D)18', 'E)10']","Required difference = [3 ½ % of Rs.9000] – [3 1/3 % of Rs.9000]
+= [(7/20-(10/3)]% of Rs.9000 =1/6 % of Rs.9000
+= Rs. [(1/6)8(1/100)*9000] = Rs. 15.
+Answer is C.",C,4,40387
+63547,The average runs scored by a batsman in 20 matches is 40. In the next 10 matches the batsman scored an average of 13 runs. Find his average in all the 30 matches?,"['A)31', 'B)34', 'C)46', 'D)47', 'E)57']","Total score of the batsman in 20 matches = 800.
+Total score of the batsman in the next 10 matches = 130.
+Total score of the batsman in the 30 matches = 930.
+Average score of the batsman = 930/30 = 31.
+Answer:A",A,0,4619
+73903,What is the place value of 6 in the numeral 4634?,"['A)450', 'B)500', 'C)600', 'D)800', 'E)840']","Option 'C'
+6 * 100 =600",C,1,63709
+95342,A car covers a distance of 630 km in 6 hours. Find its speed?,"['A)105', 'B)7778', 'C)266', 'D)288', 'E)121']","624/6 = 105 kmph
+Answer:A",A,2,53072
+42471,"The average (arithmetic man) of three integers a, b, and c is exactly four times the median. If a < b < c and a = 0, what is the value of c/b?","['A)2', 'B)3', 'C)4', 'D)11', 'E)Cannot be determined from the information given.']","The average of three integers a, b, and c is exactly twice the median --> (a+b+c)/3=4b --> since a=0, then (0+b+c)/3=4b --> c=11b --> c/b=11.
+Answer: D.",D,3,15132
+37776,"In a partnership, A invests 1/6 of the capital for 1/6 of the time, B invests 1/3 of the capital for 1/3 of the time and C, the rest of the capital for the whole time. Out of a profit of Rs.4600, B’s share is:","['A)Rs.650', 'B)Rs.800', 'C)Rs.960', 'D)Rs.1000', 'E)Rs.1200']","Suppose A invests x/6 for y/6 months.
+B invests x/3 for y/3 months.
+C invests x – x/6 + x/3 i.e x/2 for y months.
+Therefore, A : B : C = x/6 * y/6 : x/3 * y/3 : x/2 * y = 1/36 : 1/9 : 1/2 = 1 : 4 : 18.
+Therefore, B’s share = Rs. 4600 * 4/23
+= Rs.800.
+ANSWER:B",B,4,32693
+6157,"To complete a work A and B takes 8 days, B and C takes 12 days, A,B and C takes 6 days. How much
+time A and C will take","['A)24 days', 'B)16 days', 'C)12 days', 'D)8 days', 'E)None of these']","Explanation:
+A+B 1 day work = 1/8
+B+C 1 day work = 1/12
+A+B+C 1 day work = 1/6
+We can get A work by (A+B+C)-(B+C)
+And C by (A+B+C)-(A+B)
+So A 1 day work =
+16−112=112
+Similarly C 1 day work =
+16−18=4−324=124
+So A and C 1 day work =
+112+124=324=18
+So A and C can together do this work in 8 days
+Answer: D",D,0,45754
+31217,"If the sides of a triangle are 26 cm, 24 cm and 10 cm, what is its area?","['A)120', 'B)882', 'C)662', 'D)4112', 'E)2322']","The triangle with sides 26 cm, 24 cm and 10 cm is right angled, where the hypotenuse is 26 cm.
+Area of the triangle = 1/2 * 24 * 10 = 120 cm2
+Answer: A",A,1,38541
+70883,A man can row downstream at 18 kmph and upstream at 10 kmph. Find the speed of the man in still water and the speed of stream respectively?,"['A)2', 'B)9', 'C)7', 'D)4', 'E)3']","Let the speed of the man in still water and speed of stream be x kmph and y kmph respectively.
+Given x + y = 18 --- (1)
+and x - y = 10 --- (2)
+From (1) & (2) 2x = 28 => x = 14, y = 4.
+Answer:D",D,2,47569
+30501,"If (x/y)=(10/5), find the value (x^2+y^2)/(x^2-y^2)","['A)5/3', 'B)59/11', 'C)51/77', 'D)41/11', 'E)None of them']","= (x^2+y^2)/(x^2-y^2) = ( x^2 /y^2+ 1)/ ( x^2 /y^2-1) = [(10/5)^2+1] / [(10/5)^2-1]
+= [(100/25)+1] / [(100/25)-1] = 5/3
+Answer is A.",A,3,22252
+9136,"Lagaan is levied on the 60 percent of the cultivated land. The revenue department collected total Rs. 3,84,000 through the lagaan from the village of Mettur. Mettur, a very rich farmer , paid only Rs.480 as lagaan. The percentage of total land of Mettur over the total taxable land of the village is:","['A)0.20833', 'B)1.23455', 'C)2.45466', 'D)5.54353', 'E)6.45343']","Total land of Sukhiya = \inline \frac{480x}{0.6} = 800x
+\therefore Cultivated land of village = 384000x
+\therefore Required percentage = \inline \frac{800x}{384000}\times 100 = 0.20833
+A",A,4,49013
+14242,"Water consists of hydrogen and oxygen, and the approximate ratio, by mass, of hydrogen to oxygen is 2:16. Approximately how many grams of oxygen are there in 162 grams of water?","['A) 16', 'B) 72', 'C) 112', 'D) 128', 'E) 144']","Solution:
+We are given that the ratio of hydrogen to oxygen in water, by mass, is 2 : 16. Using our ratio multiplier we can re-write this as 2x : 16x. We can now use these expressions to determine how much oxygen is in 162 grams of water.
+2x + 16x = 162
+18x = 162
+x = 9
+Since x is 9, we know that there are 16 x 9 = 144 grams of oxygen in 162 grams of water.
+Answer E.",E,0,51056
+61671,"Reduce
+368/598
+to the lowest terms","['A)30/25', 'B)28/13', 'C)28/29', 'D)8/13', 'E)None of these']","Explanation:
+We can do it easily by in two steps
+Step1: We get the HCF of 368 and 598 which is 46
+Step2: Divide both by 46, we will get the answer 8/13
+Answer: Option D",D,1,51608
+69174,"If a boat goes 7 km upstream in 42 minutes and the speed of the stream is 3 kmph,then the speed of the boat in still water is :","['A)4.2 km/hr', 'B)9 km/hr', 'C)13 km/hr', 'D)21 km/hr', 'E)None of these']","Solution
+Rate upstream =(7/42x60)kmph = 10 kmph.
+Speed of stream = 3 kmph.
+Let speed in still water be x km/hr.Then, speed upstream =( x-3 ) km/hr.
+∴ x - 3 = 10 or x = 13 km/hr. Answer C",C,2,24528
+71731,"In a rectangular coordinate system, what is the area of a triangle whose vertices have the coordinates (4, 0), (6, 3), and (6, -3)?","['A)7.5', 'B)7', 'C)6.5', 'D)6', 'E)5.5']","Area of the triangle = 1/2*base*height.
+Here base = Distance between (6,3) and (6,-3) => 3-(-3) = 6
+Height = distance between the base (6,0) and 4,0 => 2
+Area = 1/2*6*2 = 6.
+ANSWER:D",D,3,27146
+34612,Find the Compound interest on 16000 at 20% per annum for 9 months.Find Compounded Quarterly?,"['A)2500', 'B)2510', 'C)2520', 'D)2530', 'E)2522']","Principle=16000
+Interest=20
+9 months=3 quarters
+Amount=Rs[16000*(1+(20/5)/100))^3)]
+=[16000*(1+(4/100)^3)]
+=[16000*(104/100)^3]
+=[(16000*21*21*21*21)/(20*20*20*20)]
+=Rs.18522
+Compound interest=Rs.(18522-16000)=Rs.2522
+Option E",E,4,28864

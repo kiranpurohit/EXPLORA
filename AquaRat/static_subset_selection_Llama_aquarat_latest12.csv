@@ -1,0 +1,258 @@
+,question,options,rationale,correct,cluster,index
+6157,"To complete a work A and B takes 8 days, B and C takes 12 days, A,B and C takes 6 days. How much
+time A and C will take","['A)24 days', 'B)16 days', 'C)12 days', 'D)8 days', 'E)None of these']","Explanation:
+A+B 1 day work = 1/8
+B+C 1 day work = 1/12
+A+B+C 1 day work = 1/6
+We can get A work by (A+B+C)-(B+C)
+And C by (A+B+C)-(A+B)
+So A 1 day work =
+16−112=112
+Similarly C 1 day work =
+16−18=4−324=124
+So A and C 1 day work =
+112+124=324=18
+So A and C can together do this work in 8 days
+Answer: D",D,0,45754
+31217,"If the sides of a triangle are 26 cm, 24 cm and 10 cm, what is its area?","['A)120', 'B)882', 'C)662', 'D)4112', 'E)2322']","The triangle with sides 26 cm, 24 cm and 10 cm is right angled, where the hypotenuse is 26 cm.
+Area of the triangle = 1/2 * 24 * 10 = 120 cm2
+Answer: A",A,1,38541
+70883,A man can row downstream at 18 kmph and upstream at 10 kmph. Find the speed of the man in still water and the speed of stream respectively?,"['A)2', 'B)9', 'C)7', 'D)4', 'E)3']","Let the speed of the man in still water and speed of stream be x kmph and y kmph respectively.
+Given x + y = 18 --- (1)
+and x - y = 10 --- (2)
+From (1) & (2) 2x = 28 => x = 14, y = 4.
+Answer:D",D,2,47569
+30501,"If (x/y)=(10/5), find the value (x^2+y^2)/(x^2-y^2)","['A)5/3', 'B)59/11', 'C)51/77', 'D)41/11', 'E)None of them']","= (x^2+y^2)/(x^2-y^2) = ( x^2 /y^2+ 1)/ ( x^2 /y^2-1) = [(10/5)^2+1] / [(10/5)^2-1]
+= [(100/25)+1] / [(100/25)-1] = 5/3
+Answer is A.",A,3,22252
+9136,"Lagaan is levied on the 60 percent of the cultivated land. The revenue department collected total Rs. 3,84,000 through the lagaan from the village of Mettur. Mettur, a very rich farmer , paid only Rs.480 as lagaan. The percentage of total land of Mettur over the total taxable land of the village is:","['A)0.20833', 'B)1.23455', 'C)2.45466', 'D)5.54353', 'E)6.45343']","Total land of Sukhiya = \inline \frac{480x}{0.6} = 800x
+\therefore Cultivated land of village = 384000x
+\therefore Required percentage = \inline \frac{800x}{384000}\times 100 = 0.20833
+A",A,4,49013
+92277,"There are three different pipes used to fill a pool: pipe x, pipe y, and pipe z. Pipe x can fill the pool in a days, pipe y in b days, and pipe z in c days, where a > b > c. When all three pipes are used together to fill a pool, it takes d days to fill the pool. Which of the following must be true?
+I. d<c
+II. d>b
+III. c/3<d<a/3","['A)II', 'B)I', 'C)III', 'D)I&II', 'E)II &III']","Name T = full pool
+X fills a pool in a days ==> 1 day X fills: T/a
+Y fills a pool in b days ==> 1 day Y fills: T/b
+Z fills a pool in c days ==> 1 day Z fills: T/c
+1 day (X+Y+Z) together fill: T(1/a + 1/b + 1/c)
+d days (X+Y+Z) together fill: T
+==> d = Tx1 / T(1/a+1/b+1/c) = abc/(ab+bc+ca)
+A
+==>d = abc/(ab+bc+ca)
+d cannot be greater than c ; d is greater than b ; d is greater than c/3 but not less than a/3",A,0,56016
+80591,The sum of how many terms of the series 6 + 12 + 18 + 24 + … is 1800,"['A)16', 'B)22', 'C)24', 'D)18', 'E)26']","Let the number of terms be N.
+Then, according to the formula,
+=> 1800 = N/2[2A+(N-1)D] , where A = First-Term, D = Common-Difference.
+=> 3600 = N[12 + (N-1)6]
+=> 3600 =N[6 + 6N]
+=> 6N^2 + 6N - 3600 = 0.
+=> 6N^2 + 150N - 144n - 3600 = 0
+=> 6N(N + 25)-144(N+25)
+=> N = -25, 24
+Hence, the number of terms is 24.
+ANSWER:B",B,1,53767
+67807,How much time does a train 100 metres long running at 72 km/hr take to pass a pole?,"['A)7.9s', 'B)2.5s', 'C)5s', 'D)7.6s', 'E)7.4s']","Explanation:
+72 km/hr = 72 * 5/18 = 20 m/s
+Speed = distance/time; v = d/t
+20 = 100/t
+t = 5s
+ANSWER: C",C,2,51519
+49693,Two dice are thrown together. What is the probability that the sum of the number on the two faces is divisible by 4?,"['A)2/9', 'B)1/9', 'C)1/4', 'D)1/3', 'E)1/2']","Clearly n(S) = 6 x 6 = 36
+Let E be the event that the sum of the numbers on the two faces is divided by 4.
+E= {(1,3), (2,2), (2,6), (3,1), (3,5), (4,4), (5,3), (6,2), (6,6)}
+n(E) = 9
+Hence, P(E) = n(E)/n(S) = 9/36 = 1/4
+ANSWER:C",C,3,36379
+64956,A dishonest dealer professes to sell his goods at Cost Price but still gets 20% profit by using a false weight. What weight does he substitute for a kilogram?,"['A)833 1/7 grams', 'B)833 1/3 grams', 'C)833 8/3 grams', 'D)933 1/3 grams', 'E)833 1/4 grams']","If the cost price is Rs.100, then to get a profit of 20%, the selling price should be Rs.120.
+If 120kg are to be sold, and the dealer gives only 100kg, to get a profit of 20%.
+How many grams he has to give instead of one kilogram(1000 gm).
+120 gm ------ 100 gm
+1000 gm ------ ?
+(1000 * 100)/120 = 2500/3 = 833 1/3 grams.
+Answer:B",B,4,1420
+57391,"Pam and Stanley packed several boxes with reams of paper. While both packed, Pam packed 40% of the boxes. After Pam stopped, Stanley packed the same number of boxes that he had packed while working with Pam. What is the ratio of the number of boxes Pam packed to the number of boxes Stanley packed?","['A)2 to 6', 'B)1 to 3', 'C)3 to 5', 'D)3 to 4', 'E)3 to 2']","Correct Answer: A
+Solution: A. We know that when Pam and Stanley were both working, the ratio was 2 boxes by Pam to 3 boxes by Stanley. We also know that Stanley continued working after Pam stopped. He packed as many boxes alone as he had packed whlie working with Pam, effectively doubling his number of boxes. Thus, the ratio of Pam's boxes to Stanley's boxes is 2 to 6. Answer A is correct.",A,0,51185
+37832,How many FIVE letter words are formed using the letters of the word LEADER?,"['A)860', 'B)720', 'C)230', 'D)460', 'E)940']","The number of letters in the given word is 6.
+The number of FIVE letter words that can be formed using these four letters is 6P5=6*5*4*3*2=720
+Answer:B",B,1,51152
+14410,"A man can swim in still water at 4.5 km/h, but takes twice as long to swim upstream than downstream. The speed of the stream is?","['A)5', 'B)8', 'C)1', 'D)6', 'E)1.5']","Explanation:
+M = 4.5
+S = x
+DS = 4.5 + x
+US = 4.5 + x
+4.5 + x = (4.5 - x)2
+4.5 + x = 9 -2x
+3x = 4.5
+x = 1.5
+Answer: E",E,2,40184
+72326,Find k if 24 / k = 4.,"['A)6', 'B)7', 'C)8', 'D)4', 'E)3']","Since 24 /k = 4 and 24/ 6 = 4, then
+k = 6 correct answer A",A,3,27316
+19941,"A milk man has 15 liters of milk. If he mixes 5 liters of water, which is freely available, in 20 liters of pure milk.If the cost of pure milk is Rs.18 per liter,then the profit of the milkman, when he sells all the mixture at cost price is:","['A)20%', 'B)25%', 'C)33.33%', 'D)18%', 'E)None of these']","Explanation:
+when the water is freely available and all the water is sold at the price of the milk, then the water gives the profit on the cost of 20 liters of milk.
+Therefore, profit percentage = 20 %. Answer: A",A,4,45807
+67408,"A is two years older than B who is twice as old as C. If the total of the ages of A, B and C be 37, the how old is B?","['A)7', 'B)9', 'C)8', 'D)14', 'E)10']","Explanation:
+Let C's age be x years. Then, B's age = 2x years. A's age = (2x + 2) years.
+(2x + 2) + 2x + x = 37
+⇒ 5x = 35
+⇒ x = 7.
+Hence, B's age = 2x = 14 years.
+Answer: D",D,0,33652
+73968,"In the given series find the number which is wrong.
+215,28,63,126,7,343","['A)215', 'B)28', 'C)126', 'D)343', 'E)625']","215=6*6*6-1
+28=3*3*3+1
+63=4*4*4-1
+126=5*5*5+1
+7=2*2*2-1
+343 should be 7*7*7+1= 344 but it is 343
+ANSWER:D",D,1,19357
+35461,A train running at a speed of 60 kmph crosses a pole in 9 seconds.What is the length of the train?,"['A)120 m', 'B)180 m', 'C)190 m', 'D)150 m', 'E)160 m']","60 kmph=50/3 m/sec
+50/3*9=150 m
+ANSWER:D",D,2,3149
+38277,"If 8m − n = p, then which of the following represents the average (arithmetic mean) of m, n, and p, in terms of m?","['A)2m −1', 'B)3m', 'C)6m', 'D)m/5', 'E)6m/5']","8m - n = p
+Add n to both sides:
+8m = n + p
+Add m to both sides:
+9m = n + p + m
+Now, divide both sides by 3
+3m = (n + p + m)/3 = the average of n, p, and m
+B",B,3,328
+79114,"Due to 10% decrease in the price of sugar and John can buy 5kg more sugar in Rs100 , then find the CP of sugar?","['A)Rs. 1(2/9)', 'B)Rs. 2(2/9)', 'C)Rs. 2(2/7)', 'D)Rs. 3(2/5)', 'E)Rs. 3(1/9)']","Here r = 10 % ,x = 100 and A = 5 kg
+Actual price of sugar = 10*100/((100-10 )*5) = Rs. 2(2/9)
+B",B,4,16889
+29020,"Calculate the number of bricks, each measuring 25 cm x 15 cm x 8 cm required to construct a wall of dimensions 10 m x 4 cm x 6 m when 10% of its volume is occupied by mortar ?","['A)720', 'B)600', 'C)660', 'D)6000', 'E)650']","Explanation:
+Let the number of bricks be 'N'
+10 x 4/100 x 6 x 90/100 = 25/100 x 15/100 x 8/100 x N
+10 x 4 x 6 x 90 = 15 x 2 x N => N = 720.
+ANSWER IS A",A,0,24891
+76198,"Solve This
+6 + 7 = 12
+8 + 9 = 16
+5 + 6 = 10
+7 + 8 = 14
+Then, 9 + 9 = ??","['A)11', 'B)12', 'C)17', 'D)14', 'E)18']","17
+ANSWER:C",C,1,5035
+51067,"Excluding stoppages, the speed of a train is 45 kmph and including stoppages it is 34 kmph. Of how many minutes does the train stop per hour?","['A)E982', 'B)27', 'C)12', 'D)14.6', 'E)28']","Explanation:
+T = 11/45 * 60 = 14.6
+Answer: Option D",D,2,9319
+55355,"If A is a positive integer, which of the following must be divisible by 6?","['A)A(A^2−2)', 'B)A^2*(A−5)', 'C)A(A+2)^3', 'D)A^2*(A−5)', 'E)(A−1)*A*(A+1)']","option E) (A−1)*A*(A+1) which represents the product of three consecutive integers
+the product of 3 consecutive integers is divisible by both 2 and 3 and so also divisible by 6.
+Answer is E",E,3,57963
+39007,"If the sales tax reduced from 3 1/2 % to 3 1/3%, then what difference does it make to a person who purchases an article with market price of Rs. 9000 ?","['A)11', 'B)13', 'C)15', 'D)18', 'E)10']","Required difference = [3 ½ % of Rs.9000] – [3 1/3 % of Rs.9000]
+= [(7/20-(10/3)]% of Rs.9000 =1/6 % of Rs.9000
+= Rs. [(1/6)8(1/100)*9000] = Rs. 15.
+Answer is C.",C,4,40387
+51656,"Three pipes A, B and C can fill a tank in 5 hours. After working at it together for 2 hours, C is closed and A and B can fill the remaining part in 6 hours. How many hours will take C alone to fill the tank?","['A)8', 'B)10', 'C)12', 'D)14', 'E)16']","The rate of A+B+C is 1/5 of the tank per hour.
+After 2 hours, the tank is 2/5 full.
+The rate of A+B is 3/5 * 1/6 = 1/10 of a tank per hour.
+The rate of C is 1/5 - 1/10 = 1/10
+C can fill the tank in 10 hours.
+The answer is B.",B,0,46474
+45186,"On a map, 1.5 inches represent 24 miles. How many miles approximately is the distance if you measured 47 centimeters assuming that 1-inch is 2.54 centimeters?","['A)174.2', 'B)212', 'C)288.1', 'D)296', 'E)282.4']","1.5 inch = 2.54*1.5 cm.
+So, 2.54*1.5 represents 24 miles.
+So for 47 cm.:
+47/(2.54*1.5) = x / 24 ---> x = 24*47/(4.81) = 296
+Answer will be D.",D,1,66777
+8846,"The time taken by a man to row his boat upstream is twice the time taken by him to row the same distance downstream. If the speed of the boat in still water is 51 kmph, find the speed of the stream?","['A)77', 'B)88', 'C)14', 'D)12', 'E)17']","The ratio of the times taken is 2:1.
+The ratio of the speed of the boat in still water to the speed of the stream = (2+1)/(2-1) = 3/1 = 3:1
+Speed of the stream = 51/3 = 17 kmph.
+Answer:E",E,2,31417
+44862,"If (2^x)(3^y) = 216, where x and y are positive integers, then (2^x-1)(3^y-2) equals:","['A)12', 'B)24', 'C)48', 'D)96', 'E)144']","So I would start attacking this problem by quickly performing the prime factorization of 288. With that it is easy to count the 5 twos and the 2 threes that are the prime factors. So x=3, y=3. now quickly 2^2(3^1)=12. Than answer should be number 1.
+A",A,3,27200
+60632,"A man has Rs. in the denominations of 100-rupee notes, 500-rupee notes and 1000-rupee notes. The number of notes of each denomination is equal. What is the total number of notes that he has ?","['A)70', 'B)80', 'C)60', 'D)40', 'E)20']","Let number of notes of each denomination be x.
+Then 100x + 500x + 1000x = 32000
+1600x = 32000
+x = 20.
+Hence, total number of notes = 3x =60.
+Answer is C",C,4,36100
+9226,The marks obtained by Polly and Sandy are in the ratio 5:6 and those obtained by Sandy and Willy are in the ratio of 3:2. The marks obtained by Polly and Willy are in the ratio of...?,"['A)3:2', 'B)5:4', 'C)7:6', 'D)9:8', 'E)11:10']","Polly : Sandy = 5:6
+Sandy : Willy = 3:2 = 6:4
+Polly : Sandy : Willy = 5:6:4
+Polly : Willy = 5:4
+The answer is B.",B,0,22597
+58860,"Difference between two numbers is 5, six times of the smaller lacks by 6 from the four times of the greater. Find the numbers?","['A)5,14', 'B)6,4', 'C)12,7', 'D)7,5', 'E)4,7']","Answer: Option C
+x â€“ y = 5
+4x â€“ 6y = 6
+x = 12 y = 7",C,1,49868
+26850,A train crosses a bridge of length 800 m in 45 seconds and a lamp post on the bridge in 15 seconds. What is the length of the train in metres?,"['A)375 m', 'B)750 m', 'C)400 m', 'D)800 m', 'E)300 m']","Let Length of Train = L
+Case-1: Distance = 800+L (While crossing the bridge)
+Time = 45 Seconds
+i.e. Speed = Distance / Time = (800+L)/45
+Case-2: Distance = L (While passing the lamp post)
+Time = 15 Seconds
+i.e. Speed = Distance / Time = (L)/15
+But Since speed has to be same in both cases so
+(800+L)/45 = (L)/15
+i.e. 800 + L = 3L
+i.e. 2L = 800
+i.e. L = 400
+Answer: option C",C,2,43050
+21796,"If 1/(m – 2) = 1/(m + 2) + 1/(m – 1), which of the following is a possible value of m?","['A)0', 'B)-1', 'C)-2', 'D)1', 'E)2']","Multiply by (m-2)*(m+2)*(m-1) throughout to get:
+(m+2)*(m-1) = (m-2)*(m-1) + (m+2)(m-2)
+Of the given options, only m=0 satisfies this.
+Answer : A",A,3,38632
+87996,If A lends Rs.3500 to B at 10% per annum and B lends the same sum to C at 14% per annum then the gain of B in a period of 3 years is?,"['A)400', 'B)410', 'C)460', 'D)420', 'E)430']","(3500*4*3)/100 => 420
+Answer: D",D,4,54229
+36454,"In how many ways a committee, consisting of 5 men and 6 women can be formed from 8 men and 10 women?","['A)524', 'B)1024', 'C)15247', 'D)11760', 'E)11470']","Required number of ways	= (8C5 x 10C6)
+= (8C3 x 10C4)
+= 11760.
+ANSWER D 11760",D,0,38783
+20617,"Divide $672 among A,B in the ratio 5:3. How many $ that A get?","['A)$120', 'B)$500', 'C)$420', 'D)$610', 'E)$315']","Sum of ratio terms = 5+3 = 8
+A = 672*5/8 = $420
+Answer is C",C,1,13035
+90262,A 200 meter long train crosses a platform in 50 seconds while it crosses a signal pole in 42 seconds. What is the length of the platform?,"['A)39.9', 'B)37.88', 'C)35', 'D)38.88', 'E)38.09']","Speed = [200 / 42] m/sec = 100/21 m/sec.
+Let the length of the platform be x meters.
+Then, x + 200 / 50 = 100/21
+21(x + 200) = 5000 è x = 38.09 m. Answer: E",E,2,11932
+75599,What is the sum of the different positive prime factors of 350?,"['A)10', 'B)11', 'C)14', 'D)16', 'E)18']","350
+35*10 --> 5*7*2*5 --> 5+7+2=14. Remember its asking for the DIFFERENT positive prime factors of 350.
+C",C,3,260
+7308,"A company sells two products, L and M. Last year, seventy percent of the units sold were product L, and the price of product L was 25 percent greater than the price of product M. Approximately what percent of the total revenue the company received last year was from the sale of product L?","['A)15%', 'B)25%', 'C)35%', 'D)65%', 'E)74%']","Percentage of total units that is product L = 70 %
+Price of product L = 25 percent greater than price of product M.
+Now , we can consider this as a weighted average scenario .
+If the price of both the products L and M was equal , then contribution of product L to total sales would be = 70%
+But since , price of product L is greater than M , then contribution of product L to total sales will be greater than 70%
+The only option is 74%
+Answer E",E,4,26068
+71223,"There are 8 red, 7 blue and 6 green balls, 1 ball is picked up randomly thenwhat is the probability that neither blue nor green?","['A)2/21', 'B)3/17', 'C)4/26', 'D)3/19', 'E)8/21']","Total number of balls = (8 + 7 + 6) = 21
+Let E = event that the ball drawn is neither blue nor green =e vent that the ball drawn is red.
+Therefore, n(E) = 8.
+P(E) = 8/21.",E,0,13264
+61701,"8, 24, 12, 36, 18, 54, (....)","['A)27', 'B)68', 'C)107', 'D)108', 'E)28']","8 × 3 = 24
+24 ÷ 2 = 12
+12 × 3 = 36
+36 ÷ 2 = 18
+18 × 3 = 54
+54 ÷ 2 = 27
+Answer is A",A,1,24253
+35461,A train running at a speed of 60 kmph crosses a pole in 9 seconds.What is the length of the train?,"['A)120 m', 'B)180 m', 'C)190 m', 'D)150 m', 'E)160 m']","60 kmph=50/3 m/sec
+50/3*9=150 m
+ANSWER:D",D,2,3149
+16839,"If |z|/w = 5,which of the following must be true?","['A)z = -5w', 'B)z = 5w', 'C)z^2 = 25w^2', 'D)z^2 = 25w^3', 'E)z^3 = 125w^3']","|z|/w = 5.
+|z| = 5w.
+Then z = 5w or -5w and so z^2 = 25w^2.
+The answer is C.",C,3,22478
+2500,"If the cost price of 50 articles is equal to the selling price of 15 articles, then the gain or loss percent is?","['A)16', 'B)127', 'C)12', 'D)18', 'E)233']","Percentage of profit = 35/15 * 100 = 233%
+Answer: E",E,4,44052
+29410,"50% of the apartments in a certain building have windows and hardwood floors. 25% of the apartments without windows have hardwood floors. If 40% of the apartments do not have hardwood floors, what M percent of the apartments with windows have hardwood floors?","['A)10', 'B)16 2/3', 'C)40', 'D)50', 'E)83 1/3']","yup you need to construct a matrix
+X********| Windows'|No Windows'''| total
+hardFl****'|50*****''|10*********'|60
+Not hardFl*|10******|30*********'|40
+Total*****|60******'|40*********'|100
+so M percent of the apartments with windows have hardwood floors = 50/60 *100
+= 83 1/3
+so E is the answer.[/u]",E,0,56113
+53507,54671 - 18456 - 33466 = ?,"['A)2749', 'B)5449', 'C)6749', 'D)6449', 'E)6468']","A
+If we calculate we will get 2749",A,1,27968
+15500,A train of length 250 m crosses a bridge of length 120m in 20 seconds. What is the speed of train?,"['A)33', 'B)27', 'C)66.6', 'D)22', 'E)72']","Sol : (length of train+ length of bridge) = speed of train x Time
+(250+120) = 20 x Speed
+Speed = 370/20= 18.5 m/s =66.6 km/h
+ANSWER=C",C,2,21992
+69965,"If x and y are prime numbers such that x > y > 1, then x^2 − y^2 must be divisible by which one of the following numbers?","['A) 3', 'B) 4', 'C) 5', 'D) 9', 'E) 12']","If x=3 and y=2, then x^2-y^2=5 and 5 is divisible only by 5 from the options, thus it must be correct.
+Answer: C.",C,3,25925
+47402,"How much interest will $10,000 earn in 3 months at an annual rate of 6%?","['A)$250', 'B)$150', 'C)$450', 'D)$550', 'E)$650']","Soln:-
+6 months = 1/4 of year;
+6% = 6/100=3/50;
+$10,000(principal)*3/50(interest rate)*1/4(time)=$150.
+ANSWER:B",B,4,42124
