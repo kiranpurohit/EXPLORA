@@ -115,11 +115,18 @@ def prompt_for_manual_prediction(ex, shots):
 
 
 
+def read_AHOTPOT_test_data():
+    data = pd.read_csv("dev.csv")
+    return data
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+def read_AHOTPOT_train_data():
+    data = pd.read_csv("train.csv")
+    return data
 
 
-
-def in_context_manual_prediction(ex, training_data):
-    template,stop = prompt_for_manual_prediction(ex, training_data)
+def in_context_manual_prediction(ex, training_data,flag):
+    template = prompt_for_manual_prediction(ex, training_data)
 
     messages=[{
                 "role": "user",
@@ -309,7 +316,7 @@ print(ans)
        
         # answer=""
         #answer=in_context_manual_prediction(row,exemplars)
-        prompt=prompt+prompt_for_manual_prediction(row,exemplars)
+        #prompt=prompt+prompt_for_manual_prediction(row,exemplars)
         #print("prompt",prompt)
 
         outputs=in_context_manual_prediction(row,exemplars,0)
