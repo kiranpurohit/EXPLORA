@@ -91,7 +91,7 @@ def prompt_for_manual_prediction(ex, shots):
     input_example = "\nQ: {}\n O: {}\nA:".format(ex['question'], ex['options'])
     prompt = "\n".join(showcase_examples + [input_example])
 
-    return prompt
+    return prompt,stop_signal
 
 
 
@@ -354,7 +354,7 @@ def LLM_avg_error(exemplars_set, val_data):
         mismatches =0
         acc_records = []
         for index, row in val_data.iterrows():
-            prompt = prompt_for_manual_prediction(row, exemplars)
+            prompt,stop = prompt_for_manual_prediction(row, exemplars)
             #chain_answer = safe_completion(prompt=prompt, max_tokens=_MAX_TOKENS, stop=stop_signal, temp=0.0, logprobs=5)
 
             tmp_list = in_context_manual_prediction(row,exemplars)
