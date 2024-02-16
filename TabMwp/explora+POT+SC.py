@@ -114,7 +114,7 @@ def safe_execute(codes:str):
 
 def prompt_for_manual_prediction(ex):
 
-    ##### Prompt created manually by writing python programs for the subset selected using static selection
+    ##### Prompt created manually by writing python programs for the subset selected using our method, explora
     prompt = """
 There is no user input required for any question in Python Code.
 
