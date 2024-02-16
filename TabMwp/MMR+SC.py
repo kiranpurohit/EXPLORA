@@ -135,6 +135,8 @@ def self_con(tmp_list):
             ans = tmp.split("The answer is:")[1]
             ans = ans.split("\n")[0]
         ans = ans.replace("$", "")
+        ans = ans.replace("%", "")
+        ans = ans.replace(",", "")
         ans = ans.strip()
         ans_list.append(ans)
 
