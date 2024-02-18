@@ -183,7 +183,7 @@ for ex in tqdm(dev_set,total=len(dev_set),desc="Generating"):
             The range is 7.
             The answer is:7
 
-            """+"Generate the answer now:\n Table:\n" + ex["table"] + "\nQuestion:" + ex["question"]
+            """+"Following the given examples generate the answer for:\n Table:\n" + ex["table"] + "\nQuestion:" + ex["question"]
     # tmp_list = []
     tmp_list = compare_llm_outputs(user_query)
     print(len(tmp_list))
