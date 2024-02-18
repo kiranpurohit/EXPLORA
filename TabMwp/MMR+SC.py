@@ -132,7 +132,7 @@ def self_con(tmp_list):
         # print(tmp)
         ans = ""
         if len(tmp.split("The answer is:"))>1:
-            ans = tmp.split("The answer is:")[1]
+            ans = tmp.split("The answer is:")[-1]
             ans = ans.split("\n")[0]
         ans = ans.replace("$", "")
         ans = ans.replace("%", "")
