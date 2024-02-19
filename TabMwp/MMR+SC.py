@@ -131,8 +131,8 @@ def self_con(tmp_list):
         # tmp = compare_llm_outputs(user_query)
         # print(tmp)
         ans = ""
-        if len(tmp.split("The answer is:"))>1:
-            ans = tmp.split("The answer is:")[-1]
+        if len(tmp.split("The answer is:"))>6:
+            ans = tmp.split("The answer is:")[6]
             ans = ans.split("\n")[0]
         ans = ans.replace("$", "")
         ans = ans.replace("%", "")
