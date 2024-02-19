@@ -187,8 +187,8 @@ for ex in tqdm(dev_set,total=len(dev_set),desc="Generating"):
 
     tmp_list = compare_llm_outputs(user_query)
     answer = None
-    if len(tmp_list.split("The answer is:"))>1:
-        answer = tmp_list.split("The answer is:")[-1]
+    if len(tmp_list.split("The answer is:"))>6:
+        answer = tmp_list.split("The answer is:")[6]
         answer = answer.split("\n")[0]
     answer = answer.replace("$", "")
     answer = answer.replace("%", "")
