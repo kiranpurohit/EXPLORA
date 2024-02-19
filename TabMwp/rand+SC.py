@@ -191,8 +191,8 @@ for ex in tqdm(dev_set,total=len(dev_set),desc="Generating"):
 
     for tmp in tmp_list:
         ans = ""
-        if len(tmp.split("The answer is:"))>1:
-            ans = tmp.split("The answer is:")[-1]
+        if len(tmp.split("The answer is:"))>6:
+            ans = tmp.split("The answer is:")[6]
             ans = ans.split("\n")[0]
         ans = ans.replace("$", "")
         ans = ans.replace("%", "")
