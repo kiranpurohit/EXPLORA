@@ -15,15 +15,13 @@ openai.api_key = "OPEN-AI-KEY"
 from tqdm import tqdm
 from tenacity import retry, stop_after_attempt, wait_random_exponential
 from transformers import BertTokenizer, BertModel, logging
-from huggingface_hub import login
-access_token_read = "YOUR-HUGGINGFACE-TOKEN"
 import transformers
 import os
 from transformers import AutoModelForCausalLM, AutoTokenizer
 
 
 random.seed(7)
-#np.random.seed(7)
+np.random.seed(7)
 torch.manual_seed(7)
 
 
