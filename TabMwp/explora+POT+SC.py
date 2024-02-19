@@ -7,7 +7,7 @@ from sklearn.model_selection import train_test_split
 from sklearn.cluster import KMeans
 from sklearn.metrics import mean_absolute_error
 import torch
-
+import func_timeout
 import pickle 
 import json
 from tqdm import tqdm
