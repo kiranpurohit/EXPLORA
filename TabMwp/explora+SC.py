@@ -77,8 +77,8 @@ def self_con(tmp_list):
     ans_list = []
     for tmp in tmp_list:
         ans = ""
-        if len(tmp.split("[The answer is:]"))>1:
-            ans = tmp.split("[The answer is:]")[-1]
+        if len(tmp.split("[The answer is:]"))>6:
+            ans = tmp.split("[The answer is:]")[6]
             ans = ans.split("\n")[0]
         ans = ans.replace("$", "")
         ans = ans.replace("%", "")
