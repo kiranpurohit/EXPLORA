@@ -103,7 +103,7 @@ def llm_output(user_query):
     # results = [get_completion(user_query, api_keys[i], endpoint_urls[i], hard_code_exception=hard_code_exception) for i in range(len(endpoint_urls))]
     results = get_completion(user_query)
     res = self_con(results)
-    if len(res)==0: return "None"
+    if len(res)==0: return ""
     answer = res[0][0]
     if answer=="" and len(res)>1: answer = res[1][0]
     return answer
