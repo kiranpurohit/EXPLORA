@@ -53,8 +53,8 @@ def get_completion(msg_in):
     text={"role": "assistant", "content":"""{}""".format(msg_in)}
     messages.append(text)
         
-    prompt = pipeline.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    outputs = pipeline(prompt, max_new_tokens=200, do_sample=True, num_return_sequences=10, temperature=0.5, top_k=10, top_p=1.0)
+    # prompt = pipeline.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    outputs = pipeline(msg_in, max_new_tokens=200, do_sample=True, num_return_sequences=10, temperature=0.5, top_k=10, top_p=1.0)
         
     out_text = []
     for x in range(0, 10):
@@ -260,7 +260,7 @@ def get_open_source_completions(test_data, data):
         # Getting code and output
         tmp_list = []
         for i in ans_list:
-            code = i
+            code = i.split("\n\n")[0].strip()
             # print(code)
             try:
                 ans = func_timeout.func_timeout(5, execute, args=[code])
