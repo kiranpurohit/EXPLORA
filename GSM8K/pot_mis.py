@@ -1,80 +1,65 @@
 import numpy as np
+from numpy import linalg
 import random
 import pandas as pd
+from sklearn.metrics.pairwise import cosine_similarity
+from sklearn.model_selection import train_test_split
+from sklearn.cluster import KMeans
+from sklearn.metrics import mean_absolute_error
 import torch
-import json
-import openai
 import func_timeout
+import pickle 
+import json
 from tqdm import tqdm
-from math import *
-from time import sleep
-from tenacity import retry, stop_after_attempt, wait_random_exponential
 
+random.seed(7)
+np.random.seed(7)
+torch.manual_seed(7)
+
+import transformers
+import os
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+model_name = "mistralai/Mistral-7B-Instruct-v0.1"
+model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.float16)
+
+# CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 ./cuda_executable
 if torch.cuda.is_available():
     device = torch.device("cuda")
 else:
     device = torch.device("cpu")
 
+
+model = model.to(device)
+pipeline = transformers.pipeline(
+    "text-generation",
+    model=model_name,
+    torch_dtype=torch.float16,
+    device_map="auto",
+)
+
+tokenizer = AutoTokenizer.from_pretrained(model_name, torch_dtype=torch.float16)
+
 #####################################################################################################
-system_message = """The following is a conversation between a Human and an AI Assistant.
-The assistant is helpful, respectful and honest, and it always answers as helpfully as possible, while being safe.
-The Assistant's answers should not include any harmful, unethical, racist, sexist, toxic, dangerous, or illegal content.
-Please ensure that the Assistant's responses are socially unbiased and positive in nature.
-If a question by the human does not make any sense, or is not factually coherent, the Assistant should explain why instead of answering something not correct.
-If the Assistant does not know the answer to a question, please don't share false information.
-####
 
-"""
 
-api_keys = ["EMPTY", "EMPTY", "EMPTY"]#, "EMPTY"]
-endpoint_urls = ["https://91c0-203-110-242-13.ngrok-free.app"]# https://68e6-14-139-109-7.ngrok-free.app/ "https://9451-130-75-87-254.ngrok-free.app", "https://7a6a-130-75-87-254.ngrok-free.app"]#, "https://akdeniz27-llama-2-70b-chat-hf-with-easyllm.hf.space/"]
-llm_names = []
+# Gen resp
+def get_completion(msg_in):
 
-for api_key, endpoint_url in zip(api_keys, endpoint_urls):
-    if 'hf.space' in endpoint_url:
-        model_name = endpoint_url.replace('https://', '').replace('.hf.space', '').replace('/', '')
-    else:
-        openai.api_key = api_key
-        openai.api_base = f"{endpoint_url}/v1"
-        model_names = openai.Model.list()
-        model_name = model_names["data"][0]["id"]
-    llm_names.append(model_name)
-
-# Gen response from API
-@retry(wait=wait_random_exponential(min=1, max=60), stop=stop_after_attempt(5))
-def get_completion(prompt, api_key, endpoint_url, hard_code_exception=False):
-
-    max_tokens=256
-    if 'hf.space' in endpoint_url:
-        client = Client(endpoint_url)
-        result = client.predict(
-                        prompt, # str in 'Message' Textbox component
-                        api_name="/chat"
-        )
-        return result.strip()
-    openai.api_key = api_key
-    openai.api_base = f"{endpoint_url}/v1"
-    model_names = openai.Model.list()
-    model_name = model_names["data"][0]["id"]
-
-    res = openai.Completion.create(
-        model=model_name,  # Replace with your model name
-        prompt=system_message + prompt,
-        # messages=[
-        #     {"role": "system", "content": system_message},
-        #     {"role": "user", "content": prompt},
-        # ],
-        temperature=0.5,
-        top_k=10,
-        top_p=1.0,
-        n=10,
-        max_tokens=256,
-    )
+    messages=[{
+                "role": "user",
+                "content": "You are a helpful, respectful and honest assistant helping to solve math word problems or tasks requiring reasoning or math.",
+            }]
+    text={"role": "assistant", "content":"""{}""".format(msg_in)}
+    messages.append(text)
+        
+    # prompt = pipeline.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    outputs = pipeline(msg_in, max_new_tokens=256, do_sample=True, num_return_sequences=10, temperature=0.5, top_k=10, top_p=1.0)
+        
     out_text = []
     for x in range(0, 10):
-        out_text.append(res['choices'][x]['text'].strip())
+        out_text.append(outputs[x]["generated_text"])
     return out_text
-
 # Self consistency on 10 generated answers
 def self_con(tmp_list):
 
@@ -97,9 +82,9 @@ def self_con(tmp_list):
     n = sorted(d.items(), key=lambda x:x[1], reverse=True)
     return n
 
-def llm_output(user_query, hard_code_exception=False):
+def llm_output(user_query):
     # results = [get_completion(user_query, api_keys[i], endpoint_urls[i], hard_code_exception=hard_code_exception) for i in range(len(endpoint_urls))]
-    results = get_completion(user_query, api_keys[0], endpoint_urls[0], hard_code_exception=hard_code_exception)
+    results = get_completion(user_query)
     return results
 
 def clean_ans(s):
@@ -118,6 +103,7 @@ def execute(x):
 
 def prompt_for_manual_prediction(ex):
 
+    # Prompt manually written for the subset selected using our method, explora
     prompt = """
 Write Python code to answer the question:
 Question:The difference between the number of boys and girls in a tree planting event is 400. If there are 600 boys at the event, and the number of girls is more than the number of boys, what's 60% of the total number of boys and girls at the event?
@@ -192,7 +178,15 @@ def get_open_source_completions(test_data):
         answer_list = llm_output(prompt)
         ans_list = []
         for i in answer_list:
-            code = i.split("\n\n")[0]
+            code = ""
+            z = i.split("# Python Code, return ans\n")
+            if len(z)>6:
+                code = z[6]
+            elif len(z)>1:
+                code = z[-1]
+            code = code.split("\n\n")[0]
+            if "</s>" in code:
+                code = code.split("</s>")[1].strip()
             ans_list.append(code)
             
         # print(ans_list)
@@ -200,7 +194,7 @@ def get_open_source_completions(test_data):
         tmp_list = []
         for i in ans_list:
             # code = i.split("\n\n")[0]
-            code = i
+            code = i.split("\n\n")[0].strip()
             # print(code)
             # try:
             #     exec(code)
@@ -250,7 +244,7 @@ def get_open_source_completions(test_data):
     print("No PoT:", no_ans)
 
     final_questions = pd.DataFrame(question_df)
-    # final_questions.to_csv("output/mistral_pot_question_answer.tsv",sep="\t",index=False)
+    final_questions.to_csv("output/mistral_pot_question_answer.tsv",sep="\t",index=False)
 
     return final_questions
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
