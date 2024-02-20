@@ -128,12 +128,13 @@ test_set = [json.loads(x) for x in json_list]
 ### Random 5 as prompt
 prompt = "Follow given examples and solve the Test Question at end in similar manner by giving step by step reasoning followed by the Final Answer.\n\n"
 
-train_set = train_set[:5]
-for i in train_set:
-    prompt += "Question:" + i["question"]+"\nAnswer:"
-    i["answer"] = re.sub("<<.*?>>", "", i["answer"])
-    i["answer"] = i["answer"].replace("#### ", "Final Answer:")
-    prompt += i["answer"] + "\n\n" 
+# train_set = train_set[:5]
+rand_list = random.sample(range(0,len(train_set)-1), 5)
+for i in rand_list:
+    prompt += "Question:" + train_set[i]["question"]+"\nAnswer:"
+    train_set[i]["answer"] = re.sub("<<.*?>>", "", train_set[i]["answer"])
+    train_set[i]["answer"] = train_set[i]["answer"].replace("#### ", "Final Answer:")
+    prompt += train_set[i]["answer"] + "\n\n" 
 
 # print(prompt)
 
