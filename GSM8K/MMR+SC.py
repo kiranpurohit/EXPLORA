@@ -62,7 +62,7 @@ def get_completion(msg_in):
     ]
         
     # prompt = pipeline.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    outputs = pipeline(msg_in, max_new_tokens=200, do_sample=True, num_return_sequences=10, temperature=0.5, top_k=10, top_p=1.0)
+    outputs = pipeline(msg_in, max_new_tokens=256, do_sample=True, num_return_sequences=10, temperature=0.5, top_k=10, top_p=1.0)
         
     out_text = []
     for x in range(0, 10):
@@ -70,7 +70,7 @@ def get_completion(msg_in):
     return out_text
 
 
-def compare_llm_outputs(user_query, hard_code_exception=False):
+def compare_llm_outputs(user_query):
     # results = [get_completion(user_query, api_keys[i], endpoint_urls[i], hard_code_exception=hard_code_exception) for i in range(len(endpoint_urls))]
     results = get_completion(user_query)
 
