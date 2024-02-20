@@ -77,8 +77,8 @@ def self_con(tmp_list):
     ans_list = []
     for tmp in tmp_list:
         ans = ""
-        if len(tmp.split("[The answer is:]"))>6:
-            ans = tmp.split("[The answer is:]")[6]
+        if len(tmp.split("The answer is:"))>6:
+            ans = tmp.split("The answer is:")[6]
             ans = ans.split("\n")[0]
         ans = ans.replace("$", "")
         ans = ans.replace("%", "")
@@ -120,9 +120,12 @@ def prompt_for_manual_prediction(ex, shots):
         Examples:
         """
     for index, s in shots.iterrows():
-        prompt += "\nTable:\n" + s["table"] + "\nQuestion:" + s["question"] + "\[Answer:]" + s["solution"] + "\[The answer is:]" + s["answer"]
+        prompt += "\nTable:\n" + s["table"] + "\nQuestion:" + s["question"]
+        if type(s["choices"])==str:
+            prompt += "Please select from the following options:"+s["choices"]
+        prompt += "\nAnswer:" + s["solution"] + "\nThe answer is:" + s["answer"]
 
-    prompt += "Following the given examples generate the answer strictly with only the fields [Answer:] containing reasoning and [The answer is:] containing the final answer for:\nTable:\n" + ex["table"] + "\nQuestion:" + ex["question"]
+    prompt += "Following the given examples generate the answer for:\nTable:\n" + ex["table"] + "\nQuestion:" + ex["question"]
     
     return prompt
 #~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
