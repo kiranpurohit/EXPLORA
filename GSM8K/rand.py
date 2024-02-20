@@ -69,7 +69,7 @@ def get_completion(msg_in):
     return outputs[0]["generated_text"]
 
 
-def compare_llm_outputs(user_query, hard_code_exception=False):
+def compare_llm_outputs(user_query):
     # results = [get_completion(user_query, api_keys[i], endpoint_urls[i], hard_code_exception=hard_code_exception) for i in range(len(endpoint_urls))]
     results = get_completion(user_query)
 
