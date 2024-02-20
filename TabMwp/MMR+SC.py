@@ -197,7 +197,10 @@ if __name__ == "__main__":
         print("\nSelected Indices:", selected_indices)
 
         for tr in selected_indices:
-            user_query += "\nTable:\n" + train_set[tr]["table"] + "\nQuestion:" + train_set[tr]["question"] + "\Answer:" + train_set[tr]["solution"] + "\The answer is:" + train_set[tr]["answer"]
+            user_query += "\nTable:\n" + train_set[tr]["table"] + "\nQuestion:" + train_set[tr]["question"]
+            if type(train_set[tr]["choices"])==str:
+                user_query += "Please select from the following options:"+ train_set[tr]["choices"]
+            user_query += "\nAnswer:" + train_set[tr]["solution"] + "\nThe answer is:" + train_set[tr]["answer"]
 
         user_query += "\nTable:\n" + ex["table"] + "\nQuestion:" + ex["question"]
         # print(user_query)
