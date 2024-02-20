@@ -46,20 +46,12 @@ tokenizer = AutoTokenizer.from_pretrained(model_name, torch_dtype=torch.float16)
 # Gen resp
 def get_completion(msg_in):
 
-    messages = [
-        {
-            "role": "user",
-            "content": "You are a helpful, respectful and honest assistant helping to solve math word problems or tasks requiring reasoning or math, use the Chain-of-Thought methodology by following given examples to explain your step-by-step calculations or logic. Do not generate examples in your answer.",
-        },
-        {
-            "role":"assistant",
-            "content": "I understand.",
-        },
-        {
-            "role": "user", 
-            "content": msg_in,
-        }
-    ]
+    messages=[{
+                "role": "user",
+                "content": "You are a helpful, respectful and honest assistant helping to solve math word problems or tasks requiring reasoning or math.",
+            }]
+    text={"role": "assistant", "content":"""{}""".format(msg_in)}
+    messages.append(text)
         
     prompt = pipeline.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
     outputs = pipeline(prompt, max_new_tokens=200, do_sample=True, num_return_sequences=10, temperature=0.5, top_k=10, top_p=1.0)
@@ -80,6 +72,7 @@ def self_con(tmp_list):
     
     d = {}
     for i in tmp_list:
+        if i=="": continue
         if i in d:
             d[i] += 1
         else:
@@ -95,20 +88,17 @@ def llm_output(user_query, hard_code_exception=False):
     return results
 
 
-def safe_execute(codes:str):
-    def execute(x):
-        try:
-            exec(x)
-            locals_ = locals()
-            return locals_.get('ans', None)
-        except Exception:
-            return None
-    try:
-        ans = func_timeout.func_timeout(5, execute, args=(codes))
-    except func_timeout.FunctionTimedOut:
-        ans = None
 
-    return ans
+def execute(x):
+    try:
+        exec(x)
+        locals_ = locals()
+        return locals_.get('ans', None)
+    except Exception:
+        return None
+    
+
+
 
 ######################################################################################################
 
@@ -254,7 +244,15 @@ def get_open_source_completions(test_data, data):
         answer_list = llm_output(prompt)
         ans_list = []
         for i in answer_list:
-            code = i.split("\n\n")[0]
+            code = ""
+            z = i.split("# Python Code, return ans\n")
+            if len(z)>6:
+                code = z[6]
+            elif len(z)>1:
+                code = z[-1]
+            code = code.split("\n\n")[0]
+            if "</s>" in code:
+                code = code.split("</s>")[1].strip()
             ans_list.append(code)
             # print(code)
             
@@ -262,13 +260,13 @@ def get_open_source_completions(test_data, data):
         # Getting code and output
         tmp_list = []
         for i in ans_list:
-            code = i.split("\n\n")[0]
+            code = i
             # print(code)
             try:
-                exec(code)
-                tmp_list.append(locals()['ans'])
-                # ans = locals_.get('ans', None)
-            except: pass
+                ans = func_timeout.func_timeout(5, execute, args=[code])
+                tmp_list.append(ans)
+            except func_timeout.FunctionTimedOut:
+                ans = None
             # t = safe_execute(str(code))
             # if ans!=None: tmp_list.append(ans)
         
