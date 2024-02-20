@@ -77,113 +77,40 @@ def compare_llm_outputs(user_query, hard_code_exception=False):
 
 dev_set1 = open("problems_dev.json") #7965
 dev_set1 = json.load(dev_set1)
-# dev_set = dev_set[args.dev_slice:(args.dev_slice + args.num_dev)]
-dev_set1 = dict(list(dev_set1.items())) #7686
+dev_set1 = dict(list(dev_set1.items()))
 
-# train_set = []
 dev_set = []
 for i in dev_set1:
     dev_set.append(dev_set1[i])
+
+train_set1 = open("problems_train.json") #23059
+train_set1 = json.load(train_set1)
+train_set1 = dict(list(train_set1.items()))
+
+train_set = []
+for i in train_set1:
+    train_set.append(train_set1[i])
+
+
+prompt =  """Follow the giving Examples each using its Table to find the answer for its Question with the reasoning and solve the Test Question in a similar manner.
+
+            Examples:
+            """
+
+rand_list = random.sample(range(0,len(train_set)-1), 5)
+for tr in rand_list:
+    prompt += "\nTable:\n" + train_set[tr]["table"] + "\nQuestion:" + train_set[tr]["question"]
+    if type(train_set[tr]["choices"])==str:
+        prompt += "Please select from the following options:"+train_set[tr]["choices"]
+    prompt += "\nAnswer:" + train_set[tr]["solution"] + "\nThe answer is:" + train_set[tr]["answer"]
 
 matches = 0
 mismatches = 0
 counts = []
 exnum = 1
 for ex in tqdm(dev_set,total=len(dev_set),desc="Generating"):
-    user_query = """Follow the giving Examples each using its Table to find the answer for its Question with the reasoning and solve the Test Question in a similar manner.
-
-            Examples:
-
-            Table:
-            Stem | Leaf
-            3 | 3, 3, 3, 5, 5
-            4 | 6
-            5 | 4, 5, 7, 8
-            6 | 7, 8
-            7 | 2, 3, 7, 9
-            8 | 6, 8, 9
-            Question:The members of the local garden club tallied the number of plants in each persons garden. How many gardens have at least 47 plants?
-            Answer: Find the row with stem 4. Count all the leaves greater than or equal to 7.
-
-            Count all the leaves in the rows with stems 5, 6, 7, and 8.
-
-            You counted 13 leaves, which are blue in the stem-and-leaf plots above. 13 gardens have at least 47 plants.
-            The answer is:13
-            Table:
-            Day | Number of tickets
-            Friday | 71
-            Saturday | 74
-            Sunday | 75
-            Monday | 72
-            Question:The transportation company tracked the number of train tickets sold in the past 4 days. On which day were the fewest train tickets sold?
-            Answer: Find the least number in the table. Remember to compare the numbers starting with the highest place value. The least number is 71.
-
-            Now find the corresponding day. Friday corresponds to 71.
-            The answer is:Friday
-
-            Table:
-            Donation level | Number of donors
-            Gold | 15
-            Silver | 68
-            Bronze | 58
-            Question:The Burlington Symphony categorizes its donors as gold, silver, or bronze depending on the amount donated. What fraction of donors are at the bronze level? Simplify your answer.
-            Answer: Find how many donors are at the bronze level.
-
-            58
-
-            Find how many donors there are in total.
-
-            15 + 68 + 58 = 141
-
-            Divide 58 by 141.
-
-            58/141
-
-            58/141 of donors are at the bronze level.
-            The answer is:58/141
-
-            Table:
-            Number of times | Frequency
-            0 | 1
-            1 | 18
-            2 | 12
-            3 | 13
-            4 | 0
-            Question:Employees at Eve's Movies tracked the number of movies that customers rented last month. How many customers are there in all?
-            Answer: Add the frequencies for each row.
-
-            Add:
-
-            1 + 18 + 12 + 13 + 0 = 44
-
-            There are 44 customers in all.
-            The answer is:44
-
-            Table:
-            Day | Number of hammers
-            Thursday | 7
-            Friday | 6
-            Saturday | 6
-            Sunday | 9
-            Monday | 4
-            Tuesday | 2
-            Question:A hardware store monitored how many hammers it sold in the past 6 days. What is the range of the numbers?
-            Answer: Read the numbers from the table.
-
-            7, 6, 6, 9, 4, 2
-
-            First, find the greatest number. The greatest number is 9.
-
-            Next, find the least number. The least number is 2.
-
-            Subtract the least number from the greatest number:
-
-            9 - 2 = 7
-
-            The range is 7.
-            The answer is:7
-
-            """+"Following the given examples generate the answer for:\n Table:\n" + ex["table"] + "\nQuestion:" + ex["question"]
+    
+    user_query = prompt + "\nFollowing the given examples generate the answer for:\n Table:\n" + ex["table"] + "\nQuestion:" + ex["question"]
     # tmp_list = []
     tmp_list = compare_llm_outputs(user_query)
     print(len(tmp_list))
