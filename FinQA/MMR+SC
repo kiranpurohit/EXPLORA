@@ -2,7 +2,7 @@ from huggingface_hub import login
 access_token_read = "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"
 login(token = access_token_read)
 
-#import numpy as np
+import numpy as np
 from numpy import linalg
 import random
 import pandas as pd
