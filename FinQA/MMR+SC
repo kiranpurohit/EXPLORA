@@ -46,9 +46,9 @@ tokenizer = AutoTokenizer.from_pretrained(model_name, torch_dtype=torch.float16)
 def prompt_for_manual_prediction(ex, shots):
     stop_signal = "\n\n"
     showcase_examples = [
-            "Q: {}\nO: {} \nA: {}. The option is {}\n".format(
-                 s["question"],s["options"],
-                s["rationale"], s["correct"]) for s in shots
+            "Read the following table, and then answer the question:\nTable: {}\nQuestion: {}\nEquation: {}\n. The answer is {}\n".format(
+                 s["table"],s["question"],
+                s["program"], s["answer"]) for s in shots
         ]
 
 
@@ -57,7 +57,7 @@ def prompt_for_manual_prediction(ex, shots):
    
 
 
-    input_example = "\nQ: {}\n O: {}\nA:".format(ex['question'], ex['options'])
+    input_example = "Read the following table, and then answer the question:\nTable: {}\nQuestion: {}\nEquation:".format(ex['table'], ex['question'])
     prompt = "\n".join(showcase_examples + [input_example])
 
     return prompt, stop_signal
@@ -94,7 +94,7 @@ def in_context_manual_prediction(ex, training_data):
 
 
 
-#import faiss
+import faiss
 from transformers import BertTokenizer, BertModel, logging
 from sklearn.metrics.pairwise import cosine_similarity
 import torch
@@ -185,12 +185,35 @@ def self_con(tmp_list):
         # tmp = compare_llm_outputs(user_query)
         # print(tmp)
         ans = ""
-        if len(tmp.split("The option is "))>6:
-            ans = tmp.split("The option is ")[6][0]
-            print(ans)
-            # ans = ans.split("\n")[0]
-        # ans = ans.replace("$", "")
-        # ans = ans.strip()
+        if len(tmp.split("The answer is "))>6:
+            ans = tmp.split("The answer is ")[6]
+            #print(ans)
+            ans = ans.split("\n")[0]
+        try:
+            ans = ans.replace("$", "")
+            ans = ans.replace("%","")
+            ans = ans.strip()
+        except:
+            pass
+
+        if 'yes' in ans.lower() or 'true' in ans.lower():
+            ans = 'yes'
+        elif 'no' in ans.lower() or 'false' in ans.lower():
+            ans = 'no'
+        try : 
+            float(ans) 
+            ans = float(ans)
+        except : 
+            pass
+        
+
+        
+
+        if type(ans)==float:
+            #print("**")
+            ans=round(ans,2)
+        
+       
         ans_list.append(ans)
 
     # print(ans_list)
@@ -215,36 +238,22 @@ def self_con(tmp_list):
 
 def test_few_shot_manual_prediction():
     print("Running prediction")
-    with open('dev.jsonl', 'r') as json_file1:
-        json_list1 = list(json_file1)
-    dev_set=[]
+    dev_set = open("finQA_test.json") #7965
+    dev_set = json.load(dev_set)
+    train_set=open("finQA_train.json")
+    train_set=json.load(train_set)
+    
 
-
-    for json_str in json_list1:
-        result1 = json.loads(json_str)
-        dev_set.append(result1)
-    dev_set=dev_set[:2]
-
-
-    with open('train.jsonl', 'r') as json_file:
-        json_list = list(json_file)
-
-    train_set=[]
-
-
-    random.seed(7)
-
-
-    for json_str in json_list:
-        result = json.loads(json_str)
-        train_set.append(result)
-    train_set=train_set[:20]
+    
+    doc_embeddings=[]
     for i in train_set:
+
         inputs_sentence1 = tokenizer_bert(i["question"], return_tensors='pt', padding=True, truncation=True)
         with torch.no_grad():
             outputs_sentence1 = model_bert(**inputs_sentence1)
         embedding_sentence1 = outputs_sentence1.last_hidden_state.mean(dim=1).numpy()[0]
         doc_embeddings.append(embedding_sentence1)
+
 
     
     print("started Running:")
@@ -254,10 +263,11 @@ def test_few_shot_manual_prediction():
     for ex in tqdm(dev_set,total=len(dev_set),desc="predicting"):
         #user_query,stop=prompt_for_manual_prediction(ex,new_rand_train)
 
-         query = tokenizer_bert(ex['question'], return_tensors='pt', padding=True, truncation=True)
+        query = tokenizer_bert(ex['question'], return_tensors='pt', padding=True, truncation=True)
         with torch.no_grad():
             outputs_sentence1 = model_bert(**query)
         query_embedding=outputs_sentence1.last_hidden_state.mean(dim=1).numpy()[0]
+        
 
         # Set the lambda parameter (trade-off between relevance and diversity)
         lambda_param = 0.5
@@ -268,24 +278,59 @@ def test_few_shot_manual_prediction():
         # Apply MMR function
         selected_indices = mmr(doc_embeddings, query_embedding, lambda_param, top_k)
         print("selected indices:",selected_indices)
+
         train_set_1=[]
         for i in selected_indices:
           train_set_1.append(train_set[i])
+        #print("1-done")
         user_query,stop=prompt_for_manual_prediction(ex,train_set_1)
+        while len(user_query)>4096:
+            print('*************************************\n')
+            train_set_1.pop()
+            user_query,stop=prompt_for_manual_prediction(ex,train_set_1)
+        #print("2-done")
 
         tmp_list = in_context_manual_prediction(ex,train_set_1)
-        # print(len(tmp_list))
+        #print("3-done")
+        # if matches+mismatches==20:
+        #     break
+        #print(tmp_list[0])
         
         n = self_con(tmp_list)
         answer = n[0][0]
         if answer=="" and len(n)>1: answer = n[1][0]
+        #print("4-done")
+        
+        
         print("\nAnswer: ", answer)
-        gt = ex["correct"]
+        gt = ex["answer"]
+        ans=gt
+        try:
+            ans = ans.replace("$", "")
+            ans = ans.replace("%","")
+            ans = ans.strip()
+        except:
+            pass
+        try : 
+            float(ans) 
+            ans = float(ans)
+        except : 
+            pass
+        
+
+        #ans = ans.strip()
+
+        if type(ans)==float:
+            #print("**")
+            ans=round(ans,2)
+        gt =ans
         print("GT: ", gt)
+        
         if(answer==gt):
           matches+=1
         else:
           mismatches+=1
+        print("Accuracy till now:",matches/(matches+mismatches))
     print("EM:",matches/(matches+mismatches))
 
 test_few_shot_manual_prediction()
