@@ -256,7 +256,7 @@ def test_few_shot_manual_prediction():
     for ex in tqdm(dev_set,total=len(dev_set),desc="predicting"):
         #user_query,stop=prompt_for_manual_prediction(ex,new_rand_train)
 
-         query = tokenizer_bert(ex['question'], return_tensors='pt', padding=True, truncation=True)
+        query = tokenizer_bert(ex['question'], return_tensors='pt', padding=True, truncation=True)
         with torch.no_grad():
             outputs_sentence1 = model_bert(**query)
         query_embedding=outputs_sentence1.last_hidden_state.mean(dim=1).numpy()[0]
