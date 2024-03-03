@@ -79,7 +79,7 @@ def compare_llm_outputs(user_query, hard_code_exception=False):
 
     return results
 
-def mmr(doc_embeddings, query_embedding, lambda_param, top_k):
+def knn(doc_embeddings, query_embedding, lambda_param, top_k):
     # Normalize embeddings
     doc_embeddings = doc_embeddings / np.linalg.norm(doc_embeddings, axis=1, keepdims=True)
     query_embedding = query_embedding / np.linalg.norm(query_embedding)
@@ -104,7 +104,7 @@ def mmr(doc_embeddings, query_embedding, lambda_param, top_k):
     max_relevance_index = np.argmax(relevance_scores)
     selected_set.add(max_relevance_index)
 
-    # Compute MMR scores and select documents iteratively
+    # Compute KNN scores and select documents iteratively
     while len(selected_set) < top_k:
         remaining_indices = list(set(similarity_indices[0]) - selected_set)
         remaining_embeddings = doc_embeddings[remaining_indices]
@@ -112,12 +112,12 @@ def mmr(doc_embeddings, query_embedding, lambda_param, top_k):
         # Compute similarity with the query for remaining documents
         similarity_scores = np.dot(remaining_embeddings, query_embedding)
         # print(similarity_scores)
-        # Compute MMR scores
-        mmr_scores = lambda_param * relevance_scores[remaining_indices] - (1 - lambda_param) * similarity_scores
+        # Compute KNN scores
+        knn_scores = lambda_param * relevance_scores[remaining_indices] - (1 - lambda_param) * similarity_scores
 
-        # Select document with maximum MMR score
-        max_mmr_index = remaining_indices[np.argmax(mmr_scores)]
-        selected_set.add(max_mmr_index)
+        # Select document with maximum KNN score
+        max_knn_index = remaining_indices[np.argmax(knn_scores)]
+        selected_set.add(max_knn_index)
 
     # Convert selected set to a list of indices
     selected_indices = list(selected_set)
@@ -192,7 +192,7 @@ if __name__ == "__main__":
         user_query = """Follow the giving Examples each using its Table to find the answer for its Question with the reasoning and solve the Test Question in a similar manner.
         Examples:
         """
-        selected_indices = mmr(train_emb, test_emb[exnum], lambda_param, top_k)
+        selected_indices = knn(train_emb, test_emb[exnum], lambda_param, top_k)
 
         print("\nSelected Indices:", selected_indices)
 
