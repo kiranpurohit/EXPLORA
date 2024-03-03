@@ -115,9 +115,9 @@ model_bert = BertModel.from_pretrained('bert-base-uncased')
 logging.set_verbosity_error()
 
 
-def mmr(doc_embeddings, query_embedding, lambda_param, top_k):
+def knn(doc_embeddings, query_embedding, lambda_param, top_k):
     """
-    Maximal Marginal Relevance (MMR) function using Faiss.
+    (KNN) function using Faiss.
 
     Parameters:
     - doc_embeddings: 2D array, each row represents the embedding of a document.
@@ -155,7 +155,7 @@ def mmr(doc_embeddings, query_embedding, lambda_param, top_k):
     max_relevance_index = np.argmax(relevance_scores)
     selected_set.add(max_relevance_index)
 
-    # Compute MMR scores and select documents iteratively
+    # Compute KNN scores and select documents iteratively
     while len(selected_set) < top_k:
         remaining_indices = list(set(similarity_indices[0]) - selected_set)
         remaining_embeddings = doc_embeddings[remaining_indices]
@@ -163,12 +163,12 @@ def mmr(doc_embeddings, query_embedding, lambda_param, top_k):
         # Compute similarity with the query for remaining documents
         similarity_scores = np.dot(remaining_embeddings, query_embedding)
 
-        # Compute MMR scores
-        mmr_scores = lambda_param * relevance_scores[remaining_indices] - (1 - lambda_param) * similarity_scores
+        # Compute KNN scores
+        knn_scores = lambda_param * relevance_scores[remaining_indices] - (1 - lambda_param) * similarity_scores
 
-        # Select document with maximum MMR score
-        max_mmr_index = remaining_indices[np.argmax(mmr_scores)]
-        selected_set.add(max_mmr_index)
+        # Select document with maximum KNN score
+        max_knn_index = remaining_indices[np.argmax(knn_scores)]
+        selected_set.add(max_knn_index)
 
     # Convert selected set to a list of indices
     selected_indices = list(selected_set)
@@ -275,8 +275,8 @@ def test_few_shot_manual_prediction():
         # Set the number of documents to return
         top_k = 5
 
-        # Apply MMR function
-        selected_indices = mmr(doc_embeddings, query_embedding, lambda_param, top_k)
+        # Apply KNN function
+        selected_indices = knn(doc_embeddings, query_embedding, lambda_param, top_k)
         print("selected indices:",selected_indices)
 
         train_set_1=[]
