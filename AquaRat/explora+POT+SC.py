@@ -7,23 +7,20 @@ from sklearn.model_selection import train_test_split
 from sklearn.cluster import KMeans
 from sklearn.metrics import mean_absolute_error
 import torch
-
 import pickle 
 import json
-#import openai
 from tqdm import tqdm
 from tenacity import retry, stop_after_attempt, wait_random_exponential
-
+import transformers
+from transformers import AutoModelForCausalLM, AutoTokenizer
 from transformers import BertTokenizer, BertModel, logging
-
+import faiss
 
 
 #for-pot
 
 from typing import Dict, Any
 import os
-import json
-from tqdm import tqdm
 from datetime import datetime
 import openai
 from time import sleep
@@ -40,6 +37,7 @@ random.seed(7)
 np.random.seed(7)
 torch.manual_seed(7)
 
+
 if torch.cuda.is_available():
     device = torch.device("cuda")
 else:
@@ -48,39 +46,13 @@ else:
 
 
 from huggingface_hub import login
-access_token_read = "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"
+access_token_read = "YOUR_TOKEN"
 login(token = access_token_read)
 
-#import numpy as np
-from numpy import linalg
-import random
-import pandas as pd
-from sklearn.metrics.pairwise import cosine_similarity
-from sklearn.model_selection import train_test_split
-from sklearn.cluster import KMeans
-from sklearn.metrics import mean_absolute_error
-import torch
-
-import pickle 
-import json
-from tqdm import tqdm
-
-random.seed(7)
-#np.random.seed(7)
-torch.manual_seed(7)
-
-import transformers
-import os
-from transformers import AutoModelForCausalLM, AutoTokenizer
 
 model_name = "mistralai/Mistral-7B-Instruct-v0.1"
 model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.float16)
 
-# CUDA_VISIBLE_DEVICES=0,1,2,3,4,5,6,7 ./cuda_executable
-if torch.cuda.is_available():
-    device = torch.device("cuda")
-else:
-    device = torch.device("cpu")
 
 model = model.to(device)
 pipeline = transformers.pipeline(
@@ -149,28 +121,10 @@ def in_context_manual_prediction(ex, training_data,flag):
 
 
 
-
-
-import faiss
-from transformers import BertTokenizer, BertModel, logging
-from sklearn.metrics.pairwise import cosine_similarity
-import torch
-import random
-from tqdm import tqdm
-from sklearn.model_selection import train_test_split
-import os
-import json
-import pickle
-import openai
-from tenacity import retry, stop_after_attempt, wait_random_exponential
-import json
-
-
 # tokenizer_bert = BertTokenizer.from_pretrained('bert-base-uncased')
 # model_bert = BertModel.from_pretrained('bert-base-uncased')
 
 # logging.set_verbosity_error()
-
 
 
 
