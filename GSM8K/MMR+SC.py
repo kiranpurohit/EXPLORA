@@ -113,17 +113,17 @@ def max_normalize_cosine_similarities(cosine_similarities):
     """Normalize cosine similarities using max normalization approach"""
     return 1 / np.max(cosine_similarities) * cosine_similarities.squeeze(axis=1)
 
-def mmr(data, emb, k):
+def mmr(data_emb, sent_emb, k):
     beta = 0.7
     
-    text_sims = emb
-    candidate_sims = l
-
+    text_sims = cosine_similarity(data_emb, [sent_emb]).tolist()
+    candidate_sims = cosine_similarity(data_emb)
     text_sims_norm = standardize_normalize_cosine_similarities(text_sims)
     phrase_sims_norm = max_normalize_cosine_similarities_pairwise(candidate_sims)
-
+    # text_sims = emb
+    # candidate_sims = l
     selected_data_indices = []
-    unselected_data_indices = list(range(len(data)))
+    unselected_data_indices = list(range(len(data_emb)))
 
     # find the most similar doc (using original cosine similarities)
     best_idx = np.argmax(text_sims)
@@ -131,7 +131,7 @@ def mmr(data, emb, k):
     unselected_data_indices.remove(best_idx)
 
     # do top_n - 1 cycle to select top N data
-    for _ in range(min(len(data), k) - 1):
+    for _ in range(min(len(data_emb), k) - 1):
         unselected_data_distances_to_text = text_sims_norm[unselected_data_indices, :]
         unselected_data_distances_pairwise = phrase_sims_norm[unselected_data_indices][:,
                                                 selected_data_indices]
@@ -211,18 +211,17 @@ def get_prompt(ex):
 
 ########################################## Main #####################################
 if __name__ == "__main__":
+
+    # Pickled embeddings for test and train
+    with open('pickle_test.pkl', 'rb') as f:
+        l1 = pickle.load(f)
     
-    # with open('pickle_test.pkl', 'rb') as f:
-    #     l1 = pickle.load(f)
-    
-    # with open('pickle_st_mis.pkl', 'rb') as f1:
-    #     l2 = pickle.load(f1)
+    with open('pickle_tr.pkl', 'rb') as f1:
+        l2 = pickle.load(f1)
 
     # test_emb = np.array(l1)
     # train_emb = np.array(l2)
-    with open('pickle_mmr_lst.pkl', 'rb') as f:
-        test_emb = pickle.load(f)
-
+   
     ### Load data
     with open("train.jsonl", 'r') as f:
         json_list = list(f)
@@ -252,8 +251,8 @@ if __name__ == "__main__":
 
         user_query = "Follow given examples and solve the Test Question at end in similar manner by giving step by step reasoning followed by the Final Answer.\n\n"
 
-        # selected_indices = mmr(train_set, test_emb[exnum], top_k)
-        selected_indices = test_emb[exnum]
+        selected_indices = mmr(l2, l1[exnum], top_k)
+        # selected_indices = test_emb[exnum]
 
         print("\nSelected Indices:", selected_indices)
 
