@@ -158,8 +158,8 @@ def self_con(tmp_list):
     ans_list = []
     for tmp in tmp_list:
         ans = ""
-        if len(tmp.split("Final Answer:"))>1:
-            ans = tmp.split("Final Answer:")[1]
+        if len(tmp.split("Final Answer:"))>6:
+            ans = tmp.split("Final Answer:")[6]
             ans = ans.split("\n")[0]
             # print(ans)
             if "each" in ans:  ans = ans.split("each")[0]
