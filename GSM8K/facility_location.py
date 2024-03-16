@@ -146,7 +146,7 @@ if __name__ == "__main__":
         # l1.append(model_a.ranking[i])
         l2.append(model_b.ranking[i])
       
-     print("Selected Indices:", l2)
+    print("Selected Indices:", l2)
     ### Load data
     with open("train.jsonl", 'r') as f:
         json_list = list(f)
