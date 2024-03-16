@@ -176,8 +176,8 @@ exnum = 1
 
 for ex in tqdm(test_set, total=len(test_set), desc="Generating"):
 
-    user_query = prompt + "\n\n" 
-    user_query += "for Question:" + ex["question"]
+    user_query = prompt + "Solve the Question with step by step and output Rationale under Rationale: and strictly only numerical answer preceded by Answer:\n\n" 
+    user_query += "Question:" + ex["question"]
     
     tmp_list = compare_llm_outputs(user_query)
     print(tmp_list)
