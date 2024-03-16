@@ -125,47 +125,6 @@ with open("test.jsonl", 'r') as f:
     json_list = list(f)
 test_set = [json.loads(x) for x in json_list]
 
-### Random 5 as prompt
-prompt = """Follow given examples and solve the Test Question at end in similar manner step by step and output Rationale under Rationale: and strictly only numerical answer preceded by Answer:
-    using Examples:  
-Question: There are 15 trees in the grove. Grove workers will plant trees in the grove today. After they are done, there will be 21 trees. How many trees did the grove workers plant today?
-Rationale: We start with 15 trees.
-Later we have 21 trees.
-The difference must be the number of trees they planted.
-So, they must have planted 21 - 15 = 6 trees.
-The answer is 6.
-Answer: 6
-
-Question: If there are 3 cars in the parking lot and 2 more cars arrive, how many cars are in the parking lot?
-Answer: There are 3 cars in the parking lot already.
-2 more arrive.
-Now there are 3 + 2 = 5 cars.
-The answer is 5.
-Rationale: 5
-
-Question: There were nine computers in the server room. Five more computers were installed each day, from monday to thursday. How many computers are now in the server room?
-Rationale: There are 4 days from monday to thursday.
-5 computers were added each day.
-That means in total 4 * 5 = 20 computers were added.
-There were 9 computers in the beginning, so now there are 9 + 20 = 29 computers.
-The answer is 29.
-Answer: 29
-
-Question: Michael had 58 golf balls. On tuesday, he lost 23 golf balls. On wednesday, he lost 2 more. How many golf balls did he have at the end of wednesday?
-Rationale: Michael initially had 58 balls.
-He lost 23 on Tuesday, so after that he has 58 - 23 = 35 balls.
-On Wednesday he lost 2 more so now he has 35 - 2 = 33 balls.
-The answer is 33.
-Answer: 33
-
-Question: Olivia has $23. She bought five bagels for $3 each. How much money does she have left?
-Rationale: She bought 5 bagels for $3 each.
-This means she spent 5 * $3 = $15 on the bagels.
-She had $23 in beginning, so now she has $23 - $15 = $8.
-The answer is 8.
-Answer: 8"""
-
-# print(prompt)
 
 ########################################## Predictions #########################
 
@@ -176,7 +135,7 @@ exnum = 1
 
 for ex in tqdm(test_set, total=len(test_set), desc="Generating"):
 
-    user_query = prompt + "Solve the Question with step by step and output Rationale under Rationale: and strictly only numerical answer preceded by Answer:\n\n" 
+    user_query = "Solve the Question with step by step and output Rationale under Rationale: and strictly only numerical answer preceded by Answer:\n\n" 
     user_query += "Question:" + ex["question"]
     
     tmp_list = compare_llm_outputs(user_query)
