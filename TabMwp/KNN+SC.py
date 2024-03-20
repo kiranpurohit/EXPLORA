@@ -140,6 +140,8 @@ def self_con(tmp_list):
 
     d = {}
     for i in ans_list:
+        if i=="":
+            continue
         if i in d:
             d[i] += 1
         else:
@@ -204,8 +206,8 @@ if __name__ == "__main__":
         # print(len(tmp_list))
         
         n = self_con(tmp_list)
-        
-        answer = n[0][0]
+        answer = ""
+        if len(n)>0: answer = n[0][0]
         if answer=="" and len(n)>1: answer = n[1][0]
             
         print("\nAnswer: ", answer)
