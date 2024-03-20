@@ -93,10 +93,9 @@ for i in train_set1:
     train_set.append(train_set1[i])
 
 
-prompt =  """Follow the giving Examples each using its Table to find the answer for its Question with the reasoning and solve the Test Question in a similar manner.
-
-            Examples:
-            """
+prompt = """Follow the giving Examples each using its Table to find the answer for its Question with the reasoning after Answer: and final answer after The answer is:.
+        Examples:
+        """
 
 rand_list = random.sample(range(0,len(train_set)-1), 5)
 for tr in rand_list:
