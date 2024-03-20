@@ -1,7 +1,3 @@
-from huggingface_hub import login
-access_token_read = "YOUR TOKEN"
-login(token = access_token_read)
-
 import faiss
 import numpy as np
 from numpy import linalg
