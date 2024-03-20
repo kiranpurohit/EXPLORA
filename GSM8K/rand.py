@@ -60,8 +60,8 @@ def get_completion(msg_in):
         }
     ]
         
-    # prompt = pipeline.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    outputs = pipeline(msg_in, max_new_tokens=256, do_sample=True, num_return_sequences=1, temperature=0.5, top_k=10, top_p=1.0)
+    prompt = pipeline.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    outputs = pipeline(prompt, max_new_tokens=256, do_sample=True, num_return_sequences=10, temperature=0.5, top_k=10, top_p=1.0)
         
     # out_text = []
     # for x in range(0, 10):
