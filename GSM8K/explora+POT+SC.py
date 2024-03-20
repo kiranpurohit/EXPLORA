@@ -46,20 +46,30 @@ tokenizer = AutoTokenizer.from_pretrained(model_name, torch_dtype=torch.float16)
 # Gen resp
 def get_completion(msg_in):
 
-    messages=[{
-                "role": "user",
-                "content": "You are a helpful, respectful and honest assistant helping to solve math word problems or tasks requiring reasoning or math.",
-            }]
-    text={"role": "assistant", "content":"""{}""".format(msg_in)}
-    messages.append(text)
+   messages = [
+        {
+            "role": "user",
+            "content": "You are a helpful, respectful and honest assistant helping to solve math word problems or tasks requiring reasoning or math, use the Chain-of-Thought methodology by following given examples to explain your step-by-step calculations or logic. Do not generate examples in your answer.",
+        },
+        {
+            "role":"assistant",
+            "content": "I understand.",
+        },
+        {
+            "role": "user", 
+            "content": msg_in,
+        }
+    ]
         
-    # prompt = pipeline.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
-    outputs = pipeline(msg_in, max_new_tokens=256, do_sample=True, num_return_sequences=10, temperature=0.5, top_k=10, top_p=1.0)
+    prompt = pipeline.tokenizer.apply_chat_template(messages, tokenize=False, add_generation_prompt=True)
+    outputs = pipeline(prompt, max_new_tokens=200, do_sample=True, num_return_sequences=10, temperature=0.5, top_k=10, top_p=1.0)
         
     out_text = []
     for x in range(0, 10):
         out_text.append(outputs[x]["generated_text"])
     return out_text
+
+
 # Self consistency on 10 generated answers
 def self_con(tmp_list):
 
