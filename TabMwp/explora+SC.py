@@ -116,7 +116,7 @@ def llm_output(user_query):
 
 def prompt_for_manual_prediction(ex, shots):
 
-    prompt = """Follow the giving Examples each using its Table to find the answer with the reasoning first in the [Answer:] field, followed by only the final answer in the [The answer is:] for its Question.
+    prompt = """Follow the giving Examples each using its Table to find the answer for its Question with the reasoning after Answer: and final answer after The answer is:.
         Examples:
         """
     for index, s in shots.iterrows():
