@@ -185,7 +185,7 @@ if __name__ == "__main__":
     matches = 0
     mismatches = 0
     for ex in tqdm(dev_set,total=len(dev_set),desc="Generating"):
-        user_query = """Follow the giving Examples each using its Table to find the answer for its Question with the reasoning and solve the Test Question in a similar manner.
+        user_query = """Follow the giving Examples each using its Table to find the answer for its Question with the reasoning after Answer: and final answer after The answer is:.
         Examples:
         """
         selected_indices = knn(train_emb, test_emb[exnum], lambda_param, top_k)
