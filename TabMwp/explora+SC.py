@@ -91,6 +91,8 @@ def self_con(tmp_list):
 
     d = {}
     for i in ans_list:
+        if i=="":
+            continue
         if i in d:
             d[i] += 1
         else:
