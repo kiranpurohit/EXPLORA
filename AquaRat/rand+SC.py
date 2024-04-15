@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 
 from huggingface_hub import login
-access_token_read = "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"
+access_token_read = "YOUR_TOKEN"
 login(token = access_token_read)
 
 #import numpy as np
