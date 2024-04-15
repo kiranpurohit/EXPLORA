@@ -17,8 +17,8 @@ Please download the embeddings for the datasets used from this [Link](https://dr
 
 ## Python script overview
 
-`AquaRat/explora+SC.py` - It contains the code for exemplar selection on AquaRat dataset using Explora approach with self-consistency decoding.\
-`FinQA/explora+SC.py` - It contains the code for exemplar selection on FinQA dataset using Explora approach with self-consistency decoding.\
-`GSM8K/explora+SC.py` - It contains the code for exemplar selection on GSM8K dataset using Explora approach with self-consistency decoding.\
-`TabMwp/explora+SC.py` - It contains the code for exemplar selection on TabMWP dataset using Explora approach with self-consistency decoding.
+`AquaRat/explora+SC.py` - It contains the code for exemplar selection on AquaRat using Explora approach with self-consistency decoding.\
+`FinQA/explora+SC.py` - It contains the code for exemplar selection on FinQA using Explora approach with self-consistency decoding.\
+`GSM8K/explora+SC.py` - It contains the code for exemplar selection on GSM8K using Explora approach with self-consistency decoding.\
+`TabMwp/explora+SC.py` - It contains the code for exemplar selection on TabMWP using Explora approach with self-consistency decoding.
 
