@@ -11,4 +11,14 @@ Create a conda environment with python version `3.9`.  Install cudatoolkit accor
 pip install -r requirements.txt
 ```
 
+## Data Preparation
+
 Please download the embeddings for the datasets used from this [Link](https://drive.google.com/drive/folders/1pWFBRMBsnWS5Ty1owK2lyIy7vPCIO4_R?usp=sharing) 
+
+## Python script overview
+
+`AquaRat/explora+SC.py` - It contains the code for exemplar selection on AquaRat datset using Explora approach with self-consistency decoding.\
+`FinQA/explora+SC.py.py` - It contains the code for exemplar selection on FinQA datset using Explora approach with self-consistency decoding.\
+`GSM8K/explora+SC.py.py` - It contains the code for exemplar selection on GSM8K datset using Explora approach with self-consistency decoding.\
+`TabMwp/explora+SC.py.py` - It contains the code for exemplar selection on TabMWP datset using Explora approach with self-consistency decoding.
+
