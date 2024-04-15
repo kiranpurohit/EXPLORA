@@ -28,7 +28,7 @@ else:
 
 
 from huggingface_hub import login
-access_token_read = "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"
+access_token_read = "KEY"
 login(token = access_token_read)
 
 #import numpy as np
