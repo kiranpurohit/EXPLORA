@@ -1,0 +1,7 @@
+pip install torch
+pip install transformers 
+pip install scikit-learn
+pip install pandas
+pip install matplotlib
+pip install langchain
+pip install accelerate
