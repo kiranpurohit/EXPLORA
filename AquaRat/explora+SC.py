@@ -155,16 +155,20 @@ def self_con(tmp_list):
     for tmp in tmp_list:
         # tmp_list.append(compare_llm_outputs(user_query))
         # tmp = compare_llm_outputs(user_query)
-        # print(tmp)
+        #print("---many outputs = ",tmp)
         ans = ""
-        if len(tmp.split("The option is "))>6:
-            ans = tmp.split("The option is ")[6][0]
-            print(ans)
+        if len(tmp.split("The option is"))>0:
+            #print("---before--",tmp.split("The option is")[-1])
+            if(len(tmp.split("The option is")[-1].split())>0):
+                ans = tmp.split("The option is")[-1].split()[0]
+            else:
+                ans = tmp.split("The option is")[-1]
+            #print("Answer is =",ans)
             # ans = ans.split("\n")[0]
         # ans = ans.replace("$", "")
         # ans = ans.strip()
         ans_list.append(ans)
-
+    #print("----- ans_list = ",ans_list)
     # print(ans_list)
 
     d = {}
@@ -173,8 +177,9 @@ def self_con(tmp_list):
             d[i] += 1
         else:
             d[i] = 1
-    print(d)
+    #print("---- count of each element = ",d)
     n = sorted(d.items(), key=lambda x:x[1], reverse=True)
+    #print("---- sorted list = ",n)
     return n
 
 
