@@ -360,16 +360,17 @@ def LLM_avg_error(exemplars_set, val_data):
             tmp_list = in_context_manual_prediction(row,exemplars)
             #print(tmp[0])
             
-            #n = self_con(tmp_list)
-            # answer = n[0][0]
-            # if answer=="" and len(n)>1: answer = n[1][0]
+            n = self_con(tmp_list)
+            answer = n[0][0]
+            if answer=="" and len(n)>1: answer = n[1][0]
+            
             # ans = ""
-            if len(tmp_list[0].split("The option is "))>6:
-                ans = tmp_list[0].split("The option is ")[6][0]
-            answer=ans
+            # if len(tmp_list[0].split("The option is "))>6:
+            #     ans = tmp_list[0].split("The option is ")[6][0]
+            # answer=ans
             
             print("\nAnswer: ", answer)
-            gt = ex["correct"]
+            gt = row["correct"]
             print("GT: ", gt)
             if(answer==gt):
               matches+=1
@@ -402,16 +403,17 @@ def LLM_error_indicator(exemplars_set, val_data):
             tmp_list = in_context_manual_prediction(row,exemplars)
             #print(tmp[0])
             
-            #n = self_con(tmp_list)
-            # answer = n[0][0]
-            # if answer=="" and len(n)>1: answer = n[1][0]
+            n = self_con(tmp_list)
+            answer = n[0][0]
+            if answer=="" and len(n)>1: answer = n[1][0]
+            
             # ans = ""
-            if len(tmp_list[0].split("The option is "))>6:
-                ans = tmp_list[0].split("The option is ")[6][0]
-            answer=ans
+            # if len(tmp_list[0].split("The option is "))>6:
+            #     ans = tmp_list[0].split("The option is ")[6][0]
+            # answer=ans
             
             print("\nAnswer: ", answer)
-            gt = ex["correct"]
+            gt = row["correct"]
             print("GT: ", gt)
 
             if answer==gt:
@@ -1302,7 +1304,7 @@ def get_open_source_completions(test_data, data):
     question_df = {"question":[],"answers":[]}
 
     train_data, val_data = train_test_split(data, test_size=0.3, random_state=42)
-    val_data=val_data[:2]
+    val_data=val_data[:20]
 
     exemplars = static_subset_selection(val_data, train_data, 5, test_data)
     print("while loop completed!")
@@ -1332,13 +1334,14 @@ def get_open_source_completions(test_data, data):
         n = self_con(tmp_list)
         answer = n[0][0]
         if answer=="" and len(n)>1: answer = n[1][0]
-        ans = ""
+            
+        # ans = ""
         # if len(tmp[0].split("The option is "))>1:
         #     ans = tmp[0].split("The option is ")[1][0]
         # answer=ans
         
         print("\nAnswer: ", answer)
-        gt = ex["correct"]
+        gt = row["correct"]
         print("GT: ", gt)
         if(answer==gt):
           matches+=1
