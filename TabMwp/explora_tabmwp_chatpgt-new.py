@@ -23,7 +23,7 @@ torch.manual_seed(7)
 import transformers
 import os
 from transformers import AutoModelForCausalLM, AutoTokenizer
-openai.api_key = "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"
+openai.api_key = ""
 #model_name = "mistralai/Mistral-7B-Instruct-v0.1"
 #model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.float16)
 
